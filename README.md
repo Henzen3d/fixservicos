@@ -138,6 +138,6 @@ Se você tem um site institucional, e-commerce ou landing page em WordPress que:
 Eu realizo a **migração completa e segura para Astro & Cloudflare Pages**, garantindo **zero perda de SEO**, velocidade máxima e custo quase zero de infraestrutura.
 
 👉 **Vamos conversar sobre o seu projeto:**
+* **Responsável Técnico / Dev**: Osmar Gonçalves
+* **LinkedIn**: [linkedin.com/in/osmargf](https://www.linkedin.com/in/osmargf/)
 * **GitHub**: [@Henzen3d](https://github.com/Henzen3d)
-* **LinkedIn**: [Conecte-se comigo no LinkedIn](https://www.linkedin.com)
-* **E-mail / Contato**: Entre em contato pelo meu perfil do GitHub.
