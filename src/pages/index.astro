@@ -1,0 +1,150 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Marquee from '../components/Marquee.astro';
+import Reviews from '../components/Reviews.astro';
+
+const title = "Fix Serviços - Marido de Aluguel Blumenau";
+const description = "Eletricista e Marido de Aluguel Blumenau, pequenos reparos, instalações e manutenções. Serviços especializados e rápidos para Blumenau. 🔨";
+const canonicalURL = "https://fixblu.com.br/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Fix Serviços",
+  "description": description,
+  "url": "https://fixblu.com.br",
+  "telephone": "+55-47-98804-1306",
+  "image": "https://fixblu.com.br/og-fixblu.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Germano Beduschi, 101 – Sala 102",
+    "addressLocality": "Blumenau",
+    "addressRegion": "SC",
+    "postalCode": "89066-020",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-26.9194",
+    "longitude": "-49.0661"
+  },
+  "areaServed": { "@type": "City", "name": "Blumenau" },
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "13:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços Fix Blumenau",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eletricista em Blumenau" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Encanador em Blumenau" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marido de Aluguel em Blumenau" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Casa Inteligente em Blumenau" } }
+    ]
+  }
+};
+// REMOVED: const h1 = "marido de aluguel";
+---
+
+<MainLayout title={title} description={description} canonicalURL={canonicalURL} noPadding={true} schema={schema}>
+  <!-- Hero Section -->
+  <Hero />
+  <Marquee />
+
+  <!-- Features/Services Section -->
+  <section class="py-24 bg-surface-2 transition-colors">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-16 text-center max-w-3xl mx-auto">
+        <h2 class="inline-flex items-center bg-brand-green/10 text-brand-green-text dark:text-brand-green px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
+          O que fazemos
+        </h2>
+        <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-text-primary font-display leading-tight">
+          Tudo o que você precisa em <span class="text-brand-green">reparos e instalações</span>
+        </h3>
+        <p class="mt-6 text-lg text-text-secondary">
+          Especialistas em resolver problemas do dia a dia com agilidade em toda Blumenau.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Eletricista -->
+        <a href="/eletricista/" class="group relative block p-8 bg-surface-1 rounded-3xl border border-border-main hover:border-brand-green/40 shadow-sm hover:shadow-xl hover:shadow-brand-green/5 transition-all duration-300 no-underline">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition-colors group-hover:bg-brand-green group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap h-8 w-8" aria-hidden="true">
+              <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+            </svg>
+          </div>
+          <h4 class="mt-6 text-xl font-bold text-text-primary uppercase tracking-tight">Eletricista</h4>
+          <p class="mt-4 text-sm text-text-muted leading-relaxed">Instalações e reparos elétricos seguros com garantia de qualidade.</p>
+          <div class="mt-8 flex items-center gap-2 text-sm font-bold text-brand-green opacity-0 transition-opacity group-hover:opacity-100 uppercase tracking-wider">
+            Saiba mais 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </div>
+        </a>
+
+        <!-- Encanador -->
+        <a href="/encanador/" class="group relative block p-8 bg-surface-1 rounded-3xl border border-border-main hover:border-brand-green/40 shadow-sm hover:shadow-xl hover:shadow-brand-green/5 transition-all duration-300 no-underline">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition-colors group-hover:bg-brand-green group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet h-8 w-8" aria-hidden="true">
+              <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path>
+            </svg>
+          </div>
+          <h4 class="mt-6 text-xl font-bold text-text-primary uppercase tracking-tight">Encanador</h4>
+          <p class="mt-4 text-sm text-text-muted leading-relaxed">Resolução de vazamentos, reparos hidráulicos e novas instalações.</p>
+          <div class="mt-8 flex items-center gap-2 text-sm font-bold text-brand-green opacity-0 transition-opacity group-hover:opacity-100 uppercase tracking-wider">
+            Saiba mais 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </div>
+        </a>
+
+        <!-- Marido de Aluguel -->
+        <a href="/marido-de-aluguel/" class="group relative block p-8 bg-surface-1 rounded-3xl border border-border-main hover:border-brand-green/40 shadow-sm hover:shadow-xl hover:shadow-brand-green/5 transition-all duration-300 no-underline">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition-colors group-hover:bg-brand-green group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer h-8 w-8" aria-hidden="true">
+              <path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"></path><path d="M17.64 15 22 10.64"></path><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86c0-1 1.92-1.92 1.92-1.92s.51-.51.51-1.46A2.25 2.25 0 0 0 17.91 1.7c-.95 0-1.46.51-1.46.51s-.92 1.92-1.92 1.92h-.86c-.85 0-1.65.33-2.25.93l-1.25 1.25"></path>
+            </svg>
+          </div>
+          <h4 class="mt-6 text-xl font-bold text-text-primary uppercase tracking-tight">Marido de Aluguel</h4>
+          <p class="mt-4 text-sm text-text-muted leading-relaxed">Pequenos reparos, montagens e instalações diversas para o dia a dia.</p>
+          <div class="mt-8 flex items-center gap-2 text-sm font-bold text-brand-green opacity-0 transition-opacity group-hover:opacity-100 uppercase tracking-wider">
+            Saiba mais 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </div>
+        </a>
+
+        <!-- Casa Inteligente -->
+        <a href="/casa-inteligente/" class="group relative block p-8 bg-surface-1 rounded-3xl border border-border-main hover:border-brand-green/40 shadow-sm hover:shadow-xl hover:shadow-brand-green/5 transition-all duration-300 no-underline">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green transition-colors group-hover:bg-brand-green group-hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb h-8 w-8" aria-hidden="true">
+              <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path>
+              <path d="M9 18h6"></path>
+              <path d="M10 22h4"></path>
+            </svg>
+          </div>
+          <h4 class="mt-6 text-xl font-bold text-text-primary uppercase tracking-tight">Casa Inteligente</h4>
+          <p class="mt-4 text-sm text-text-muted leading-relaxed">Automação residencial, configuração de Alexas, lâmpadas e câmeras.</p>
+          <div class="mt-8 flex items-center gap-2 text-sm font-bold text-brand-green opacity-0 transition-opacity group-hover:opacity-100 uppercase tracking-wider">
+            Saiba mais 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <Reviews />
+</MainLayout>

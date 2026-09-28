@@ -1,0 +1,80 @@
+---
+const phone = "5547988041306";
+const msg = encodeURIComponent("Olá! Vi o site e preciso de um orçamento para um reparo em Blumenau.");
+const url = `https://wa.me/${phone}?text=${msg}`;
+---
+
+<section class="py-20 px-4 md:px-8 max-w-7xl mx-auto transition-colors duration-300">
+  <div class="relative overflow-hidden rounded-[2.5rem] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl shadow-green-900/5 dark:shadow-green-900/20 group transition-colors duration-300">
+    
+    <div class="absolute inset-0 bg-gradient-to-br from-green-50/50 to-white dark:from-green-900/20 dark:to-slate-900 pointer-events-none transition-colors duration-300"></div>
+    <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(rgb(22, 101, 52) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    
+    <div class="relative px-6 py-14 md:p-16 lg:p-24 space-y-8 md:space-y-16">
+      
+      <div class="flex justify-center">
+        <div class="inline-flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-semibold tracking-wide text-green-600 dark:text-green-400 uppercase">
+          Pronto para começar?
+        </div>
+      </div>
+      
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-16 text-center lg:text-left">
+        <h3 class="font-sans font-black text-slate-900 dark:text-white text-4xl md:text-6xl lg:text-7xl leading-[0.98] tracking-tighter max-w-xl transition-colors duration-300">
+          Vamos resolver seu <span class="text-green-600 dark:text-green-500">problema</span>
+        </h3>
+        <div class="max-w-sm">
+          <p class="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed font-medium transition-colors duration-300">
+            Diga o que você precisa e receba seu orçamento agora. Atendimento para Blumenau.
+          </p>
+        </div>
+      </div>
+      
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-14">
+        <div class="flex justify-center flex-wrap -space-x-4 md:-space-x-5">
+          <!-- Icons -->
+          <div class="inline-flex items-center justify-center h-16 w-16 md:h-24 md:w-24 rounded-full p-0.5 border shadow-xl bg-white dark:bg-slate-800 text-yellow-600 dark:text-yellow-400 border-yellow-100 dark:border-slate-700 transition-transform cursor-help" title="Elétrica">
+            <div class="flex h-full w-full items-center justify-center rounded-full bg-yellow-50 dark:bg-yellow-900/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap h-8 w-8 md:h-10 md:w-10" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+            </div>
+          </div>
+          <div class="inline-flex items-center justify-center h-16 w-16 md:h-24 md:w-24 rounded-full p-0.5 border shadow-xl bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 border-blue-100 dark:border-slate-700 transition-transform cursor-help" title="Hidráulica">
+            <div class="flex h-full w-full items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets h-8 w-8 md:h-10 md:w-10" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>
+            </div>
+          </div>
+          <div class="inline-flex items-center justify-center h-16 w-16 md:h-24 md:w-24 rounded-full p-0.5 border shadow-xl bg-white dark:bg-slate-800 text-purple-600 dark:text-purple-400 border-purple-100 dark:border-slate-700 transition-transform cursor-help" title="TV/Áudio">
+            <div class="flex h-full w-full items-center justify-center rounded-full bg-purple-50 dark:bg-purple-900/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv h-8 w-8 md:h-10 md:w-10" aria-hidden="true"><path d="m17 2-5 5-5-5"></path><rect width="20" height="15" x="2" y="7" rx="2"></rect></svg>
+            </div>
+          </div>
+          <div class="inline-flex items-center justify-center h-16 w-16 md:h-24 md:w-24 rounded-full p-0.5 border shadow-xl bg-white dark:bg-slate-800 text-orange-600 dark:text-orange-400 border-orange-100 dark:border-slate-700 transition-transform cursor-help" title="Reparos">
+            <div class="flex h-full w-full items-center justify-center rounded-full bg-orange-50 dark:bg-orange-900/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench h-8 w-8 md:h-10 md:w-10" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path></svg>
+            </div>
+          </div>
+          <div class="inline-flex items-center justify-center h-16 w-16 md:h-24 md:w-24 rounded-full p-0.5 border shadow-xl bg-white dark:bg-slate-800 text-cyan-600 dark:text-cyan-400 border-cyan-100 dark:border-slate-700 transition-transform cursor-help" title="Casa Inteligente">
+            <div class="flex h-full w-full items-center justify-center rounded-full bg-cyan-50 dark:bg-cyan-900/30">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu h-8 w-8 md:h-10 md:w-10" aria-hidden="true"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg>
+            </div>
+          </div>
+        </div>
+        <h3 class="font-sans font-black text-slate-900 dark:text-white text-4xl md:text-6xl lg:text-7xl leading-[0.98] tracking-tighter transition-colors duration-300">
+          Especialistas
+        </h3>
+      </div>
+      
+      <div class="flex flex-col lg:flex-row lg:items-end items-center justify-center gap-10 lg:gap-14 -mt-6 md:mt-0">
+        <h3 class="font-sans font-black underline decoration-green-600 decoration-4 underline-offset-[12px] text-green-600 dark:text-green-500 text-4xl md:text-6xl lg:text-7xl leading-[0.98] tracking-tighter transition-colors duration-300">
+          que resolvem.
+        </h3>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={url} target="_blank" rel="noopener noreferrer" class="group/btn inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-full bg-[#25D366] text-white px-8 py-4 sm:px-10 sm:py-5 text-lg font-bold shadow-xl hover:bg-[#128C7E] transition-all hover:scale-105 active:scale-95 no-underline">
+            Chamar no WhatsApp
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-6 w-6 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>

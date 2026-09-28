@@ -1,0 +1,133 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const related = [
+  { title: "Troca de Resistência", url: "/eletricista/troca-de-resistencia-de-chuveiro-queimado/" },
+  { title: "Troca de Disjuntor", url: "/eletricista/troca-de-disjuntor/" },
+  { title: "Instalação de DPS", url: "/eletricista/instalacao-de-dps/" },
+  { title: "Instalação de Chuveiro", url: "/eletricista/instalacao-de-chuveiro/" },
+];
+---
+<ServicePage
+  title="Instalação Elétrica de Torneira Elétrica em Blumenau | Fix Serviços"
+  description="Instalação e dimensionamento elétrico de torneira elétrica em Blumenau. Fiação exclusiva, disjuntor correto, aterramento e conectores seguros. Fix Serviços."
+  canonicalURL="https://fixblu.com.br/eletricista/instalacao-de-torneira-eletrica/"
+  h1="Instalação de Torneira Elétrica"
+  category="Eletricista"
+  categoryUrl="/eletricista/"
+  relatedServices={related}
+>
+
+  <!-- ===================== MOBILE CONTENT (hidden on sm+) ===================== -->
+  <div class="sm:hidden space-y-5 mt-6">
+
+    <!-- Benefícios Rápidos com ícones -->
+    <div class="grid grid-cols-3 gap-2">
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Segurança<br/>NR10</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Rápido e<br/>Limpo</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86c0-1 1.92-1.92 1.92-1.92s.51-.51.51-1.46A2.25 2.25 0 0 0 17.91 1.7c-.95 0-1.46.51-1.46.51s-.92 1.92-1.92 1.92h-.86c-.85 0-1.65.33-2.25.93l-1.25 1.25"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Todas as<br/>Marcas</p>
+      </div>
+    </div>
+
+    <!-- O que está incluso -->
+    <div class="bg-surface-2 border border-border-main rounded-2xl p-4">
+      <h2 class="font-bold text-text-main font-display mb-3 text-base flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        O que está incluso
+      </h2>
+      <ul class="space-y-2.5">
+        {[
+          "Avaliação da capacidade da rede elétrica e dimensionamento do circuito",
+        "Passagem de fiação exclusiva do quadro de distribuição até a cozinha (se necessário)",
+        "Instalação e dimensionamento do disjuntor correto no padrão NBR para a potência",
+        "Conexão do aterramento obrigatório de segurança contra choques elétricos",
+        "Emenda e conexões elétricas robustas com conectores apropriados (cerâmica ou Wago)",
+        "Testes de corrente elétrica e verificação de aquecimento seguro da água",
+        ].map((item: any) => (
+          <li class="flex items-center gap-3">
+            <div class="h-5 w-5 rounded-full bg-brand-green flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="text-sm text-text-main font-medium">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Marcas atendidas -->
+    <div class="bg-brand-navy/5 dark:bg-white/5 border border-border-main rounded-2xl p-4">
+      <p class="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Marcas atendidas</p>
+      <p class="text-sm text-text-main font-medium">Lorenzetti · Hydra · Fame · Corona · Sintex · ND · Siemens · Clamper</p>
+    </div>
+
+  </div>
+  <!-- ===================== END MOBILE CONTENT ===================== -->
+
+  <!-- ===================== DESKTOP CONTENT (hidden on mobile) ===================== -->
+  <div class="hidden sm:block">
+<h2 class="text-2xl font-bold text-text-main font-display mb-4">Dimensionamento e Instalação Elétrica Segura de Torneira em Blumenau</h2>
+  <p class="text-text-muted leading-relaxed mb-4">
+    A instalação de uma torneira elétrica requer cuidados técnicos rigorosos que vão além da hidráulica. Por ser um equipamento de altíssima potência (geralmente entre 5500W e 7500W), ela exige um circuito elétrico exclusivo com fiação dimensionada adequadamente e proteção por disjuntor e DR corretos para evitar curtos e derretimento de cabos.
+  </p>
+  <p class="text-text-muted leading-relaxed mb-6">
+    Nossos eletricistas profissionais realizam a instalação elétrica perfeita da sua torneira das principais marcas (Lorenzetti, Hydra, Fame, Corona). Avaliamos a fiação existente (se é de 4mm² ou 6mm² conforme a potência), instalamos disjuntores adequados no quadro de distribuição, conectamos o sistema de aterramento para eliminar riscos de choques ao lavar a louça e utilizamos conectores elétricos de alta qualidade (como cerâmicos ou Wago) para uma conexão 100% segura.
+  </p>
+
+  <div class="bg-surface-2 border border-border-main rounded-2xl p-6 mb-6">
+    <h3 class="font-bold text-text-main font-display mb-4 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      O que está incluso no serviço
+    </h3>
+    <ul class="space-y-2 text-text-muted text-sm">
+      {[
+        "Avaliação da capacidade da rede elétrica e dimensionamento do circuito",
+        "Passagem de fiação exclusiva do quadro de distribuição até a cozinha (se necessário)",
+        "Instalação e dimensionamento do disjuntor correto no padrão NBR para a potência",
+        "Conexão do aterramento obrigatório de segurança contra choques elétricos",
+        "Emenda e conexões elétricas robustas com conectores apropriados (cerâmica ou Wago)",
+        "Testes de corrente elétrica e verificação de aquecimento seguro da água",
+      ].map(item => (
+        <li class="flex items-start gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green shrink-0 mt-0.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <h3 class="text-lg font-bold text-text-main font-display mb-4">Como funciona o atendimento</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+    {[
+      { n: "1", titulo: "Modelo e Potência", desc: "Informe o modelo e a potência da torneira que deseja para o cálculo do circuito." },
+      { n: "2", titulo: "Vistoria da Rede", desc: "Avaliamos se a fiação e o quadro de disjuntores da sua casa comportam a nova carga." },
+      { n: "3", titulo: "Conexão Segura", desc: "Instalamos toda a estrutura de fiação e proteção para um funcionamento sem oscilações." },
+    ].map(step => (
+      <div class="bg-brand-navy/5 dark:bg-white/5 rounded-2xl p-4 text-center border border-border-main">
+        <div class="h-10 w-10 rounded-full bg-brand-green text-white font-bold text-lg flex items-center justify-center mx-auto mb-3">{step.n}</div>
+        <p class="font-bold text-text-main text-sm mb-1">{step.titulo}</p>
+        <p class="text-text-muted text-xs leading-relaxed">{step.desc}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="bg-brand-green/10 border border-brand-green/30 rounded-2xl p-5">
+    <p class="text-brand-green-text dark:text-brand-green font-semibold text-sm">
+      ✅ Instalação elétrica de torneira elétrica em Blumenau de forma normatizada e segura. Proteção de fiação e disjuntor dedicada para sua tranquilidade.
+    </p>
+  </div>
+  </div>
+  <!-- ===================== END DESKTOP CONTENT ===================== -->
+</ServicePage>

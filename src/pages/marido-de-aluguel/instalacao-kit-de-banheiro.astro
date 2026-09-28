@@ -1,0 +1,133 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const related = [
+  { title: "Barra de Apoio", url: "/marido-de-aluguel/instalacao-barra-para-banheiro/" },
+  { title: "Fixação de Espelho", url: "/marido-de-aluguel/fixacao-espelho-de-banheiro/" },
+  { title: "Assento Sanitário", url: "/marido-de-aluguel/troca-de-assento-sanitario/" },
+  { title: "Fixação de Quadros", url: "/marido-de-aluguel/fixacao-de-quadros/" },
+];
+---
+<ServicePage
+  title="Instalação de Kit de Banheiro em Blumenau | Fix Serviços"
+  description="Instalação de kit de acessórios de banheiro em Blumenau: porta-toalha, saboneteira, papeleira, gancho e suporte de papel. Marido de aluguel Fix Serviços."
+  canonicalURL="https://fixblu.com.br/marido-de-aluguel/instalacao-kit-de-banheiro/"
+  h1="Kit de Banheiro"
+  category="Marido de Aluguel"
+  categoryUrl="/marido-de-aluguel/"
+  relatedServices={related}
+>
+
+  <!-- ===================== MOBILE CONTENT (hidden on sm+) ===================== -->
+  <div class="sm:hidden space-y-5 mt-6">
+
+    <!-- Benefícios Rápidos com ícones -->
+    <div class="grid grid-cols-3 gap-2">
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Sem<br/>Sujeira</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Rápido e<br/>Eficiente</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86c0-1 1.92-1.92 1.92-1.92s.51-.51.51-1.46A2.25 2.25 0 0 0 17.91 1.7c-.95 0-1.46.51-1.46.51s-.92 1.92-1.92 1.92h-.86c-.85 0-1.65.33-2.25.93l-1.25 1.25"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Montagem<br/>Segura</p>
+      </div>
+    </div>
+
+    <!-- O que está incluso -->
+    <div class="bg-surface-2 border border-border-main rounded-2xl p-4">
+      <h2 class="font-bold text-text-main font-display mb-3 text-base flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        O que está incluso
+      </h2>
+      <ul class="space-y-2.5">
+        {[
+          "Planejamento do posicionamento de cada peça",
+        "Furação com broca diamantada (sem rachar o azulejo)",
+        "Fixação com buchas e parafusos em inox resistentes à umidade",
+        "Nivelamento de todos os acessórios",
+        "Montagem das peças nos suportes (aparafusar ou encaixar)",
+        "Limpeza do pó de furação do box e do banheiro",
+        ].map((item: any) => (
+          <li class="flex items-center gap-3">
+            <div class="h-5 w-5 rounded-full bg-brand-green flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="text-sm text-text-main font-medium">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Marcas atendidas -->
+    <div class="bg-brand-navy/5 dark:bg-white/5 border border-border-main rounded-2xl p-4">
+      <p class="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Marcas atendidas</p>
+      <p class="text-sm text-text-main font-medium">Todas as marcas e modelos do mercado</p>
+    </div>
+
+  </div>
+  <!-- ===================== END MOBILE CONTENT ===================== -->
+
+  <!-- ===================== DESKTOP CONTENT (hidden on mobile) ===================== -->
+  <div class="hidden sm:block">
+<h2 class="text-2xl font-bold text-text-main font-display mb-4">Acessórios de Banheiro Instalados em Blumenau</h2>
+  <p class="text-text-muted leading-relaxed mb-4">
+    Instalar um kit de banheiro em cerâmica é uma das tarefas que parece fácil mas frequentemente resulta em peças tortas, no lugar errado ou com o azulejo rachado. Com o equipamento certo (broca diamantada, nível laser) fazemos tudo perfeitamente alinhado.
+  </p>
+  <p class="text-text-muted leading-relaxed mb-6">
+    Instalamos kits completos de banheiro: porta-toalha de barra e anel, saboneteira de parede, papeleira, gancho para toalha, suporte para secador de cabelo, porta-shampoo de box e quaisquer outros acessórios. Trabalhamos com todas as marcas: Docol, Deca, Tramontina, 2900 e Tigre.
+  </p>
+
+  <div class="bg-surface-2 border border-border-main rounded-2xl p-6 mb-6">
+    <h3 class="font-bold text-text-main font-display mb-4 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      O que está incluso no serviço
+    </h3>
+    <ul class="space-y-2 text-text-muted text-sm">
+      {[
+        "Planejamento do posicionamento de cada peça",
+        "Furação com broca diamantada (sem rachar o azulejo)",
+        "Fixação com buchas e parafusos em inox resistentes à umidade",
+        "Nivelamento de todos os acessórios",
+        "Montagem das peças nos suportes (aparafusar ou encaixar)",
+        "Limpeza do pó de furação do box e do banheiro",
+      ].map(item => (
+        <li class="flex items-start gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green shrink-0 mt-0.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <h3 class="text-lg font-bold text-text-main font-display mb-4">Como funciona o atendimento</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+    {[
+      { n: "1", titulo: "Kit em mãos?", desc: "Informe as peças do kit a instalar." },
+      { n: "2", titulo: "Orçamento por peça", desc: "Valor transparente por acessório." },
+      { n: "3", titulo: "Banheiro completo", desc: "Tudo nivelado e sem azulejo rachado." },
+    ].map(step => (
+      <div class="bg-brand-navy/5 dark:bg-white/5 rounded-2xl p-4 text-center border border-border-main">
+        <div class="h-10 w-10 rounded-full bg-brand-green text-white font-bold text-lg flex items-center justify-center mx-auto mb-3">{step.n}</div>
+        <p class="font-bold text-text-main text-sm mb-1">{step.titulo}</p>
+        <p class="text-text-muted text-xs leading-relaxed">{step.desc}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="bg-brand-green/10 border border-brand-green/30 rounded-2xl p-5">
+    <p class="text-brand-green-text dark:text-brand-green font-semibold text-sm">
+      ✅ Instalação de kit de banheiro em Blumenau. Broca diamantada, sem rachar azulejo, tudo nivelado.
+    </p>
+  </div>
+  </div>
+  <!-- ===================== END DESKTOP CONTENT ===================== -->
+</ServicePage>

@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  
+  --color-brand-green: var(--green);
+  --color-brand-green-hover: var(--green-hover);
+  --color-brand-green-deep: var(--green-deep);
+  --color-brand-green-muted: var(--green-muted);
+  --color-brand-green-text: var(--green-text);
+  
+  --color-brand-navy: var(--navy);
+  --color-brand-navy-mid: var(--navy-mid);
+  --color-brand-navy-text: var(--navy-text);
+  
+  --color-surface-1: var(--surface);
+  --color-surface-2: var(--bg);
+  --color-surface-footer: var(--navy); /* Footer is navy */
+  --color-surface-hero: var(--navy);   /* Hero is navy */
+  
+  --color-border-main: var(--border);
+  
+  --color-text-main: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-text-nav: var(--text-secondary);
+  
+  --shadow-soft: var(--shadow-cta); /* Keep the var name or map to new shadow */
+}
+
+:root {
+  /* Verde — ação (único CTA da página) */
+  --green:           #28C348; /* botão primário, badge, logo */
+  --green-hover:     #1FA83A; /* :hover mais escuro */
+  --green-deep:      #1A9432; /* fundo bloco CTA */
+  --green-muted:     rgba(40,195,72,.12); /* bg badge/chip */
+  --green-glow:      rgba(40,195,72,.30); /* sombra botão */
+  --green-text:      #166B27; /* texto verde sobre branco */
+
+  /* Navy — estrutura e autoridade */
+  --navy:            #0D1B2A; /* hero, depoimentos, footer */
+  --navy-mid:        #142236; /* cards em seções navy */
+  --navy-text:       #E8EDF8; /* texto sobre navy */
+
+  /* Neutros */
+  --text-primary:    #111827;
+  --text-secondary:  #4B5563;
+  --text-muted:      #9CA3AF;
+  --bg:              #F9FAFB;
+  --surface:         #FFFFFF;
+  --border:          #E5E7EB;
+
+  --shadow-cta:      0 8px 24px rgba(40,195,72,.35);
+
+  /* Hero Theme Transitions */
+  --hero-filter-b:   1;
+  --hero-filter-s:   1;
+  --hero-overlay-1:  rgba(13, 27, 42, 0.95); /* brand-navy/95 */
+  --hero-overlay-2:  rgba(13, 27, 42, 0.60); /* brand-navy/60 */
+  --hero-overlay-3:  transparent;
+}
+
+:root[data-theme="dark"] {
+  /* Dark Mode */
+  --bg:              #0A1220; /* fundo navy */
+  --surface:         #111C2E; /* cards */
+  --border:          #1E2E45;
+  --text-primary:    #E8EDF8;
+  --text-secondary:  #A0B4CC;
+  --green-hover:     #34D459; /* levemente mais claro no dark */
+  
+  /* Hero Theme Transitions (Dark Mode) */
+  --hero-filter-b:   0.75;  /* Brilho reduzido apenas para 75% em vez de 50% */
+  --hero-filter-s:   0.85;  /* Saturação mantida em 85% */
+  --hero-overlay-1:  rgba(10, 18, 32, 0.95); /* Fundo dark navy padrão (igual ao bg) */
+  --hero-overlay-2:  rgba(10, 18, 32, 0.75); 
+  --hero-overlay-3:  rgba(10, 18, 32, 0.20); 
+}
+
+@layer base {
+  body {
+    @apply bg-surface-2 text-text-main font-sans transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+/* View Transitions Circle Reveal */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  display: block;
+}
+
+::view-transition-new(root) {
+  z-index: 99999;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}

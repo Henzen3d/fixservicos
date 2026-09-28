@@ -1,0 +1,44 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFAB from '../components/WhatsAppFAB.astro';
+import GlobalCTA from '../components/GlobalCTA.astro';
+import TrackingScripts from '../components/TrackingScripts.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string | URL;
+  h1?: string;
+  noPadding?: boolean;
+  schema?: object;
+}
+
+const { title, description, canonicalURL, h1, noPadding = false, schema } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <BaseHead title={title} description={description} canonicalURL={canonicalURL} schema={schema} />
+    <TrackingScripts />
+  </head>
+  <body class="font-sans text-text-main bg-surface-2 antialiased">
+    <Header />
+    <main class={noPadding ? "" : "pt-24"}>
+      {h1 && (
+        <section class="bg-surface-1 border-b border-border-main py-10 sm:py-14 shadow-sm mb-12">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-3xl sm:text-5xl font-display font-bold text-brand-navy uppercase tracking-tight">{h1}</h1>
+          </div>
+        </section>
+      )}
+      <slot />
+    </main>
+    <GlobalCTA />
+    <Footer />
+    <WhatsAppFAB />
+  </body>
+</html>

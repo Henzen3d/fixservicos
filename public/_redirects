@@ -1,0 +1,13 @@
+# Cloudflare Pages Redirects
+/sitemap.xml                           /sitemap-index.xml                     301
+/encanador/instalacao-aquecedor-a-gas/ /encanador/                            301
+/eletricista/manutencao-ar-condicionado-blumenau/ /eletricista/               301
+/eletricista/carga-de-gas-ar-condicionado-split-blumenau/ /eletricista/       301
+/servicos/casa-inteligente/            /casa-inteligente/                     301
+/servicos/encanador/                   /encanador/                            301
+/servicos/eletricista/                 /eletricista/                          301
+/servicos/marido-de-aluguel/           /marido-de-aluguel/                    301
+/servicos/casa-inteligente/*           /casa-inteligente/                     301
+/servicos/encanador/*                  /encanador/                            301
+/servicos/eletricista/*                /eletricista/                          301
+/servicos/marido-de-aluguel/*          /marido-de-aluguel/                    301

@@ -1,0 +1,14 @@
+User-agent: *
+# Directories
+Disallow: /cgi-bin/
+Disallow: /wp-content/plugins/
+Disallow: /wp-admin/
+Disallow: /readme.html
+Disallow: /refer/ 
+
+# Allow de Avaliacao
+Allow: /avaliar/
+Allow: /
+
+Sitemap: https://fixblu.com.br/sitemap-index.xml
+Sitemap: https://fixblu.com.br/sitemap.xml

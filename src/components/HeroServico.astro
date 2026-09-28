@@ -1,0 +1,121 @@
+---
+interface Props {
+  badge?: string;
+  titulo: string;
+  subtitulo?: string;
+  descricao: string;
+  imagemDesktop: string;
+  imagemMobile?: string;
+  altImagem?: string;
+  whatsappMsg?: string;
+}
+
+const {
+  badge = "Serviços de Qualidade",
+  titulo,
+  subtitulo,
+  descricao,
+  imagemDesktop,
+  imagemMobile,
+  altImagem = "Fix Serviços Blumenau",
+  whatsappMsg = "Olá! Vi o site e preciso de um orçamento para um reparo em Blumenau.",
+} = Astro.props;
+
+const msg = encodeURIComponent(whatsappMsg);
+const waLink = `https://wa.me/5547988041306?text=${msg}`;
+---
+
+<section class="relative min-h-[90dvh] flex flex-col justify-center overflow-hidden pt-16 sm:pt-24">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 z-0 bg-surface-2 transition-colors duration-300">
+    <picture>
+      {imagemMobile && (
+        <source srcset={imagemMobile} media="(max-width: 639px)" />
+      )}
+      <img
+        src={imagemDesktop}
+        alt={altImagem}
+        class="w-full h-full object-cover object-center sm:object-[center_top]"
+        style="filter: brightness(var(--hero-filter-b)) saturate(var(--hero-filter-s));"
+      />
+    </picture>
+
+    <!-- Adaptive Gradient Overlay on Mobile -->
+    <div class="absolute inset-0 bg-gradient-to-r from-surface-2 via-surface-2 via-40% to-transparent sm:hidden transition-colors duration-300"></div>
+
+    <!-- Navy Gradient Overlay on Desktop -->
+    <div
+      class="absolute inset-0 hidden sm:block"
+      style="background-image: linear-gradient(to right, var(--hero-overlay-1), var(--hero-overlay-2), var(--hero-overlay-3));"
+    ></div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pt-8 pb-24 sm:pt-20 sm:pb-32 w-full -mt-20 sm:-mt-20">
+    <div class="max-w-2xl">
+      <!-- Badge -->
+      <div class="inline-flex items-center bg-brand-green/10 text-brand-green-text dark:bg-brand-green/10 dark:text-brand-green sm:bg-brand-green sm:text-white sm:dark:bg-brand-green/10 sm:dark:text-brand-green px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-6 transition-colors sm:shadow-sm sm:dark:shadow-none">
+        {badge}
+      </div>
+
+      <!-- Desktop Title with Orange Bar -->
+      <div class="hidden sm:flex gap-4 sm:gap-6 mb-6 sm:mb-10 items-stretch">
+        <div class="w-1.5 sm:w-2 bg-brand-green rounded-full shrink-0 sm:shadow-[0_0_15px_rgba(40,195,72,0.3)]"></div>
+        <div class="flex flex-col justify-center">
+          <h1 class="text-5xl xl:text-6xl font-extrabold text-white tracking-tight mb-2 font-display leading-tight drop-shadow-xl">
+            {titulo}
+          </h1>
+          {subtitulo && (
+            <h2 class="text-base font-semibold text-brand-green uppercase tracking-[0.2em] font-display">
+              {subtitulo}
+            </h2>
+          )}
+        </div>
+      </div>
+
+      <!-- Mobile Title -->
+      <div class="sm:hidden mb-8">
+        <h1 class="text-[42px] font-extrabold text-text-main tracking-tight leading-[1.1] font-display transition-colors">
+          {titulo.split(" em ").map((part: string, i: number) => (
+            i === 0
+              ? <>{part}{titulo.includes(" em ") ? " em " : ""}</>
+              : <span class="text-brand-green relative inline-block">{part}<span class="absolute -bottom-1.5 left-0 w-full h-1.5 bg-brand-green/20 rounded-full"></span></span>
+          ))}
+        </h1>
+      </div>
+
+      <!-- Mobile description -->
+      <p class="sm:hidden text-lg text-[#444444] dark:text-slate-300 font-normal leading-[1.6] mb-[32px] max-w-2xl">
+        {descricao}
+      </p>
+      <!-- Desktop description -->
+      <p class="hidden sm:block text-xl text-white/90 font-normal leading-relaxed mb-14 max-w-2xl">
+        {descricao}
+      </p>
+
+      <!-- CTA -->
+      <div class="flex flex-col items-start">
+        <a
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-3 bg-brand-green hover:bg-brand-green-hover text-white px-8 sm:px-12 py-6 sm:py-7 rounded-full sm:rounded-2xl font-bold tracking-wide font-display transition-all hover:scale-105 active:scale-95 no-underline shadow-[0_8px_24px_rgba(0,0,0,0.1)] text-[18px] sm:text-[20px] group"
+        >
+          <span class="sm:hidden">Solicitar Orçamento</span>
+          <span class="hidden sm:inline">Solicitar Orçamento via WhatsApp</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 transition-transform group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <!-- Micro-copy -->
+        <div class="mt-4 ml-2 flex items-center gap-2">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+          </span>
+          <span class="text-xs font-medium text-slate-600 dark:text-slate-300 sm:text-white/80 uppercase tracking-widest transition-colors">
+            Resposta média em 5 minutos
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

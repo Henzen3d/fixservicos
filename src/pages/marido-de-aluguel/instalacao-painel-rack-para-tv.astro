@@ -1,0 +1,133 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const related = [
+  { title: "Instalação de TV", url: "/marido-de-aluguel/instalacao-de-tv-em-blumenau/" },
+  { title: "Home Theater", url: "/marido-de-aluguel/instalacao-de-home-theater/" },
+  { title: "Fixação de Quadros", url: "/marido-de-aluguel/fixacao-de-quadros/" },
+  { title: "Fixação de Espelho", url: "/marido-de-aluguel/fixacao-espelho-de-banheiro/" },
+];
+---
+<ServicePage
+  title="Instalação de Painel Rack para TV em Blumenau | Fix Serviços"
+  description="Montagem e instalação de painel rack e painel de TV em Blumenau. Painéis de madeira, MDF, porcelanato e concreto. Marido de aluguel Fix Serviços."
+  canonicalURL="https://fixblu.com.br/marido-de-aluguel/instalacao-painel-rack-para-tv/"
+  h1="Painel e Rack para TV"
+  category="Marido de Aluguel"
+  categoryUrl="/marido-de-aluguel/"
+  relatedServices={related}
+>
+
+  <!-- ===================== MOBILE CONTENT (hidden on sm+) ===================== -->
+  <div class="sm:hidden space-y-5 mt-6">
+
+    <!-- Benefícios Rápidos com ícones -->
+    <div class="grid grid-cols-3 gap-2">
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Sem<br/>Sujeira</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Rápido e<br/>Eficiente</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86c0-1 1.92-1.92 1.92-1.92s.51-.51.51-1.46A2.25 2.25 0 0 0 17.91 1.7c-.95 0-1.46.51-1.46.51s-.92 1.92-1.92 1.92h-.86c-.85 0-1.65.33-2.25.93l-1.25 1.25"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Montagem<br/>Segura</p>
+      </div>
+    </div>
+
+    <!-- O que está incluso -->
+    <div class="bg-surface-2 border border-border-main rounded-2xl p-4">
+      <h2 class="font-bold text-text-main font-display mb-3 text-base flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        O que está incluso
+      </h2>
+      <ul class="space-y-2.5">
+        {[
+          "Montagem completa do painel ou rack conforme manual",
+        "Fixação na parede com suportes e buchas adequados",
+        "Nivelamento e alinhamento perfeitos",
+        "Instalação da fita de LED decorativa (se incluída)",
+        "Organização dos cabos no painel",
+        "Limpeza do local após a montagem",
+        ].map((item: any) => (
+          <li class="flex items-center gap-3">
+            <div class="h-5 w-5 rounded-full bg-brand-green flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="text-sm text-text-main font-medium">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Marcas atendidas -->
+    <div class="bg-brand-navy/5 dark:bg-white/5 border border-border-main rounded-2xl p-4">
+      <p class="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Marcas atendidas</p>
+      <p class="text-sm text-text-main font-medium">Todas as marcas e modelos do mercado</p>
+    </div>
+
+  </div>
+  <!-- ===================== END MOBILE CONTENT ===================== -->
+
+  <!-- ===================== DESKTOP CONTENT (hidden on mobile) ===================== -->
+  <div class="hidden sm:block">
+<h2 class="text-2xl font-bold text-text-main font-display mb-4">Montagem de Painel de TV e Rack em Blumenau</h2>
+  <p class="text-text-muted leading-relaxed mb-4">
+    O painel de TV é o centro visual da sala — e exige montagem precisa para ficar alinhado, nivelado e sem folgas. Montamos painéis de MDF, madeira compensada, porcelanato e concreto, com ou sem iluminação de LED.
+  </p>
+  <p class="text-text-muted leading-relaxed mb-6">
+    Também montamos racks (móveis de chão e suspensos), painéis com nichos, estantes suspensas e combinações mistas. Se o painel veio em caixas da loja, desmontamos e montamos corretamente seguindo o manual — ou adaptamos conforme o espaço disponível.
+  </p>
+
+  <div class="bg-surface-2 border border-border-main rounded-2xl p-6 mb-6">
+    <h3 class="font-bold text-text-main font-display mb-4 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      O que está incluso no serviço
+    </h3>
+    <ul class="space-y-2 text-text-muted text-sm">
+      {[
+        "Montagem completa do painel ou rack conforme manual",
+        "Fixação na parede com suportes e buchas adequados",
+        "Nivelamento e alinhamento perfeitos",
+        "Instalação da fita de LED decorativa (se incluída)",
+        "Organização dos cabos no painel",
+        "Limpeza do local após a montagem",
+      ].map(item => (
+        <li class="flex items-start gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green shrink-0 mt-0.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <h3 class="text-lg font-bold text-text-main font-display mb-4">Como funciona o atendimento</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+    {[
+      { n: "1", titulo: "Envie fotos", desc: "Foto do painel e do local de instalação." },
+      { n: "2", titulo: "Orçamento rápido", desc: "Valor fixo sem surpresas." },
+      { n: "3", titulo: "Montagem perfeita", desc: "Painel nivelado e fixo — garantido." },
+    ].map(step => (
+      <div class="bg-brand-navy/5 dark:bg-white/5 rounded-2xl p-4 text-center border border-border-main">
+        <div class="h-10 w-10 rounded-full bg-brand-green text-white font-bold text-lg flex items-center justify-center mx-auto mb-3">{step.n}</div>
+        <p class="font-bold text-text-main text-sm mb-1">{step.titulo}</p>
+        <p class="text-text-muted text-xs leading-relaxed">{step.desc}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="bg-brand-green/10 border border-brand-green/30 rounded-2xl p-5">
+    <p class="text-brand-green-text dark:text-brand-green font-semibold text-sm">
+      ✅ Montagem de painel de TV em Blumenau. Alinhado, nivelado e com acabamento impecável.
+    </p>
+  </div>
+  </div>
+  <!-- ===================== END DESKTOP CONTENT ===================== -->
+</ServicePage>

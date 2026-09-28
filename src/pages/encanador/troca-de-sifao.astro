@@ -1,0 +1,133 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const related = [
+  { title: "Troca de Ralo de Pia", url: "/encanador/troca-ralo-de-pia/" },
+  { title: "Instalação de Torneira", url: "/encanador/instalacao-de-torneira/" },
+  { title: "Conserto Caixa Acoplada", url: "/encanador/conserto-de-descarga-em-caixa-acoplada/" },
+  { title: "Válvula Hydra / Docol", url: "/encanador/reparo-valvula-descarga-hydra-docol/" },
+];
+---
+<ServicePage
+  title="Troca de Sifão em Blumenau | Fix Serviços"
+  description="Troca de sifão de pia de cozinha e banheiro em Blumenau. Elimine o mau cheiro, veda o ralo e evita entupimento. Encanador com atendimento rápido."
+  canonicalURL="https://fixblu.com.br/encanador/troca-de-sifao/"
+  h1="Troca de Sifão"
+  category="Encanador"
+  categoryUrl="/encanador/"
+  relatedServices={related}
+>
+
+  <!-- ===================== MOBILE CONTENT (hidden on sm+) ===================== -->
+  <div class="sm:hidden space-y-5 mt-6">
+
+    <!-- Benefícios Rápidos com ícones -->
+    <div class="grid grid-cols-3 gap-2">
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Zero<br/>Vazamentos</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Atendimento<br/>Rápido</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86c0-1 1.92-1.92 1.92-1.92s.51-.51.51-1.46A2.25 2.25 0 0 0 17.91 1.7c-.95 0-1.46.51-1.46.51s-.92 1.92-1.92 1.92h-.86c-.85 0-1.65.33-2.25.93l-1.25 1.25"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Garantia de<br/>Qualidade</p>
+      </div>
+    </div>
+
+    <!-- O que está incluso -->
+    <div class="bg-surface-2 border border-border-main rounded-2xl p-4">
+      <h2 class="font-bold text-text-main font-display mb-3 text-base flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        O que está incluso
+      </h2>
+      <ul class="space-y-2.5">
+        {[
+          "Identificação do tipo de sifão adequado",
+        "Remoção do sifão antigo ou danificado",
+        "Instalação do sifão novo com vedação completa",
+        "Teste de vedação e verificação de vazamento",
+        "Verificação do ramal de esgoto da pia",
+        "Limpeza do espaço sob a pia após o serviço",
+        ].map((item: any) => (
+          <li class="flex items-center gap-3">
+            <div class="h-5 w-5 rounded-full bg-brand-green flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="text-sm text-text-main font-medium">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Marcas atendidas -->
+    <div class="bg-brand-navy/5 dark:bg-white/5 border border-border-main rounded-2xl p-4">
+      <p class="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Marcas atendidas</p>
+      <p class="text-sm text-text-main font-medium">Tigre · Amanco · Deca · Docol · Lorenzetti · Hydra</p>
+    </div>
+
+  </div>
+  <!-- ===================== END MOBILE CONTENT ===================== -->
+
+  <!-- ===================== DESKTOP CONTENT (hidden on mobile) ===================== -->
+  <div class="hidden sm:block">
+<h2 class="text-2xl font-bold text-text-main font-display mb-4">Sifão de Pia com Mau Cheiro ou Vazando em Blumenau</h2>
+  <p class="text-text-muted leading-relaxed mb-4">
+    O sifão é a peça em "S" ou "U" sob a pia que retém água para bloquear o mau cheiro da rede de esgoto. Quando ele racha, entope ou perde a vedação, surge o cheiro de esgoto na cozinha ou no banheiro. Trocar o sifão é rápido e resolve definitivamente.
+  </p>
+  <p class="text-text-muted leading-relaxed mb-6">
+    Trocamos sifões de todos os tipos: sifão simples (S ou U), sifão com extensão, sifão garrafa (para armários apertados), sifão com caixa sifonada e colunas de descarga. Trabalhamos com todas as marcas: Blukit, Tigre, Amanco, Tigre e Tramontina.
+  </p>
+
+  <div class="bg-surface-2 border border-border-main rounded-2xl p-6 mb-6">
+    <h3 class="font-bold text-text-main font-display mb-4 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      O que está incluso no serviço
+    </h3>
+    <ul class="space-y-2 text-text-muted text-sm">
+      {[
+        "Identificação do tipo de sifão adequado",
+        "Remoção do sifão antigo ou danificado",
+        "Instalação do sifão novo com vedação completa",
+        "Teste de vedação e verificação de vazamento",
+        "Verificação do ramal de esgoto da pia",
+        "Limpeza do espaço sob a pia após o serviço",
+      ].map(item => (
+        <li class="flex items-start gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green shrink-0 mt-0.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <h3 class="text-lg font-bold text-text-main font-display mb-4">Como funciona o atendimento</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+    {[
+      { n: "1", titulo: "Foto do sifão", desc: "Envie foto do sifão atual pelo WhatsApp." },
+      { n: "2", titulo: "Orçamento fixo", desc: "Passamos o valor sem surpresas." },
+      { n: "3", titulo: "Serviço rápido", desc: "Troca realizada em cerca de 30 minutos." },
+    ].map(step => (
+      <div class="bg-brand-navy/5 dark:bg-white/5 rounded-2xl p-4 text-center border border-border-main">
+        <div class="h-10 w-10 rounded-full bg-brand-green text-white font-bold text-lg flex items-center justify-center mx-auto mb-3">{step.n}</div>
+        <p class="font-bold text-text-main text-sm mb-1">{step.titulo}</p>
+        <p class="text-text-muted text-xs leading-relaxed">{step.desc}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="bg-brand-green/10 border border-brand-green/30 rounded-2xl p-5">
+    <p class="text-brand-green-text dark:text-brand-green font-semibold text-sm">
+      ✅ Troca de sifão em Blumenau. Elimine o mau cheiro de esgoto de vez — atendimento no mesmo dia.
+    </p>
+  </div>
+  </div>
+  <!-- ===================== END DESKTOP CONTENT ===================== -->
+</ServicePage>

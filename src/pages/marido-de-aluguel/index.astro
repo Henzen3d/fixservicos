@@ -1,0 +1,161 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import HeroServico from '../../components/HeroServico.astro';
+import Marquee from '../../components/Marquee.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+const title = "Marido de Aluguel Blumenau - Fix Serviços";
+const description = "⚡ Contrate nosso Marido de Aluguel e surpreenda-se com nossos serviços. Empresa Especializada Serviços e Consertos para Casa, Solicite Agora!";
+const canonicalURL = "https://fixblu.com.br/marido-de-aluguel/";
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Marido de Aluguel em Blumenau",
+  "description": description,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Fix Serviços",
+    "telephone": "+55-47-98804-1306",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Germano Beduschi, 101 – Sala 102",
+      "addressLocality": "Blumenau",
+      "addressRegion": "SC",
+      "addressCountry": "BR"
+    }
+  },
+  "areaServed": { "@type": "City", "name": "Blumenau" },
+  "url": canonicalURL
+};
+---
+<MainLayout title={title} description={description} canonicalURL={canonicalURL} noPadding={true} schema={schema}>
+  <HeroServico
+    badge="Reparos para Casa e Empresa"
+    titulo="Marido de Aluguel em Blumenau"
+    subtitulo="Pequenos Reparos com Qualidade"
+    descricao="Nosso Marido de Aluguel resolve tudo: instalações, fixações, montagens e pequenos reparos. Atendimento rápido para sua casa ou empresa em Blumenau."
+    imagemDesktop="/images/hero-bg.png"
+    imagemMobile="/images/hero-mobile-optimized.jpg"
+    altImagem="Marido de Aluguel Blumenau - Fix Serviços"
+    whatsappMsg="Olá! Vi o site e preciso de um marido de aluguel em Blumenau. Pode me passar um orçamento?"
+  />
+  <Marquee />
+
+  <section class="py-16 sm:py-20 bg-surface-2 transition-colors">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+
+      <!-- Section header -->
+      <div class="mb-10 sm:mb-12">
+        <span class="inline-flex items-center bg-brand-green/10 text-brand-green-text dark:text-brand-green px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-4">
+          O que resolvemos
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-text-main font-display leading-tight">
+          Como podemos ajudar você hoje?
+        </h2>
+        <p class="mt-3 text-base text-text-muted max-w-2xl">
+          Pequenos reparos, instalações e consertos para sua casa ou empresa em Blumenau. Rapidez e qualidade garantidas.
+        </p>
+      </div>
+
+      <!-- Service cards grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-de-tv-em-blumenau/"
+          titulo="Instalação de TV"
+          descricao="Suportes fixos ou articulados para qualquer modelo."
+          icone={`<rect width="20" height="15" x="2" y="3" rx="2"/><polyline points="8 21 12 17 16 21"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-de-home-theater/"
+          titulo="Home Theater"
+          descricao="Instalação completa de sistema de som surround."
+          icone={`<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-painel-rack-para-tv/"
+          titulo="Painel Rack para TV"
+          descricao="Montagem e instalação de painel rack."
+          icone={`<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-de-persiana/"
+          titulo="Instalação de Persiana"
+          descricao="Todos os modelos: rolo, veneziana, roman shade."
+          icone={`<path d="M2 3h20"/><path d="M2 7h20"/><path d="M2 11h20"/><path d="M2 15h20"/><path d="M2 19h20"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/fixacao-de-varao-de-cortina/"
+          titulo="Varão de Cortina"
+          descricao="Varões e suportes para cortinas com nivelamento perfeito."
+          icone={`<path d="M3 6h18"/><path d="M7 12h10"/><path d="M11 18h2"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/fixacao-de-quadros/"
+          titulo="Fixação de Quadros"
+          descricao="Nivelamento perfeito e fixação segura."
+          icone={`<rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 9 5 5"/><path d="m14 9-5 5"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/fixacao-espelho-de-banheiro/"
+          titulo="Espelho de Banheiro"
+          descricao="Fixação segura de espelhos em qualquer parede."
+          icone={`<path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-kit-de-banheiro/"
+          titulo="Kit de Banheiro"
+          descricao="Porta-toalha, saboneteira, papeleira e mais."
+          icone={`<path d="M5 12h14"/><path d="M5 12a7 7 0 0 0 7 7"/><path d="M5 12a7 7 0 0 1 7-7"/><circle cx="12" cy="12" r="1"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-barra-para-banheiro/"
+          titulo="Barra de Apoio"
+          descricao="Acessibilidade conforme NBR 9050."
+          icone={`<path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" x2="6" y1="1" y2="4"/><line x1="10" x2="10" y1="1" y2="4"/><line x1="14" x2="14" y1="1" y2="4"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-varal-de-teto/"
+          titulo="Varal de Teto"
+          descricao="Varal retrátil suspenso para área de serviço."
+          icone={`<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/troca-de-assento-sanitario/"
+          titulo="Assento Sanitário"
+          descricao="Troca de tampo e assento sanitário."
+          icone={`<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/troca-dobradica-armario/"
+          titulo="Dobradiça de Armário"
+          descricao="Troca de dobradiças, pistões e amortecedores."
+          icone={`<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/conserto-cadeira-giratoria-de-escritorio/"
+          titulo="Cadeira de Escritório"
+          descricao="Conserto de mecanismos, pistão e rodízios."
+          icone={`<circle cx="12" cy="5" r="3"/><path d="M12 8v8"/><path d="M8 16H4a2 2 0 0 0 0 4h16a2 2 0 0 0 0-4h-4"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-de-olho-magico/"
+          titulo="Olho Mágico"
+          descricao="Instalação de olho mágico óptico ou digital."
+          icone={`<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-de-fechadura-digital/"
+          titulo="Fechadura Digital"
+          descricao="Biométrica, por senha ou cartão."
+          icone={`<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/>`}
+        />
+        <ServiceCard
+          href="/marido-de-aluguel/instalacao-de-coifa/"
+          titulo="Instalação de Coifa"
+          descricao="Coifa ou depurador de ar para cozinha."
+          icone={`<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/>`}
+        />
+      </div>
+    </div>
+  </section>
+</MainLayout>
+

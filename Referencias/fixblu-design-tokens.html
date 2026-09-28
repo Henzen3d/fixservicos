@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix Serviços — Design System v3</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ════════════════════════════════════════════════════
+   DESIGN SYSTEM — FIX SERVIÇOS v3
+   Verde + Navy · Migração HTML Estático
+   
+   Lógica de cores:
+   🟢 Verde  = Ação   → botões CTA, badges, destaques, logo
+   🌑 Navy   = Estrutura → hero, seções escuras, footer
+   ⚪ Neutros = Suporte → fundos, bordas, texto, cards
+════════════════════════════════════════════════════ */
+
+    /* ── LIGHT MODE ── */
+    :root {
+      /* Verde — a única cor de ação */
+      --green: #28C348;
+      --green-hover: #1FA83A;
+      --green-deep: #1A9432;
+      /* seções de fundo verde (CTA block) */
+      --green-muted: rgba(40, 195, 72, 0.12);
+      --green-glow: rgba(40, 195, 72, 0.30);
+      --green-text: #166B27;
+      /* verde escuro p/ texto sobre branco */
+
+      /* Navy — estrutura e hierarquia */
+      --navy: #0D1B2A;
+      --navy-mid: #142236;
+      --navy-soft: #1E3048;
+      --navy-text: #E8EDF8;
+      /* texto sobre navy */
+      --navy-muted: rgba(255, 255, 255, 0.55);
+
+      /* Neutros */
+      --text-primary: #111827;
+      --text-secondary: #4B5563;
+      --text-muted: #9CA3AF;
+      --bg: #F9FAFB;
+      --bg-alt: #F3F4F6;
+      --surface: #FFFFFF;
+      --border: #E5E7EB;
+      --border-strong: #D1D5DB;
+      --star: #FFC107;
+
+      /* Tipografia */
+      --font-heading: 'Inter', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      /* Efeitos */
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+      --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-cta: 0 8px 24px rgba(40, 195, 72, 0.35);
+      --shadow-navy: 0 8px 24px rgba(13, 27, 42, 0.40);
+
+      /* Raios */
+      --r-sm: 6px;
+      --r-md: 10px;
+      --r-lg: 16px;
+      --r-xl: 24px;
+      --r-full: 9999px;
+
+      /* UI do documento */
+      --ui-bg: #FFFFFF;
+      --ui-bg-alt: #F3F4F6;
+      --ui-border: #E5E7EB;
+      --ui-text: #111827;
+      --ui-text2: #4B5563;
+      --ui-text3: #9CA3AF;
+    }
+
+    /* ── DARK MODE — Navy Profundo ── */
+    [data-theme="dark"] {
+      /* Verde NÃO muda — contrasta igualmente no navy */
+      --green: #28C348;
+      --green-hover: #34D459;
+      /* um toque mais claro no dark */
+      --green-deep: #1A9432;
+      --green-muted: rgba(40, 195, 72, 0.15);
+      --green-glow: rgba(40, 195, 72, 0.35);
+      --green-text: #5DE07A;
+      /* verde mais claro p/ texto no dark */
+
+      /* Navy — fica como fundo base */
+      --navy: #07101A;
+      --navy-mid: #0A1620;
+      --navy-soft: #0F1E2E;
+      --navy-text: #E8EDF8;
+      --navy-muted: rgba(255, 255, 255, 0.45);
+
+      /* Neutros invertidos */
+      --text-primary: #E8EDF8;
+      --text-secondary: #A0B4CC;
+      --text-muted: #5A7090;
+      --bg: #0A1220;
+      --bg-alt: #0D1729;
+      --surface: #111C2E;
+      --border: #1E2E45;
+      --border-strong: #2A3E58;
+      --star: #FFC107;
+
+      /* Sombras mais fortes no dark */
+      --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.30);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.50);
+      --shadow-cta: 0 8px 28px rgba(40, 195, 72, 0.40);
+      --shadow-navy: 0 8px 28px rgba(0, 0, 0, 0.60);
+
+      /* UI do documento */
+      --ui-bg: #111C2E;
+      --ui-bg-alt: #0A1220;
+      --ui-border: #1E2E45;
+      --ui-text: #E8EDF8;
+      --ui-text2: #A0B4CC;
+      --ui-text3: #5A7090;
+    }
+
+    /* ════════════════════════════════════
+   BASE
+════════════════════════════════════ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--ui-bg-alt);
+      color: var(--ui-text);
+      transition: background .35s ease, color .35s ease;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 24px 72px;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .h-left h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--ui-text);
+    }
+
+    .h-left h1 span {
+      color: var(--green);
+    }
+
+    .h-left p {
+      font-size: 0.78rem;
+      color: var(--ui-text3);
+      margin-top: 3px;
+    }
+
+    .version-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      background: var(--green-muted);
+      color: var(--green-text);
+      padding: 3px 10px;
+      border-radius: var(--r-full);
+      border: 1px solid rgba(40, 195, 72, 0.25);
+      margin-top: 6px;
+    }
+
+    [data-theme="dark"] .version-tag {
+      color: var(--green);
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toggle-lbl {
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: var(--ui-text2);
+    }
+
+    .tog {
+      position: relative;
+      width: 52px;
+      height: 26px;
+    }
+
+    .tog input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .sl {
+      position: absolute;
+      inset: 0;
+      background: #D1D5DB;
+      border-radius: 26px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .sl:before {
+      content: '';
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      left: 4px;
+      top: 4px;
+      background: white;
+      border-radius: 50%;
+      transition: .3s;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    input:checked+.sl {
+      background: var(--green);
+    }
+
+    input:checked+.sl:before {
+      transform: translateX(26px);
+    }
+
+    .divider {
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--green) 0%, var(--navy) 100%);
+      margin: 20px 0 36px;
+      opacity: .8;
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .sec-title {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--ui-text3);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--ui-border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ════════════════════════════════════
+   SWATCHES
+════════════════════════════════════ */
+    .palette {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .sw {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      width: 168px;
+      background: var(--ui-bg);
+      border: 1px solid var(--ui-border);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .sw:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    }
+
+    .sw-color {
+      height: 86px;
+    }
+
+    .sw-body {
+      padding: 12px 14px;
+    }
+
+    .sw-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--ui-text);
+      margin-bottom: 2px;
+    }
+
+    .sw-hex {
+      font-size: 0.8rem;
+      font-family: monospace;
+      color: var(--ui-text2);
+      margin-bottom: 5px;
+    }
+
+    .sw-role {
+      display: inline-block;
+      font-size: 0.59rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-bottom: 5px;
+    }
+
+    .role-action {
+      background: rgba(40, 195, 72, 0.14);
+      color: #166B27;
+      border: 1px solid rgba(40, 195, 72, 0.3);
+    }
+
+    .role-structure {
+      background: rgba(13, 27, 42, 0.10);
+      color: #0D1B2A;
+      border: 1px solid rgba(13, 27, 42, 0.2);
+    }
+
+    .role-neutral {
+      background: rgba(156, 163, 175, 0.15);
+      color: #4B5563;
+      border: 1px solid rgba(156, 163, 175, 0.3);
+    }
+
+    [data-theme="dark"] .role-action {
+      background: rgba(40, 195, 72, 0.18);
+      color: var(--green);
+      border-color: rgba(40, 195, 72, 0.35);
+    }
+
+    [data-theme="dark"] .role-structure {
+      background: rgba(14, 30, 46, 0.8);
+      color: #A0B4CC;
+      border-color: #2A3E58;
+    }
+
+    [data-theme="dark"] .role-neutral {
+      background: rgba(90, 112, 144, 0.15);
+      color: #A0B4CC;
+      border-color: #2A3E58;
+    }
+
+    .sw-use {
+      font-size: 0.66rem;
+      color: var(--ui-text3);
+      line-height: 1.45;
+    }
+
+    .cp-btn {
+      margin-top: 7px;
+      display: inline-block;
+      font-size: 0.62rem;
+      background: var(--ui-bg-alt);
+      border: 1px solid var(--ui-border);
+      border-radius: 5px;
+      padding: 3px 9px;
+      cursor: pointer;
+      color: var(--ui-text2);
+      font-family: monospace;
+      transition: all .15s;
+    }
+
+    .cp-btn:hover {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    /* ════════════════════════════════════
+   HIERARCHY BOX
+════════════════════════════════════ */
+    .hier-box {
+      background: var(--ui-bg);
+      border: 1px solid var(--ui-border);
+      border-radius: 16px;
+      padding: 24px 26px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .hier-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--ui-border);
+    }
+
+    .hier-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hier-row:first-child {
+      padding-top: 0;
+    }
+
+    .hi {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .ht h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ui-text);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .ht p {
+      font-size: 0.75rem;
+      color: var(--ui-text2);
+      line-height: 1.6;
+    }
+
+    .badge {
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      white-space: nowrap;
+    }
+
+    .b-green {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .b-navy {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .b-warn {
+      background: rgba(220, 53, 69, 0.12);
+      color: #dc3545;
+      border: 1px solid rgba(220, 53, 69, 0.3);
+    }
+
+    /* ════════════════════════════════════
+   COMPARISON TABLE
+════════════════════════════════════ */
+    .table {
+      background: var(--ui-bg);
+      border: 1px solid var(--ui-border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .tr {
+      display: flex;
+      border-bottom: 1px solid var(--ui-border);
+    }
+
+    .tr:last-child {
+      border-bottom: none;
+    }
+
+    .th-row {
+      background: var(--ui-bg-alt);
+    }
+
+    .td {
+      flex: 1;
+      padding: 12px 16px;
+      font-size: 0.77rem;
+      color: var(--ui-text2);
+    }
+
+    .td:first-child {
+      flex: 1.5;
+      font-weight: 600;
+      color: var(--ui-text);
+      border-right: 1px solid var(--ui-border);
+    }
+
+    .th-row .td {
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--ui-text3);
+    }
+
+    .bad {
+      color: #ef4444;
+    }
+
+    .good {
+      color: #16a34a;
+      font-weight: 600;
+    }
+
+    /* ════════════════════════════════════
+   CSS CODE BLOCK
+════════════════════════════════════ */
+    .code {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 14px;
+      padding: 24px 26px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.77rem;
+      line-height: 2;
+      color: #e6edf3;
+      overflow-x: auto;
+    }
+
+    .cv {
+      color: #79c0ff;
+    }
+
+    /* variable */
+    .cg {
+      color: #7ee787;
+    }
+
+    /* green value / selector */
+    .cn {
+      color: #ffa657;
+    }
+
+    /* navy value */
+    .cp-v {
+      color: #d2a8ff;
+    }
+
+    /* neutral value */
+    .cm {
+      color: #8b949e;
+    }
+
+    /* comment */
+    .cs {
+      color: #a5d6ff;
+    }
+
+    /* string */
+
+    /* ════════════════════════════════════
+   COMPONENT PREVIEW
+════════════════════════════════════ */
+    .preview-wrap {
+      background: var(--ui-bg);
+      border: 1px solid var(--ui-border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .prev-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--ui-text3);
+      margin-bottom: 10px;
+    }
+
+    /* Navbar */
+    .demo-nav {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .demo-nav .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+    }
+
+    .demo-nav .brand svg {
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .btn-nav {
+      background: var(--green);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: var(--r-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all .2s;
+      box-shadow: var(--shadow-cta);
+    }
+
+    .btn-nav:hover {
+      background: var(--green-hover);
+    }
+
+    /* Hero mobile */
+    .demo-hero-mobile {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 24px 20px;
+      max-width: 340px;
+    }
+
+    .demo-hero-mobile .badge-chip {
+      display: inline-block;
+      background: var(--green-muted);
+      color: var(--green-text);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--r-full);
+      margin-bottom: 16px;
+      border: 1px solid rgba(40, 195, 72, 0.25);
+    }
+
+    [data-theme="dark"] .demo-hero-mobile .badge-chip {
+      color: var(--green);
+    }
+
+    .demo-hero-mobile h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .demo-hero-mobile h2 em {
+      color: var(--green);
+      font-style: normal;
+    }
+
+    .demo-hero-mobile p {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green);
+      color: #fff;
+      padding: 13px 24px;
+      border-radius: var(--r-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all .2s;
+      box-shadow: var(--shadow-cta);
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary:hover {
+      background: var(--green-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text-primary);
+      padding: 13px 24px;
+      border-radius: var(--r-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      border: 2px solid var(--border-strong);
+      cursor: pointer;
+      transition: all .2s;
+      width: 100%;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    /* Hero dark section */
+    .demo-hero-dark {
+      background: var(--navy);
+      border-radius: var(--r-lg);
+      padding: 28px 28px;
+      color: white;
+    }
+
+    .demo-hero-dark h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .demo-hero-dark h2 em {
+      color: var(--green);
+      font-style: italic;
+    }
+
+    .demo-hero-dark p {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .check-list li::before {
+      content: '';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--green-muted);
+      border: 2px solid var(--green);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%2328C348' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-shrink: 0;
+    }
+
+    /* CTA Section */
+    .demo-cta-section {
+      background: var(--green-deep);
+      border-radius: var(--r-lg);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .demo-cta-section::after {
+      content: '⚡';
+      position: absolute;
+      right: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 5rem;
+      opacity: .15;
+      line-height: 1;
+    }
+
+    .demo-cta-section h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .demo-cta-section p {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .cta-contacts {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .cta-contacts span {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+    }
+
+    .btn-cta-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--green-deep);
+      padding: 14px 26px;
+      border-radius: var(--r-full);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .btn-cta-white:hover {
+      background: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Button matrix */
+    .btn-matrix {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-secondary);
+      padding: 10px 20px;
+      border-radius: var(--r-full);
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .btn-navy {
+      background: var(--navy);
+      color: var(--navy-text);
+      padding: 10px 20px;
+      border-radius: var(--r-full);
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .btn-navy:hover {
+      background: var(--navy-mid);
+    }
+
+    .tag-green {
+      display: inline-block;
+      background: var(--green-muted);
+      color: var(--green-text);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      padding: 4px 12px;
+      border-radius: var(--r-full);
+      border: 1px solid rgba(40, 195, 72, 0.25);
+    }
+
+    [data-theme="dark"] .tag-green {
+      color: var(--green);
+    }
+
+    /* Service card */
+    .service-grid {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .s-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 20px 18px;
+      flex: 1;
+      min-width: 180px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .s-card .cat {
+      font-size: 0.64rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--green);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .s-card .cat::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+
+    .s-card h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .s-card p {
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .s-card .item {
+      font-size: 0.71rem;
+      color: var(--text-secondary);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .s-card .item:last-of-type {
+      border-bottom: none;
+    }
+
+    .dot-green {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .s-card-footer {
+      margin-top: 16px;
+    }
+
+    /* Reviews */
+    .reviews-navy {
+      background: var(--navy);
+      border-radius: var(--r-lg);
+      padding: 22px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .r-card {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--r-md);
+      padding: 18px;
+      color: #fff;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .r-stars {
+      color: var(--star);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .r-card p {
+      font-size: 0.74rem;
+      line-height: 1.65;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .r-author {
+      font-size: 0.71rem;
+      font-weight: 700;
+      margin-top: 12px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Tip */
+    .tip {
+      background: rgba(40, 195, 72, 0.07);
+      border-left: 4px solid var(--green);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      padding: 14px 18px;
+      font-size: 0.77rem;
+      color: var(--ui-text2);
+      line-height: 1.65;
+    }
+
+    .tip strong {
+      color: var(--green);
+    }
+
+    /* ═══════════════
+   RESPONSIVE
+═══════════════ */
+    @media (max-width:600px) {
+      .nav-links {
+        display: none;
+      }
+
+      .demo-hero-dark {
+        padding: 20px;
+      }
+
+      .reviews-navy {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- ── HEADER ── -->
+    <div class="header">
+      <div class="h-left">
+        <h1>Fix <span>Serviços</span></h1>
+        <p>Design System v3 · Verde + Navy · fixblu.com.br</p>
+        <span class="version-tag">✦ Nova Identidade Visual</span>
+      </div>
+      <div class="toggle-row">
+        <span class="toggle-lbl">☀️</span>
+        <label class="tog"><input type="checkbox" id="tg"><span class="sl"></span></label>
+        <span class="toggle-lbl">🌙 Navy</span>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+    <!-- ── HIERARQUIA ── -->
+    <div class="section">
+      <div class="sec-title">⚡ Lógica de Cores — O que Muda no v3</div>
+      <div class="hier-box">
+        <div class="hier-row">
+          <div class="hi">🟢</div>
+          <div class="ht">
+            <h3>Verde = Toda ação de conversão <span class="badge b-green">CTA primário</span></h3>
+            <p>Botão "Agendar Agora", "Solicitar Orçamento", "Iniciar Conversa no WhatsApp", badge de destaque, ícone do
+              logo, checkmarks. Verde é escasso e intencional — aparece onde o usuário precisa agir.</p>
+          </div>
+        </div>
+        <div class="hier-row">
+          <div class="hi">🌑</div>
+          <div class="ht">
+            <h3>Navy = Estrutura e autoridade <span class="badge b-navy">Fundo / Estrutura</span></h3>
+            <p>Hero com foto de fundo, seções de prova social (depoimentos), footer, navbar em scroll. O navy transmite
+              profissionalismo e cria o contraste perfeito para o verde brilhar.</p>
+          </div>
+        </div>
+        <div class="hier-row">
+          <div class="hi">⚪</div>
+          <div class="ht">
+            <h3>Branco / Cinza = Espaço de respiro</h3>
+            <p>Fundo da página, cards de serviço, formulários. Seções claras entre as seções navy criam ritmo visual.
+              Botão secundário = outline sobre branco, não cor sólida competindo com o verde.</p>
+          </div>
+        </div>
+        <div class="hier-row">
+          <div class="hi">🚫</div>
+          <div class="ht">
+            <h3>O que foi eliminado <span class="badge b-warn">Antes</span></h3>
+            <p>Azul `#0047E0` em botões sólidos competindo com o laranja. Resultado: dois CTAs brigando pelo olhar do
+              usuário. No v3 existe apenas <strong>um</strong> estímulo de ação — verde — e o resto organiza sem
+              distrair.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ANTES VS DEPOIS ── -->
+    <div class="section">
+      <div class="sec-title">📊 Antes vs Depois</div>
+      <div class="table">
+        <div class="tr th-row">
+          <div class="td">Elemento</div>
+          <div class="td">❌ v1 (WordPress)</div>
+          <div class="td">✅ v3 (Nova identidade)</div>
+        </div>
+        <div class="tr">
+          <div class="td">CTA principal</div>
+          <div class="td bad">Azul sólido "Agendar"</div>
+          <div class="td good">Verde sólido pill "Agendar Agora"</div>
+        </div>
+        <div class="tr">
+          <div class="td">CTA hero secundário</div>
+          <div class="td bad">Laranja competindo</div>
+          <div class="td good">Outline neutro "Ver Projetos"</div>
+        </div>
+        <div class="tr">
+          <div class="td">Botão nos cards</div>
+          <div class="td bad">Azul (3 iguais na tela)</div>
+          <div class="td good">Verde sólido — 1 por card</div>
+        </div>
+        <div class="tr">
+          <div class="td">Seção hero / dark</div>
+          <div class="td bad">Overlay preto genérico</div>
+          <div class="td good">Navy #0D1B2A com personalidade</div>
+        </div>
+        <div class="tr">
+          <div class="td">Badge de categoria</div>
+          <div class="td bad">Laranja (confundia com CTA)</div>
+          <div class="td good">Verde claro muted — contexto, não ação</div>
+        </div>
+        <div class="tr">
+          <div class="td">Seção CTA block</div>
+          <div class="td bad">Azul sólido</div>
+          <div class="td good">Verde profundo #1A9432 + botão branco</div>
+        </div>
+        <div class="tr">
+          <div class="td">Dark mode fundos</div>
+          <div class="td bad">Preto (#0F0F11) genérico</div>
+          <div class="td good">Navy #0A1220 — identidade consistente</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PALETA VERDE ── -->
+    <div class="section">
+      <div class="sec-title">🎨 Paleta Completa — Papéis Definidos</div>
+      <div class="palette" style="margin-bottom:20px;">
+        <div class="sw">
+          <div class="sw-color" style="background:#28C348;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Brand Green</div>
+            <div class="sw-hex">#28C348</div>
+            <span class="sw-role role-action">Ação / CTA</span>
+            <div class="sw-use">Botão primário, badge, checkmarks, logo, ícones de destaque.</div>
+            <button class="cp-btn" onclick="cp(this,'#28C348')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#1FA83A;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Green Hover</div>
+            <div class="sw-hex">#1FA83A</div>
+            <span class="sw-role role-action">Ação / Hover</span>
+            <div class="sw-use">:hover e :active do botão verde. Mais escuro = feedback tátil.</div>
+            <button class="cp-btn" onclick="cp(this,'#1FA83A')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#1A9432;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Green Deep</div>
+            <div class="sw-hex">#1A9432</div>
+            <span class="sw-role role-action">Ação / Fundo CTA</span>
+            <div class="sw-use">Bloco CTA de fundo verde (seção "Pronto para energizar").</div>
+            <button class="cp-btn" onclick="cp(this,'#1A9432')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#166B27;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Green Text</div>
+            <div class="sw-hex">#166B27</div>
+            <span class="sw-role role-action">Ação / Texto</span>
+            <div class="sw-use">Texto em cor verde sobre fundos claros. Contraste WCAG AA.</div>
+            <button class="cp-btn" onclick="cp(this,'#166B27')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#0D1B2A;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Navy Base</div>
+            <div class="sw-hex">#0D1B2A</div>
+            <span class="sw-role role-structure">Estrutura</span>
+            <div class="sw-use">Hero dark, seção depoimentos, footer. Cor de estrutura primária.</div>
+            <button class="cp-btn" onclick="cp(this,'#0D1B2A')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#142236;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Navy Mid</div>
+            <div class="sw-hex">#142236</div>
+            <span class="sw-role role-structure">Estrutura</span>
+            <div class="sw-use">Cards dentro de seções navy, navbar ao rolar, overlays.</div>
+            <button class="cp-btn" onclick="cp(this,'#142236')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#111827;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Text Primary</div>
+            <div class="sw-hex">#111827</div>
+            <span class="sw-role role-neutral">Neutro</span>
+            <div class="sw-use">Títulos e texto principal sobre fundo claro.</div>
+            <button class="cp-btn" onclick="cp(this,'#111827')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#4B5563;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Text Secondary</div>
+            <div class="sw-hex">#4B5563</div>
+            <span class="sw-role role-neutral">Neutro</span>
+            <div class="sw-use">Parágrafos, descrições de serviço, meta info.</div>
+            <button class="cp-btn" onclick="cp(this,'#4B5563')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#F9FAFB; outline:1px solid #E5E7EB;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Background</div>
+            <div class="sw-hex">#F9FAFB</div>
+            <span class="sw-role role-neutral">Neutro</span>
+            <div class="sw-use">Fundo geral light mode. Levemente cinza — não branco puro.</div>
+            <button class="cp-btn" onclick="cp(this,'#F9FAFB')"># copiar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-title">🌙 Dark Mode — Família Navy</div>
+      <div class="palette">
+        <div class="sw">
+          <div class="sw-color" style="background:#0A1220;"></div>
+          <div class="sw-body">
+            <div class="sw-name">BG Dark</div>
+            <div class="sw-hex">#0A1220</div>
+            <span class="sw-role role-structure">Estrutura</span>
+            <div class="sw-use">Fundo base da página no dark mode.</div>
+            <button class="cp-btn" onclick="cp(this,'#0A1220')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#111C2E;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Surface Card DK</div>
+            <div class="sw-hex">#111C2E</div>
+            <span class="sw-role role-structure">Estrutura</span>
+            <div class="sw-use">Cards, modais, navbar no dark mode.</div>
+            <button class="cp-btn" onclick="cp(this,'#111C2E')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#1E2E45;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Border Dark</div>
+            <div class="sw-hex">#1E2E45</div>
+            <span class="sw-role role-neutral">Neutro</span>
+            <div class="sw-use">Bordas de card e divisores no dark.</div>
+            <button class="cp-btn" onclick="cp(this,'#1E2E45')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#28C348;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Green (unchanged)</div>
+            <div class="sw-hex">#28C348</div>
+            <span class="sw-role role-action">Ação / CTA</span>
+            <div class="sw-use">Verde não muda. Contrasta em ambos os temas.</div>
+            <button class="cp-btn" onclick="cp(this,'#28C348')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#E8EDF8;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Text Primary DK</div>
+            <div class="sw-hex">#E8EDF8</div>
+            <span class="sw-role role-neutral">Neutro</span>
+            <div class="sw-use">Texto principal no dark — levemente azulado, harmoniza com navy.</div>
+            <button class="cp-btn" onclick="cp(this,'#E8EDF8')"># copiar</button>
+          </div>
+        </div>
+        <div class="sw">
+          <div class="sw-color" style="background:#5A7090;"></div>
+          <div class="sw-body">
+            <div class="sw-name">Text Muted DK</div>
+            <div class="sw-hex">#5A7090</div>
+            <span class="sw-role role-neutral">Neutro</span>
+            <div class="sw-use">Metadados, rodapés e textos secundários no dark.</div>
+            <button class="cp-btn" onclick="cp(this,'#5A7090')"># copiar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CSS VARIABLES ── -->
+    <div class="section">
+      <div class="sec-title">💻 CSS Custom Properties — Pronto para Colar</div>
+      <div class="code"><span class="cm">/* ════════════════════════════════════════
+          Fix Serviços — Design System v3
+          Verde + Navy | fixblu.com.br
+          ════════════════════════════════════════ */</span>
+
+        <span class="cm">:root {</span>
+        <span class="cm">/* Verde — ação (único CTA da página) */</span>
+        <span class="cv">--green</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cg">#28C348</span>;<span class="cm"> /* botão primário, badge, logo */</span>
+        <span class="cv">--green-hover</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cg">#1FA83A</span>;<span
+          class="cm"> /* :hover mais escuro */</span>
+        <span class="cv">--green-deep</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cg">#1A9432</span>;<span
+          class="cm"> /* fundo bloco CTA */</span>
+        <span class="cv">--green-muted</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cg">rgba(40,195,72,.12)</span>;<span class="cm"> /* bg badge/chip */</span>
+        <span class="cv">--green-glow</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cg">rgba(40,195,72,.30)</span>;<span class="cm"> /* sombra botão */</span>
+        <span class="cv">--green-text</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cg">#166B27</span>;<span
+          class="cm"> /* texto verde sobre branco */</span>
+
+        <span class="cm">/* Navy — estrutura e autoridade */</span>
+        <span class="cv">--navy</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cn">#0D1B2A</span>;<span class="cm"> /* hero, depoimentos, footer */</span>
+        <span class="cv">--navy-mid</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cn">#142236</span>;<span class="cm"> /* cards em seções navy */</span>
+        <span class="cv">--navy-text</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cn">#E8EDF8</span>;<span class="cm"> /* texto sobre navy */</span>
+
+        <span class="cm">/* Neutros */</span>
+        <span class="cv">--text-primary</span>:&nbsp;&nbsp;&nbsp;&nbsp;<span class="cp-v">#111827</span>;
+        <span class="cv">--text-secondary</span>:&nbsp;&nbsp;<span class="cp-v">#4B5563</span>;
+        <span class="cv">--text-muted</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cp-v">#9CA3AF</span>;
+        <span
+          class="cv">--bg</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cp-v">#F9FAFB</span>;
+        <span class="cv">--surface</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cp-v">#FFFFFF</span>;
+        <span class="cv">--border</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cp-v">#E5E7EB</span>;
+
+        <span class="cm">/* Tipografia */</span>
+        <span class="cv">--font-heading</span>:&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">'Inter'</span>, sans-serif;<span
+          class="cm"> /* ou 'Oswald' p/ títulos maiores */</span>
+        <span class="cv">--font-body</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs">'Inter'</span>,
+        sans-serif;
+
+        <span class="cm">/* Efeitos */</span>
+        <span class="cv">--shadow-cta</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 8px 24px <span
+          class="cg">rgba(40,195,72,.35)</span>;
+        <span class="cv">--r-pill</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9999px;
+        <span class="cm">}</span>
+
+        <span class="cm">/* Dark Mode */</span>
+        <span class="cg">[data-theme="dark"]</span> {
+        <span
+          class="cv">--bg</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cn">#0A1220</span>;<span class="cm"> /* fundo navy (da ref enviada) */</span>
+        <span class="cv">--surface</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cn">#111C2E</span>;<span class="cm"> /* cards */</span>
+        <span class="cv">--border</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+          class="cn">#1E2E45</span>;
+        <span class="cv">--text-primary</span>:&nbsp;&nbsp;&nbsp;&nbsp;<span class="cp-v">#E8EDF8</span>;
+        <span class="cv">--text-secondary</span>:&nbsp;&nbsp;<span class="cp-v">#A0B4CC</span>;
+        <span class="cv">--green-hover</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cg">#34D459</span>;<span
+          class="cm"> /* levemente mais claro no dark */</span>
+        <span class="cm">/* --green NÃO muda */</span>
+        <span class="cm">}</span>
+
+        <span class="cm">/* Padrões de uso */</span>
+        <span class="cg">.btn-primary</span> {
+        background: <span class="cv">var(--green)</span>; color: white;
+        border-radius: <span class="cv">var(--r-pill)</span>;
+        box-shadow: <span class="cv">var(--shadow-cta)</span>;
+        }
+        <span class="cg">.btn-primary:hover</span> { background: <span class="cv">var(--green-hover)</span>; }
+        <span class="cg">.btn-secondary</span> {
+        background: transparent; color: <span class="cv">var(--text-primary)</span>;
+        border: 2px solid <span class="cv">var(--border)</span>;
+        border-radius: <span class="cv">var(--r-pill)</span>;
+        }
+        <span class="cg">.btn-secondary:hover</span> { border-color: <span class="cv">var(--green)</span>; color: <span
+          class="cv">var(--green)</span>; }
+      </div>
+    </div>
+
+    <!-- ── COMPONENT PREVIEW ── -->
+    <div class="section">
+      <div class="sec-title">🖼️ Preview de Componentes</div>
+      <div class="preview-wrap">
+
+        <!-- Navbar -->
+        <div>
+          <div class="prev-label">Navbar</div>
+          <div class="demo-nav">
+            <div class="brand">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+              FIX SERVIÇOS
+            </div>
+            <div class="nav-links">
+              <a href="#">Sobre</a>
+              <a href="#">Serviços</a>
+              <a href="#">Contato</a>
+              <button class="btn-nav">Agendar Agora</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero mobile -->
+        <div style="display:flex;gap:20px;flex-wrap:wrap;">
+          <div>
+            <div class="prev-label">Hero — Mobile</div>
+            <div class="demo-hero-mobile">
+              <div class="badge-chip">Serviços de Qualidade</div>
+              <h2>Marido de Aluguel em <em>Blumenau</em></h2>
+              <p>Serviços especializados, rápidos e de confiança. Eletricista, encanador e reparos gerais.</p>
+              <button class="btn-primary">Solicitar Orçamento →</button>
+              <button class="btn-secondary">Ver Projetos</button>
+            </div>
+          </div>
+
+          <!-- Button matrix -->
+          <div style="flex:1;min-width:240px;">
+            <div class="prev-label">Hierarquia de Botões</div>
+            <div
+              style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;box-shadow:var(--shadow-card);">
+              <div style="margin-bottom:12px;">
+                <div style="font-size:0.65rem;color:var(--ui-text3);margin-bottom:6px;">🟢 Primário — único CTA por
+                  seção</div>
+                <div class="btn-matrix"><button class="btn-primary"
+                    style="border:none;padding:11px 22px;font-size:0.78rem;">Agendar Agora</button><button
+                    class="btn-primary" style="border:none;padding:11px 22px;font-size:0.78rem;">Solicitar
+                    Orçamento</button></div>
+              </div>
+              <div style="margin-bottom:12px;">
+                <div style="font-size:0.65rem;color:var(--ui-text3);margin-bottom:6px;">⬜ Secundário — alternativa não
+                  urgente</div>
+                <div class="btn-matrix"><button class="btn-secondary" style="padding:11px 22px;font-size:0.78rem;">Ver
+                    Serviços</button><button class="btn-secondary" style="padding:11px 22px;font-size:0.78rem;">Ver
+                    Projetos</button></div>
+              </div>
+              <div style="margin-bottom:12px;">
+                <div style="font-size:0.65rem;color:var(--ui-text3);margin-bottom:6px;">👻 Ghost — ação terciária /
+                  informacional</div>
+                <div class="btn-matrix"><button class="btn-ghost" style="padding:11px 22px;font-size:0.78rem;">Saiba
+                    Mais</button><button class="btn-navy" style="padding:11px 22px;font-size:0.78rem;">Ver no
+                    Mapa</button></div>
+              </div>
+              <div>
+                <div style="font-size:0.65rem;color:var(--ui-text3);margin-bottom:6px;">🏷️ Tags / Badges</div>
+                <div class="btn-matrix">
+                  <span class="tag-green">Eletricista</span>
+                  <span class="tag-green">Encanador</span>
+                  <span class="tag-green">Marido de Aluguel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero dark section -->
+        <div>
+          <div class="prev-label">Seção Escura (Navy) — Desktop</div>
+          <div class="demo-hero-dark">
+            <h2>Qualidade que você pode <em>sentir</em> pela tela.</h2>
+            <p>Nossos profissionais não são apenas técnicos, são especialistas equipados com as melhores ferramentas. A
+              confiança começa na imagem e se consolida na entrega.</p>
+            <ul class="check-list">
+              <li>Textura de pele realista em todas as fotos de perfil</li>
+              <li>Uniforme impecável com tecido pique de alta definição</li>
+              <li>Equipamentos profissionais devidamente calibrados</li>
+              <li>Documentação técnica clara e precisa</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service cards -->
+        <div>
+          <div class="prev-label">Cards de Serviço</div>
+          <div class="service-grid">
+            <div class="s-card">
+              <div class="cat">Eletricista</div>
+              <h4>Elétrica Residencial</h4>
+              <p>Consertos e instalações elétricas rápidas e seguras.</p>
+              <div class="item">Instalação de Chuveiro <span class="dot-green"></span></div>
+              <div class="item">Troca de Lâmpadas <span class="dot-green"></span></div>
+              <div class="item">Instalação de Luminárias <span class="dot-green"></span></div>
+              <div class="s-card-footer"><button class="btn-primary"
+                  style="border:none;padding:9px 18px;font-size:0.72rem;">Agendar</button></div>
+            </div>
+            <div class="s-card">
+              <div class="cat">Encanador Blumenau</div>
+              <h4>Hidráulica</h4>
+              <p>Instalação de duchas, torneiras e reparo de vazamentos.</p>
+              <div class="item">Instalação de Chuveiro <span class="dot-green"></span></div>
+              <div class="item">Troca de Torneira <span class="dot-green"></span></div>
+              <div class="item">Caixa Acoplada <span class="dot-green"></span></div>
+              <div class="s-card-footer"><button class="btn-primary"
+                  style="border:none;padding:9px 18px;font-size:0.72rem;">Agendar</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA block verde -->
+        <div>
+          <div class="prev-label">Bloco CTA — Fundo Verde</div>
+          <div class="demo-cta-section">
+            <h2>Pronto para energizar seus projetos?</h2>
+            <p>Fale conosco hoje mesmo. Atendemos em toda a região com a rapidez e segurança que você merece.</p>
+            <div class="cta-contacts">
+              <span>📞 (47) 98804-1306</span>
+              <span>✉️ contato@fixblu.com.br</span>
+            </div>
+            <button class="btn-cta-white">INICIAR CONVERSA NO WHATSAPP</button>
+          </div>
+        </div>
+
+        <!-- Reviews navy -->
+        <div>
+          <div class="prev-label">Depoimentos (Navy como estrutura)</div>
+          <div class="reviews-navy">
+            <div class="r-card">
+              <div class="r-stars">★★★★★</div>
+              <p>"Simplesmente os serviços prestados são de primeira qualidade. Excelente atendimento e
+                profissionalismo."</p>
+              <div class="r-author">— Vanessa Pereira</div>
+            </div>
+            <div class="r-card">
+              <div class="r-stars">★★★★★</div>
+              <p>"Atendimento muito rápido, solução prática. Marido de aluguel com preço justo."</p>
+              <div class="r-author">— Caio Augusto Carvalho</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tip -->
+        <div class="tip">
+          <strong>Por que verde funciona melhor que laranja para a Fix Serviços?</strong> Verde é semanticamente
+          associado a "aprovado", "confirmado", "segurança" — exatamente o que alguém que vai contratar um serviço em
+          casa precisa sentir. O laranja é mais urgência/alerta. Para um serviço de confiança como marido de aluguel,
+          verde converte mais.
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const tg = document.getElementById('tg');
+    tg.addEventListener('change', () => {
+      document.documentElement.setAttribute('data-theme', tg.checked ? 'dark' : 'light');
+    });
+    function cp(btn, hex) {
+      navigator.clipboard.writeText(hex).then(() => {
+        const o = btn.textContent;
+        btn.textContent = '✓ copiado!';
+        btn.style.color = '#16a34a';
+        setTimeout(() => { btn.textContent = o; btn.style.color = ''; }, 1400);
+      });
+    }
+  </script>
+</body>
+
+</html>

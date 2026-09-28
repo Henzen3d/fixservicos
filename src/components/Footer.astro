@@ -1,0 +1,49 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="bg-brand-navy dark:bg-[#050B14] text-text-primary pt-16 pb-8 transition-colors duration-500 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+    <!-- Info -->
+    <div>
+      <h3 class="text-xl font-bold mb-4 font-display text-white uppercase tracking-tight">Fix Serviços</h3>
+      <p class="text-white/70 text-sm leading-relaxed mb-4">Manutenção residencial e predial em Blumenau e região. Mais de 20 anos de experiência.</p>
+      <div class="space-y-3">
+        <p class="text-white/70 text-sm flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Rua Germano Beduschi, 101 – Sala 102
+        </p>
+        <p class="text-white/70 text-sm flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span class="font-extrabold text-white text-base">(47) 98804-1306</span>
+        </p>
+      </div>
+    </div>
+    <!-- Services -->
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-green mb-6">Serviços</h4>
+      <ul class="space-y-4">
+        <li><a href="/eletricista/" class="text-white/60 hover:text-brand-green text-sm transition-colors no-underline inline-block py-1">Eletricista</a></li>
+        <li><a href="/encanador/" class="text-white/60 hover:text-brand-green text-sm transition-colors no-underline inline-block py-1">Encanador</a></li>
+        <li><a href="/marido-de-aluguel/" class="text-white/60 hover:text-brand-green text-sm transition-colors no-underline inline-block py-1">Marido de Aluguel</a></li>
+        <li><a href="/casa-inteligente/" class="text-white/60 hover:text-brand-green text-sm transition-colors no-underline inline-block py-1">Casa Inteligente</a></li>
+      </ul>
+    </div>
+    <!-- Company -->
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-green mb-6">Empresa</h4>
+      <ul class="space-y-4">
+        <li><a href="/servicos/" class="text-white/60 hover:text-brand-green text-sm transition-colors no-underline inline-block py-1">Todos os Serviços</a></li>
+        <li><a href="/contato/" class="text-white/60 hover:text-brand-green text-sm transition-colors no-underline inline-block py-1">Contato</a></li>
+        <li><a href="/politica-de-privacidade/" class="text-white/60 hover:text-brand-green text-sm transition-colors no-underline inline-block py-1">Privacidade</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="mt-12 pt-8 border-t border-white/5 text-center text-white/40 text-[10px] uppercase tracking-widest relative z-10">
+    &copy; {year} Fix Serviços — Blumenau, SC. Todos os direitos reservados.
+  </div>
+
+  <!-- Ambient Glows - Same as Reviews section -->
+  <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 h-80 w-80 rounded-full bg-brand-green/5 blur-[100px] dark:bg-brand-green/10 dark:blur-[120px] transition-all duration-700"></div>
+  <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 h-80 w-80 rounded-full bg-blue-500/5 blur-[100px] dark:bg-purple-500/10 dark:blur-[120px] transition-all duration-700"></div>
+</footer>

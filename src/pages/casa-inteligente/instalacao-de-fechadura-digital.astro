@@ -1,0 +1,132 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+const related = [
+  { title: "Interruptor Inteligente", url: "/casa-inteligente/instalacao-interruptor-inteligente/" },
+  { title: "Interruptor Sonoff", url: "/casa-inteligente/instalar-interruptor-sonoff/" },
+  { title: "Fechadura Digital (Simples)", url: "/marido-de-aluguel/instalacao-de-fechadura-digital/" },
+];
+---
+<ServicePage
+  title="Instalação de Fechadura Digital Smart em Blumenau | Fix Serviços"
+  description="Instalação e configuração de fechadura inteligente Wi-Fi/Zigbee em Blumenau. Intelbras Izy, Tuya, Yale, Samsung. Automação e controle pelo app. Fix Serviços."
+  canonicalURL="https://fixblu.com.br/casa-inteligente/instalacao-de-fechadura-digital/"
+  h1="Fechadura Inteligente Smart"
+  category="Casa Inteligente"
+  categoryUrl="/casa-inteligente/"
+  relatedServices={related}
+>
+
+  <!-- ===================== MOBILE CONTENT (hidden on sm+) ===================== -->
+  <div class="sm:hidden space-y-5 mt-6">
+
+    <!-- Benefícios Rápidos com ícones -->
+    <div class="grid grid-cols-3 gap-2">
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Configuração<br/>Rápida</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Integração<br/>Total</p>
+      </div>
+      <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
+        <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <p class="text-xs font-bold text-text-main leading-tight">Segurança<br/>Garantida</p>
+      </div>
+    </div>
+
+    <!-- O que está incluso -->
+    <div class="bg-surface-2 border border-border-main rounded-2xl p-4">
+      <h2 class="font-bold text-text-main font-display mb-3 text-base flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        O que está incluso
+      </h2>
+      <ul class="space-y-2.5">
+        {[
+          "Avaliação e furação precisa da porta de madeira ou alumínio",
+        "Instalação mecânica completa do maquinário interno e painéis",
+        "Conexão física e alinhamento perfeito do trinco e contra-testa",
+        "Pareamento da fechadura com o aplicativo de automação (Tuya, Izy Smart, etc.)",
+        "Configuração de senhas de acesso (master, usuários e senhas temporárias/agendadas)",
+        "Configuração de automações inteligentes (ligar luzes ao abrir a porta, notificações de status)",
+        ].map((item: any) => (
+          <li class="flex items-center gap-3">
+            <div class="h-5 w-5 rounded-full bg-brand-green flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <span class="text-sm text-text-main font-medium">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Marcas atendidas -->
+    <div class="bg-brand-navy/5 dark:bg-white/5 border border-border-main rounded-2xl p-4">
+      <p class="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Marcas atendidas</p>
+      <p class="text-sm text-text-main font-medium">Sonoff · Tuya · Positivo · Intelbras · Nova Digital · Amazon Alexa · Google Home</p>
+    </div>
+
+  </div>
+  <!-- ===================== END MOBILE CONTENT ===================== -->
+
+  <!-- ===================== DESKTOP CONTENT (hidden on mobile) ===================== -->
+  <div class="hidden sm:block">
+<h2 class="text-2xl font-bold text-text-main font-display mb-4">Fechadura Inteligente Wi-Fi e Automação Residencial em Blumenau</h2>
+  <p class="text-text-muted leading-relaxed mb-4">
+    A fechadura inteligente (smart lock) vai muito além da biometria e senha locais. Ela conecta-se à rede Wi-Fi da sua residência (ou via Hub Zigbee), permitindo o gerenciamento completo do acesso à sua casa de qualquer lugar do mundo diretamente pelo seu smartphone.
+  </p>
+  <p class="text-text-muted leading-relaxed mb-6">
+    Realizamos a instalação física precisa e a configuração lógica de fechaduras inteligentes smart das principais marcas do mercado: Intelbras (linha Izy, como IFR 7000 e IFR 3000), Yale Connect, Tuya, Positivo Casa Inteligente, Geonav e Kaadas Wi-Fi. Integramos com sua rede Wi-Fi doméstica, criamos senhas temporárias para visitas ou prestadores de serviços e configuramos rotinas para que as luzes se acendam automaticamente ao abrir a porta.
+  </p>
+
+  <div class="bg-surface-2 border border-border-main rounded-2xl p-6 mb-6">
+    <h3 class="font-bold text-text-main font-display mb-4 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      O que está incluso no serviço
+    </h3>
+    <ul class="space-y-2 text-text-muted text-sm">
+      {[
+        "Avaliação e furação precisa da porta de madeira ou alumínio",
+        "Instalação mecânica completa do maquinário interno e painéis",
+        "Conexão física e alinhamento perfeito do trinco e contra-testa",
+        "Pareamento da fechadura com o aplicativo de automação (Tuya, Izy Smart, etc.)",
+        "Configuração de senhas de acesso (master, usuários e senhas temporárias/agendadas)",
+        "Configuração de automações inteligentes (ligar luzes ao abrir a porta, notificações de status)",
+      ].map(item => (
+        <li class="flex items-start gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green shrink-0 mt-0.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <h3 class="text-lg font-bold text-text-main font-display mb-4">Como funciona o atendimento</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+    {[
+      { n: "1", titulo: "Defina o modelo", desc: "Ajudamos a escolher o melhor modelo (Wi-Fi, Bluetooth ou Zigbee) para sua porta." },
+      { n: "2", titulo: "Instalação precisa", desc: "Realizamos a furação e fixação com ferramentas profissionais de alto padrão." },
+      { n: "3", titulo: "App e automação", desc: "Conectamos ao celular, Alexa/Google Home e configuramos as primeiras rotinas de uso." },
+    ].map(step => (
+      <div class="bg-brand-navy/5 dark:bg-white/5 rounded-2xl p-4 text-center border border-border-main">
+        <div class="h-10 w-10 rounded-full bg-brand-green text-white font-bold text-lg flex items-center justify-center mx-auto mb-3">{step.n}</div>
+        <p class="font-bold text-text-main text-sm mb-1">{step.titulo}</p>
+        <p class="text-text-muted text-xs leading-relaxed">{step.desc}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="bg-brand-green/10 border border-brand-green/30 rounded-2xl p-5">
+    <p class="text-brand-green-text dark:text-brand-green font-semibold text-sm">
+      ✅ Instalação e configuração de fechadura inteligente smart em Blumenau. Acesso por aplicativo, Alexa ou Google Home — integrado na hora.
+    </p>
+  </div>
+  </div>
+  <!-- ===================== END DESKTOP CONTENT ===================== -->
+</ServicePage>
