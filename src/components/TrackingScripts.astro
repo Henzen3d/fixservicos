@@ -1,13 +1,60 @@
 ---
 // Google tag (gtag.js) - Google Analytics 4
 const GA_ID = "G-SXJ6BKB1KM";
+// Se tiver o ID do Google Ads (ex: "AW-123456789"), insira aqui:
+const ADS_ID = "";
 ---
 <!-- Google tag (gtag.js) -->
 <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
-<script is:inline define:vars={{ GA_ID }}>
+<script is:inline define:vars={{ GA_ID, ADS_ID }}>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', GA_ID);
+  if (ADS_ID) {
+    gtag('config', ADS_ID);
+  }
+
+  // Rastreamento automático de conversão (WhatsApp e Telefone)
+  document.addEventListener('click', function(event) {
+    const link = event.target.closest('a');
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    
+    // Identifica qualquer clique que leve ao WhatsApp
+    if (href.includes('wa.me') || href.includes('whatsapp.com')) {
+      gtag('event', 'generate_lead', {
+        event_category: 'Contato',
+        event_label: 'WhatsApp Click',
+        transport_type: 'beacon',
+        page_location: window.location.href
+      });
+      gtag('event', 'whatsapp_click', {
+        event_category: 'Conversao',
+        event_label: 'Contato WhatsApp',
+        transport_type: 'beacon',
+        page_location: window.location.href
+      });
+
+      // Se o Google Ads ID estiver preenchido, dispara a conversão direta
+      if (ADS_ID) {
+        gtag('event', 'conversion', {
+          'send_to': ADS_ID,
+          'value': 150.0,
+          'currency': 'BRL'
+        });
+      }
+    }
+    
+    // Identifica clique para discagem telefônica direta
+    if (href.startsWith('tel:')) {
+      gtag('event', 'contact', {
+        event_category: 'Contato',
+        event_label: 'Ligacao Telefonica',
+        transport_type: 'beacon',
+        page_location: window.location.href
+      });
+    }
+  }, true);
 </script>
