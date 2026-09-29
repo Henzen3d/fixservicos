@@ -30,14 +30,19 @@ const waLink = `https://wa.me/5547988041306?text=${msg}`;
   <div class="absolute inset-0 z-0 bg-surface-2 transition-colors duration-300">
     <picture>
       {imagemMobile && (
-        <source srcset={imagemMobile} media="(max-width: 639px)" />
+        <>
+          <source srcset="/images/hero-mobile-optimized.webp 480w, /images/hero-mobile-800.webp 800w" type="image/webp" media="(max-width: 639px)" width="480" height="877" />
+          <source srcset="/images/hero-mobile-optimized.jpg 480w, /images/hero-mobile-800.jpg 800w" type="image/jpeg" media="(max-width: 639px)" width="480" height="877" />
+        </>
       )}
+      <source srcset="/images/hero-bg.webp" type="image/webp" media="(min-width: 640px)" width="1451" height="1084" />
       <img
-        src={imagemDesktop}
+        src="/images/hero-bg.webp"
         alt={altImagem}
-        width="1200"
-        height="800"
+        width="1451"
+        height="1084"
         fetchpriority="high"
+        decoding="async"
         class="w-full h-full object-cover object-center sm:object-[center_top]"
         style="filter: brightness(var(--hero-filter-b)) saturate(var(--hero-filter-s));"
       />
