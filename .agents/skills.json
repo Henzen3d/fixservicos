@@ -1,0 +1,34 @@
+{
+  "entries": [
+    {
+      "path": ".skills/claude-seo/skills"
+    },
+    {
+      "path": ".skills/claude-seo/extensions/ahrefs/skills"
+    },
+    {
+      "path": ".skills/claude-seo/extensions/banana/skills"
+    },
+    {
+      "path": ".skills/claude-seo/extensions/bing-webmaster/skills"
+    },
+    {
+      "path": ".skills/claude-seo/extensions/dataforseo/skills"
+    },
+    {
+      "path": ".skills/claude-seo/extensions/firecrawl/skills"
+    },
+    {
+      "path": ".skills/claude-seo/extensions/matomo/skills"
+    },
+    {
+      "path": ".skills/claude-seo/extensions/profound/skills"
+    },
+    {
+      "path": ".skills/claude-seo/extensions/seranking/skills"
+    },
+    {
+      "path": ".skills/claude-seo/extensions/unlighthouse/skills"
+    }
+  ]
+}

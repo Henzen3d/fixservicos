@@ -38,3 +38,9 @@ Esta pasta reúne a documentação executiva desenvolvida para apoiar a nova fas
    * Lista Mestra de Palavras-Chave Negativas pronta para copiar e colar no Google Ads.
    * Passo a passo para bloquear cliques de curiosos/DIY e madrugadas.
    * Ativação e conferência do rastreamento de conversões no GA4 e Google Ads.
+
+6. [06_GUIA_CRIACAO_GRUPOS_E_ANUNCIOS_GOOGLE_ADS.md](file:///j:/Arquivos%20Osmar/Reforma%20Divi%20FixBlu/Referencias/Docs/06_GUIA_CRIACAO_GRUPOS_E_ANUNCIOS_GOOGLE_ADS.md)
+   * Checklist executivo e guia passo a passo para criação futura dos 5 Grupos de Anúncios.
+   * Palavras-chave qualificadas prontas (correspondência de frase e exata) por serviço.
+   * Textos completos de anúncios responsivos (títulos e descrições prontos para copiar).
+   * Mapeamento de URLs finais e extensões recomendadas.

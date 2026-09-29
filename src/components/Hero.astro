@@ -12,6 +12,9 @@ const waLink = `https://wa.me/5547988041306?text=${msg}`;
       <img 
         src="/images/hero-bg.png" 
         alt="Técnico Osmar - Fix Serviços" 
+        width="1200"
+        height="800"
+        fetchpriority="high"
         class="w-full h-full object-cover object-center sm:object-[right_-35px]"
         style="filter: brightness(var(--hero-filter-b)) saturate(var(--hero-filter-s));"
       />
@@ -33,22 +36,17 @@ const waLink = `https://wa.me/5547988041306?text=${msg}`;
         Serviços de Qualidade
       </div>
 
-      <!-- Decorative Orange Bar (Desktop Only) -->
-      <div class="hidden sm:flex gap-4 sm:gap-6 mb-6 sm:mb-10 items-stretch">
-        <div class="w-1.5 sm:w-2 bg-brand-green rounded-full shrink-0 sm:shadow-[0_0_15px_rgba(242,101,34,0.3)]"></div>
+      <!-- Main Title Section (Unified Single H1 for SEO) -->
+      <div class="flex gap-4 sm:gap-6 mb-6 sm:mb-10 items-stretch">
+        <div class="hidden sm:block w-1.5 sm:w-2 bg-brand-green rounded-full shrink-0 sm:shadow-[0_0_15px_rgba(242,101,34,0.3)]"></div>
         <div class="flex flex-col justify-center">
-          <h1 class="text-6xl font-extrabold text-white tracking-tight mb-2 font-display leading-tight drop-shadow-xl">
-            Marido de Aluguel <br /> em Blumenau
+          <h1 class="text-[42px] sm:text-6xl font-extrabold text-text-main sm:text-white tracking-tight mb-2 font-display leading-[1.1] sm:leading-tight transition-colors drop-shadow-sm sm:drop-shadow-xl">
+            Marido de <br class="sm:hidden" />Aluguel em <br class="hidden sm:inline" /><span class="text-brand-green relative inline-block">Blumenau<span class="sm:hidden absolute -bottom-1.5 left-0 w-full h-1.5 bg-brand-green/20 rounded-full"></span></span>
           </h1>
-          <h2 class="text-base font-semibold text-brand-green uppercase tracking-[0.2em] font-display">
-            Eletricista Profissional para Blumenau
+          <h2 class="text-xs sm:text-base font-semibold text-brand-green uppercase tracking-[0.15em] sm:tracking-[0.2em] font-display">
+            Eletricista Profissional e Pequenos Reparos
           </h2>
         </div>
-      </div>
-
-      <!-- Mobile Title (Matching Reference) -->
-      <div class="sm:hidden mb-8">
-        <h1 class="text-[42px] font-extrabold text-text-main tracking-tight leading-[1.1] font-display transition-colors">Marido de <br />Aluguel em <br /><span class="text-brand-green relative inline-block">Blumenau<span class="absolute -bottom-1.5 left-0 w-full h-1.5 bg-brand-green/20 rounded-full"></span></span></h1>
       </div>
 
       <!-- Mobile paragraph: short and scannable -->

@@ -107,18 +107,13 @@ balneario camboriu
 
 ---
 
-### ⏱️ Ajuste Adicional de Emergência: Bloquear Cliques de Madrugada
+### ⏱️ Ajuste Estratégico de Programação de Anúncios (Aplicado com Sucesso!)
 
-Para evitar que seu saldo acabe antes do horário comercial começar:
-
-1.  No Google Ads, entre na campanha `"Pesquisa - Serviços Elétricos - Blumenau"`.
-2.  No menu lateral da campanha, clique em **Programação de anúncios** (ou *Ad schedule*).
-3.  Clique no ícone do lápis para editar.
-4.  Defina o horário de exibição:
-    *   **Segunda a Sexta:** das **07:30 às 18:30**
-    *   **Sábado:** das **08:00 às 13:00**
-    *   **Domingo:** Nenhum horário adicionado (desativado).
-5.  Clique em **Salvar**.
+**Regra de Ouro da FixBlu:**
+*   **Segunda e Terça-feira (Pausado):** A agenda do Osmar já costuma lotar naturalmente com a demanda orgânica acumulada do final de semana (chuveiros queimados, vazamentos, compras de TV/fechadura). Anunciar nesses dias geraria perda de dinheiro com orçamentos que não poderiam ser atendidos com rapidez.
+*   **Quarta a Sexta-feira (Ativo das 07:30 às 18:30):** É quando a "torneira" do Google Ads é aberta para completar a agenda da segunda metade da semana com serviços rápidos e de alta margem.
+*   **Sábado (Ativo das 08:00 às 13:00):** Para capturar orçamentos do fim de semana com antecedência.
+*   **Domingo e Madrugadas (Pausado):** Zero desperdício de saldo fora do expediente da Vera e do Osmar.
 
 ---
 
@@ -168,6 +163,17 @@ Depois de marcar a conversão no GA4:
 Se você preferir que o Google Ads receba o disparo direto sem depender do GA4:
 1.  Basta nos informar o seu código de conversão do Google Ads (que começa com `AW-`, encontrado em *Metas ➔ Conversões ➔ Detalhes da Tag*).
 2.  Nós colocamos esse código no `TrackingScripts.astro` em 1 minuto!
+
+---
+
+## ⏩ PRÓXIMA TAREFA (Para Fazer Mais para Frente):
+
+Quando você for estruturar ou renovar os anúncios e palavras-chave por especialidade, consulte o guia detalhado:
+👉 **[06_GUIA_CRIACAO_GRUPOS_E_ANUNCIOS_GOOGLE_ADS.md](file:///j:/Arquivos%20Osmar/Reforma%20Divi%20FixBlu/Referencias/Docs/06_GUIA_CRIACAO_GRUPOS_E_ANUNCIOS_GOOGLE_ADS.md)**
+*   Contém os **5 Grupos de Anúncios** (Fechadura Digital, Suporte TV, Eletricista, Encanador, Cadeiras de Escritório);
+*   Listas de palavras-chave prontas em correspondência de frase `"..."` e exata `[...]`;
+*   Títulos e descrições prontos para copiar e colar nos anúncios responsivos;
+*   Passo a passo no painel do Google Ads.
 
 ---
 

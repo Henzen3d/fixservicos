@@ -1,0 +1,296 @@
+{
+  "summary": {
+    "health_score": 84,
+    "business_type": "Serviços Locais / Manutenção e Reformas Residenciais (Blumenau - SC)",
+    "domain": "fixblu.com.br",
+    "crawled_urls": 42,
+    "grade": "B+",
+    "top_findings": [
+      {
+        "title": "Dupla tag <h1> na Página Inicial (Desktop e Mobile simultâneos no DOM)",
+        "severity": "High",
+        "category": "On-Page SEO",
+        "impact": "Dilui a autoridade semântica da palavra-chave principal no Googlebot"
+      },
+      {
+        "title": "Sintaxe não-padrão e regras legadas em robots.txt",
+        "severity": "Medium",
+        "category": "Technical SEO",
+        "impact": "Uso de 'Allow: */' e referência a sitemap com redirecionamento 301"
+      },
+      {
+        "title": "Ausência de Schema BreadcrumbList nos serviços",
+        "severity": "Medium",
+        "category": "Schema / Structured Data",
+        "impact": "Perde exibição de trilha de navegação (breadcrumbs) nos resultados de pesquisa do Google"
+      },
+      {
+        "title": "Ausência de Schema AggregateRating / Reviews para os depoimentos exibidos",
+        "severity": "Medium",
+        "category": "Schema / Structured Data",
+        "impact": "Não exibe estrelas de avaliação (Rich Snippets) na SERP do Google"
+      },
+      {
+        "title": "Imagem principal Hero em formato PNG pesado no desktop",
+        "severity": "Medium",
+        "category": "Performance (CWV)",
+        "impact": "Aumenta o tempo de renderização do Largest Contentful Paint (LCP)"
+      }
+    ],
+    "quick_wins": [
+      {
+        "action": "Unificar a tag <h1> na Página Inicial utilizando estilização responsiva via classes CSS, mantendo apenas 1 <h1> no DOM.",
+        "effort": "30 minutos",
+        "impact": "Alto"
+      },
+      {
+        "action": "Corrigir o robots.txt removendo regras legadas do WordPress, corrigindo a sintaxe para 'Allow: /' e apontando para '/sitemap-index.xml'.",
+        "effort": "15 minutos",
+        "impact": "Médio"
+      },
+      {
+        "action": "Implementar BreadcrumbList JSON-LD no layout ServicePage.astro.",
+        "effort": "45 minutos",
+        "impact": "Alto"
+      },
+      {
+        "action": "Adicionar Schema AggregateRating e Reviews ao JSON-LD da Home e páginas de serviços.",
+        "effort": "30 minutos",
+        "impact": "Alto"
+      },
+      {
+        "action": "Atualizar o link redirecionado no llms.txt e converter o hero-bg.png para WebP/AVIF.",
+        "effort": "20 minutos",
+        "impact": "Médio"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "weight": 22,
+      "score": 84,
+      "what_works": [
+        "Edge CDN da Cloudflare ativo com suporte a HTTP/2 e HTTP/3 (QUIC)",
+        "Certificado SSL/TLS válido e HTTPS forçado em todas as rotas",
+        "Sitemap XML dinâmico com 42 URLs ativas e canônicas",
+        "Mapeamento de redirecionamentos 301 limpo e eficiente no Cloudflare Pages",
+        "URLs limpas com trailing slash consistente e sem parâmetros duplicados"
+      ],
+      "findings": [
+        {
+          "title": "Sintaxe incorreta de Allow e referência a sitemap redirecionado no robots.txt",
+          "severity": "Medium",
+          "description": "O robots.txt possui 'Allow: */' (asterisco inicial não é padrão RFC e pode ser ignorado por alguns crawlers) e declara 'Sitemap: https://fixblu.com.br/sitemap.xml', que retorna 301 Moved Permanently para '/sitemap-index.xml'.",
+          "recommendation": "Ajustar o robots.txt para 'Allow: /' e declarar apenas a URL canônica 'https://fixblu.com.br/sitemap-index.xml'."
+        },
+        {
+          "title": "Regras residuais de WordPress em site Astro estático",
+          "severity": "Low",
+          "description": "O robots.txt ainda desautoriza '/wp-content/plugins/' e '/wp-admin/', caminhos inexistentes no projeto atual Astro.",
+          "recommendation": "Limpar diretivas legadas desnecessárias mantendo o arquivo enxuto."
+        },
+        {
+          "title": "Falta de cabeçalhos de segurança avançados (HSTS e CSP)",
+          "severity": "Low",
+          "description": "Faltam cabeçalhos como Strict-Transport-Security (HSTS) e Permissions-Policy nas respostas HTTP.",
+          "recommendation": "Adicionar cabeçalhos de segurança recomendados na configuração de headers do Cloudflare."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality & E-E-A-T",
+      "weight": 23,
+      "score": 88,
+      "what_works": [
+        "Forte autoridade técnica evidenciada (formação SENAI, certificações NR10, NR18, NR33, NR35)",
+        "Mais de 20 anos de experiência real comprovada e comunicada ao usuário",
+        "Depoimentos reais com geolocalização por bairros de Blumenau (Victor Konder, Vila Nova, Centro, Itoupava Norte)",
+        "Linguagem clara, objetiva e orientada à conversão no WhatsApp"
+      ],
+      "findings": [
+        {
+          "title": "Duplicação de conteúdo entre blocos mobile e desktop nos templates Astro",
+          "severity": "Medium",
+          "description": "Páginas de serviços renderizam simultaneamente blocos completos com 'sm:hidden' e 'hidden sm:block', duplicando parágrafos e títulos no HTML bruto para os robôs de busca.",
+          "recommendation": "Refatorar os componentes para usar tipografia e layouts responsivos em um único fluxo HTML, evitando duplicação de texto no DOM."
+        },
+        {
+          "title": "Ausência de caixa de perfil/bio do técnico responsável nas páginas de serviços",
+          "severity": "Low",
+          "description": "As credenciais do Técnico Osmar constam no llms.txt e no footer, mas não possuem destaque visual nas páginas de conversão de serviços específicos.",
+          "recommendation": "Incluir uma mini-box de autoridade técnica ('Serviço executado por técnico certificado SENAI e NR10') em cada serviço."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "weight": 20,
+      "score": 81,
+      "what_works": [
+        "Titles com intenção transacional e geo-referenciamento 'em Blumenau'",
+        "Meta descriptions persuasivas com call-to-action e emojis funcionais",
+        "URLs semânticas organizadas em arquitetura de silo (/eletricista/, /encanador/, /marido-de-aluguel/)",
+        "Links canônicos autorreferenciados presentes em 100% das páginas"
+      ],
+      "findings": [
+        {
+          "title": "Tag <h1> duplicada na Página Inicial",
+          "severity": "High",
+          "description": "A homepage renderiza duas tags <h1> simultâneas: uma dentro do bloco desktop e outra no mobile.",
+          "recommendation": "Manter apenas uma tag <h1> na homepage, adaptando tamanhos de fonte via Tailwind (ex: class='text-4xl sm:text-6xl')."
+        },
+        {
+          "title": "Salto na hierarquia de cabeçalhos (H2 para H4 em cards de serviços)",
+          "severity": "Medium",
+          "description": "Na seção 'O que fazemos' da home, títulos de serviços utilizam <h4> logo abaixo de <h2> e <h3>, quebrando a sequência lógica de títulos.",
+          "recommendation": "Normalizar a hierarquia de tags para h2 -> h3 ou h3 -> p com classes tipográficas semânticas."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "weight": 10,
+      "score": 78,
+      "what_works": [
+        "Schema LocalBusiness ativo na home com endereço, telefone, coordenadas geo e horários de funcionamento",
+        "Schema Service implementado nas páginas de categorias e páginas filhas",
+        "Dados consistentes de NAP em todo o site"
+      ],
+      "findings": [
+        {
+          "title": "Falta de Schema BreadcrumbList",
+          "severity": "Medium",
+          "description": "O breadcrumb visual existe nas páginas de serviço, mas não está marcado com Schema.org BreadcrumbList.",
+          "recommendation": "Injetar JSON-LD de BreadcrumbList em todas as páginas filhas para exibição de navegação rica no Google."
+        },
+        {
+          "title": "Falta de AggregateRating e Review no JSON-LD",
+          "severity": "Medium",
+          "description": "O site exibe 'Média 5 estrelas no Google' e 4 depoimentos reais, mas não os declara no Schema.org.",
+          "recommendation": "Adicionar propriedade aggregateRating e array de reviews ao Schema LocalBusiness."
+        },
+        {
+          "title": "Tipagem genérica de LocalBusiness",
+          "severity": "Low",
+          "description": "O tipo está como 'LocalBusiness' genérico ao invés de especializações como 'HomeAndConstructionBusiness', 'Electrician' ou 'Plumber'.",
+          "recommendation": "Utilizar tipos mais específicos do Schema.org para reforçar a relevância de nicho."
+        }
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "weight": 10,
+      "score": 90,
+      "what_works": [
+        "Arquitetura estática Astro com carregamento ultrarrápido (sub-50ms TTFB)",
+        "Zero dependência pesada de frameworks client-side (sem hydration React/Vue)",
+        "Distribuição global com baixa latência pelo CDN da Cloudflare",
+        "Preconnect para Google Fonts ativo no BaseHead"
+      ],
+      "findings": [
+        {
+          "title": "Hero Desktop em formato PNG sem dimensões explícitas",
+          "severity": "Medium",
+          "description": "A imagem '/images/hero-bg.png' é um arquivo PNG com potencial de atraso de LCP em conexões móveis ou 4G.",
+          "recommendation": "Converter para WebP/AVIF e adicionar atributos width/height ou fetchpriority='high'."
+        },
+        {
+          "title": "Logo sem largura e altura explícitas no header",
+          "severity": "Low",
+          "description": "Tag <img> do logo não declara width e height fixos, podendo induzir pequenas flutuações de CLS durante o carregamento inicial.",
+          "recommendation": "Declarar width='150' height='32' na tag do logo."
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness (GEO & Agentic)",
+      "weight": 10,
+      "score": 86,
+      "what_works": [
+        "Arquivo llms.txt implementado na raiz do domínio com documentação completa dos serviços",
+        "Alta citabilidade em respostas geradas por IA (Perplexity, ChatGPT Search, Gemini)",
+        "Presença de especificações técnicas exatas (normas NR10, NBR 14136, tipos de conectores Wago)",
+        "Informações de contato e área de atendimento facilmente extraíveis por agentes autônomos"
+      ],
+      "findings": [
+        {
+          "title": "URL obsoleta com redirecionamento 301 dentro do llms.txt",
+          "severity": "Low",
+          "description": "O llms.txt lista '/encanador/instalacao-aquecedor-a-gas/', que atualmente retorna 301 para '/encanador/'.",
+          "recommendation": "Remover ou atualizar o link para apontar diretamente para a categoria de encanador."
+        },
+        {
+          "title": "Falta de diretivas explícitas para AI Bots no robots.txt",
+          "severity": "Low",
+          "description": "Não há declaração explícita de permissão para OAI-SearchBot, Claude-SearchBot e PerplexityBot.",
+          "recommendation": "Adicionar blocos específicos no robots.txt autorizando os agentes de busca generativa."
+        }
+      ]
+    },
+    {
+      "name": "Images & Visual",
+      "weight": 5,
+      "score": 76,
+      "what_works": [
+        "Textos alternativos (alt) descritivos presentes nas imagens principais",
+        "Tag <picture> com imagem responsiva no Hero mobile e desktop",
+        "Contraste visual de acessibilidade excelente tanto no tema claro quanto no escuro"
+      ],
+      "findings": [
+        {
+          "title": "Falta de adoção sistemática de formatos modernos WebP/AVIF em todas as imagens",
+          "severity": "Medium",
+          "description": "Imagens em /images/ utilizam PNG e JPG clássicos.",
+          "recommendation": "Converter todas as imagens estáticas para WebP mantendo compressão visual sem perdas perceptíveis."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Fase 1: Correções Críticas e Rápidas",
+        "timeframe": "Semana 1",
+        "items": [
+          "Corrigir duplicidade de tag <h1> na homepage (/src/components/Hero.astro)",
+          "Ajustar robots.txt (sintaxe 'Allow: /', remover WP legados e apontar para /sitemap-index.xml)",
+          "Atualizar link de aquecedor no llms.txt para manter 100% de integridade 200 OK",
+          "Declarar atributos width e height no logo do Header para estabilidade de CLS"
+        ]
+      },
+      {
+        "name": "Fase 2: Estruturação e Rich Snippets",
+        "timeframe": "Semanas 2-3",
+        "items": [
+          "Implementar Schema BreadcrumbList em todas as páginas filhas de serviços",
+          "Adicionar Schema AggregateRating e Reviews na homepage",
+          "Converter imagem hero-bg.png para WebP/AVIF e aplicar fetchpriority='high'",
+          "Implementar FAQPage Schema nas páginas que contêm perguntas frequentes"
+        ]
+      },
+      {
+        "name": "Fase 3: Refinamento de Conteúdo e E-E-A-T",
+        "timeframe": "Mês 2",
+        "items": [
+          "Refatorar templates para eliminar duplicidade de parágrafos entre mobile e desktop",
+          "Adicionar box visual de autoridade do Técnico Osmar (SENAI/NR10) nas páginas de serviços",
+          "Criar páginas ou seções com foco em bairros prioritários de Blumenau (ex: Garcia, Itoupava, Centro, Velha)"
+        ]
+      },
+      {
+        "name": "Fase 4: Monitoramento Contínuo",
+        "timeframe": "Contínuo",
+        "items": [
+          "Monitorar cobertura de indexação no Google Search Console",
+          "Acompanhar impressões e CTR das palavras-chave locais",
+          "Capturar baselines com 'seo drift' para evitar regressões em futuros deploys"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

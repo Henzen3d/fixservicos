@@ -25,3 +25,11 @@ pnpm-debug.log*
 
 # large backups
 *.zip
+
+# skills virtualenv & cache
+.skills/**/.venv/
+.skills/**/__pycache__/
+.skills/**/ms-playwright/
+.skills/**/runtime-state.json
+.skills/**/.setup.lock
+
