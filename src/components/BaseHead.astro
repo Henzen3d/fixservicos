@@ -27,6 +27,9 @@ const { title, description, canonicalURL, image = '/og-fixblu.jpg', schema, noin
 <!-- Canonical URL -->
 {canonicalURL && <link rel="canonical" href={canonicalURL} />}
 
+<!-- Agentic Resource Discovery (ARD 1.0 / Lighthouse Agentic Browsing) -->
+<link rel="ai-catalog" type="application/ai-catalog+json" href="/.well-known/ai-catalog.json" />
+
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />

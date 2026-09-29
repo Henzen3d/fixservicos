@@ -5,6 +5,9 @@ Disallow: /404
 # Sitemap Canônico Oficial
 Sitemap: https://fixblu.com.br/sitemap-index.xml
 
+# Descoberta de Recursos Agênticos (ARD / Lighthouse Agentic Browsing)
+Agentmap: https://fixblu.com.br/.well-known/ai-catalog.json
+
 # Permissões para Mecanismos de Busca com Inteligência Artificial (GEO)
 User-agent: OAI-SearchBot
 Allow: /

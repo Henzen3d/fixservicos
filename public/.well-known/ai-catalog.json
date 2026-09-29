@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/schemas/v1.0/schema.json",
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Fix Serviços Blumenau",
+    "identifier": "fixblu.com.br"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:fixblu:services:catalogo",
+      "displayName": "Fix Serviços - Catálogo de Reparos e Manutenção",
+      "type": "application/ai-catalog+json",
+      "url": "https://fixblu.com.br/llms.txt",
+      "description": "Catálogo completo em formato llms.txt para agentes de IA consultarem serviços de eletricista, encanador e marido de aluguel em Blumenau.",
+      "representativeQueries": [
+        "Qual o contato de eletricista profissional em Blumenau?",
+        "Quem faz conserto de vazamentos e válvula de descarga em Blumenau?",
+        "Onde encontrar marido de aluguel para instalação de TV e coifa em Blumenau?"
+      ]
+    },
+    {
+      "identifier": "urn:air:fixblu:tools:atendimento",
+      "displayName": "Atendimento e Orçamentos Fix Serviços",
+      "type": "application/mcp-server-card+json",
+      "url": "https://fixblu.com.br/contato/",
+      "description": "Canal oficial para informações sobre orçamento, envio de fotos para avaliação e agendamento de serviços em Blumenau.",
+      "representativeQueries": [
+        "Como solicitar orçamento de reparos residenciais em Blumenau?",
+        "Quais são os horários de atendimento da Fix Serviços Blumenau?",
+        "Quais bairros de Blumenau contam com atendimento da Fix Serviços?"
+      ]
+    }
+  ]
+}
