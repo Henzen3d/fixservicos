@@ -1,10 +1,36 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Política de Privacidade - Fix Serviços",
+  "description": "Política de Privacidade e proteção de dados da Fix Serviços Blumenau.",
+  "url": "https://fixblu.com.br/politica-de-privacidade/",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "https://fixblu.com.br/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Política de Privacidade",
+        "item": "https://fixblu.com.br/politica-de-privacidade/"
+      }
+    ]
+  }
+};
 ---
 <MainLayout 
   title="🔒 Política de Privacidade - Fix Serviços" 
   description="🔒 Saiba como cuidamos e protegemos seus dados e privacidade na Fix Serviços!" 
   canonicalURL="https://fixblu.com.br/politica-de-privacidade/"
+  schema={schema}
 >
   <section class="py-12 sm:py-20 bg-surface-2 transition-colors">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
