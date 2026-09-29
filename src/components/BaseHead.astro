@@ -5,9 +5,10 @@ interface Props {
   canonicalURL?: string | URL;
   image?: string;
   schema?: object;
+  noindex?: boolean;
 }
 
-const { title, description, canonicalURL, image = '/og-fixblu.jpg', schema } = Astro.props;
+const { title, description, canonicalURL, image = '/og-fixblu.jpg', schema, noindex = false } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -15,6 +16,13 @@ const { title, description, canonicalURL, image = '/og-fixblu.jpg', schema } = A
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Robots Meta -->
+{noindex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow" />
+)}
 
 <!-- Canonical URL -->
 {canonicalURL && <link rel="canonical" href={canonicalURL} />}
@@ -38,6 +46,14 @@ const { title, description, canonicalURL, image = '/og-fixblu.jpg', schema } = A
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- LCP Preload Hero Image (Prioritizes Mobile & Desktop First Contentful Paint) -->
+{Astro.url.pathname === '/' && (
+  <>
+    <link rel="preload" as="image" href="/images/hero-mobile-optimized.jpg" media="(max-width: 639px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/hero-bg.png" media="(min-width: 640px)" fetchpriority="high" />
+  </>
+)}
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />

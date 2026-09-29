@@ -1,0 +1,125 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const waLink = "https://wa.me/5547988041306?text=" + encodeURIComponent("Olá! Estava navegando no site da Fix Serviços e não encontrei a página que procurava. Poderia me ajudar?");
+
+const services = [
+  {
+    title: "Eletricista",
+    desc: "Instalações elétricas, chuveiros, tomadas, iluminação e curto-circuito.",
+    url: "/eletricista/",
+    icon: "⚡",
+    badge: "Emergência & Instalação"
+  },
+  {
+    title: "Encanador",
+    desc: "Vazamentos, válvulas de descarga, caixas acopladas, sifões e torneiras.",
+    url: "/encanador/",
+    icon: "💦",
+    badge: "Reparos Hidráulicos"
+  },
+  {
+    title: "Marido de Aluguel",
+    desc: "Instalação de TV, coifas, fechaduras digitais, cortinas e reparos gerais.",
+    url: "/marido-de-aluguel/",
+    icon: "🔨",
+    badge: "Faz Tudo Especializado"
+  },
+  {
+    title: "Casa Inteligente",
+    desc: "Fechaduras digitais, interruptores inteligentes Sonoff e automação.",
+    url: "/casa-inteligente/",
+    icon: "💡",
+    badge: "Smart Home"
+  }
+];
+---
+
+<MainLayout
+  title="Página Não Encontrada (404) | Fix Serviços Blumenau"
+  description="Ops! A página que você procura não foi encontrada ou foi movida. Conheça nossos serviços de eletricista, encanador e marido de aluguel em Blumenau."
+  noPadding={true}
+  noindex={true}
+>
+  <div class="min-h-[80vh] flex flex-col justify-center items-center py-20 px-4 sm:px-6 relative overflow-hidden">
+    <!-- Background Glow Effect -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-green/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-4xl mx-auto text-center w-full">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-brand-green/10 text-brand-green-text dark:text-brand-green px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+        <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+        Erro 404 • Página não encontrada
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-7xl sm:text-9xl font-black text-brand-navy dark:text-white font-display tracking-tight leading-none mb-4">
+        4<span class="text-brand-green">0</span>4
+      </h1>
+      
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy dark:text-white font-display mb-4">
+        Ops! O reparo que você procura não está aqui.
+      </h2>
+
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto mb-10 leading-relaxed font-sans">
+        O endereço digitado pode ter mudado, mas nosso time de profissionais em Blumenau continua pronto para resolver seu problema.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a
+          href="/"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-brand-navy hover:bg-slate-800 text-white dark:bg-white dark:text-brand-navy dark:hover:bg-slate-100 px-8 py-4 rounded-xl font-bold font-display text-base transition-all shadow-md hover:shadow-lg no-underline"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Voltar para a Página Inicial
+        </a>
+
+        <a
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-brand-green hover:bg-brand-green-hover text-white px-8 py-4 rounded-xl font-bold font-display text-base transition-all shadow-[0_4px_16px_rgba(40,195,72,0.3)] hover:scale-105 active:scale-95 no-underline"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+
+      <!-- Quick Services Grid -->
+      <div class="border-t border-border-main pt-12">
+        <h3 class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-6">
+          Ou acesse diretamente uma de nossas categorias de serviços
+        </h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+          {services.map((item) => (
+            <a
+              href={item.url}
+              class="group p-5 rounded-2xl bg-surface-1 border border-border-main hover:border-brand-green/40 hover:shadow-md transition-all duration-200 no-underline flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-2xl">{item.icon}</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-green bg-brand-green/10 px-2 py-0.5 rounded-full">
+                    {item.badge}
+                  </span>
+                </div>
+                <h4 class="text-lg font-bold text-brand-navy dark:text-white font-display group-hover:text-brand-green transition-colors mb-1.5">
+                  {item.title}
+                </h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+              <div class="mt-4 flex items-center text-xs font-bold text-brand-green gap-1 group-hover:translate-x-1 transition-transform">
+                Ver serviços
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>

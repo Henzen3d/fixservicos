@@ -8,6 +8,7 @@ export default defineConfig({
   site: 'https://fixblu.com.br',
   integrations: [
     sitemap({
+      filter: (page) => !page.includes('/404') && !page.includes('/avaliar'),
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),

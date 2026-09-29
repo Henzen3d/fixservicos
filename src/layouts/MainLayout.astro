@@ -14,15 +14,16 @@ interface Props {
   h1?: string;
   noPadding?: boolean;
   schema?: object;
+  noindex?: boolean;
 }
 
-const { title, description, canonicalURL, h1, noPadding = false, schema } = Astro.props;
+const { title, description, canonicalURL, h1, noPadding = false, schema, noindex = false } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <BaseHead title={title} description={description} canonicalURL={canonicalURL} schema={schema} />
+    <BaseHead title={title} description={description} canonicalURL={canonicalURL} schema={schema} noindex={noindex} />
     <TrackingScripts />
   </head>
   <body class="font-sans text-text-main bg-surface-2 antialiased">

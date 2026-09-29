@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /404
 
 # Sitemap Canônico Oficial
 Sitemap: https://fixblu.com.br/sitemap-index.xml

@@ -1,14 +1,16 @@
 User-agent: *
-# Directories
-Disallow: /cgi-bin/
-Disallow: /wp-content/plugins/
-Disallow: /wp-admin/
-Disallow: /readme.html
-Disallow: /refer/ 
+Allow: /
+Disallow: /404
 
-# Allow de Avaliacao
-Allow: /avaliar/
+# Sitemap Canônico Oficial
+Sitemap: https://fixblu.com.br/sitemap-index.xml
+
+# Permissões para Mecanismos de Busca com Inteligência Artificial (GEO)
+User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://fixblu.com.br/sitemap-index.xml
-Sitemap: https://fixblu.com.br/sitemap.xml
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /

@@ -1,13 +1,54 @@
-# Cloudflare Pages Redirects
-/sitemap.xml                           /sitemap-index.xml                     301
-/encanador/instalacao-aquecedor-a-gas/ /encanador/                            301
-/eletricista/manutencao-ar-condicionado-blumenau/ /eletricista/               301
-/eletricista/carga-de-gas-ar-condicionado-split-blumenau/ /eletricista/       301
-/servicos/casa-inteligente/            /casa-inteligente/                     301
-/servicos/encanador/                   /encanador/                            301
-/servicos/eletricista/                 /eletricista/                          301
-/servicos/marido-de-aluguel/           /marido-de-aluguel/                    301
-/servicos/casa-inteligente/*           /casa-inteligente/                     301
-/servicos/encanador/*                  /encanador/                            301
-/servicos/eletricista/*                /eletricista/                          301
-/servicos/marido-de-aluguel/*          /marido-de-aluguel/                    301
+# ========================================================
+# CLOUDFLARE PAGES REDIRECTS - FIX SERVIÇOS BLUMENAU
+# ========================================================
+
+# 1. Host Canonicalization: WWW -> Apex (HTTP & HTTPS)
+https://www.fixblu.com.br/* https://fixblu.com.br/:splat 301
+http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
+
+# 2. Canonical Sitemaps
+/sitemap.xml                     /sitemap-index.xml                     301
+/wp-sitemap.xml                  /sitemap-index.xml                     301
+/wp-sitemap-posts-page-1.xml     /sitemap-index.xml                     301
+
+# 3. Google Avaliações (Atalho para clientes avaliarem)
+/avaliar                         https://search.google.com/local/writereview?placeid=ChIJTyGA3_ob35QR5Iu8YYSNRIY 302
+/avaliar/                        https://search.google.com/local/writereview?placeid=ChIJTyGA3_ob35QR5Iu8YYSNRIY 302
+
+# 4. WordPress Legacy Categories & Hubs
+/servicos/casa-inteligente/      /casa-inteligente/                     301
+/servicos/casa-inteligente       /casa-inteligente/                     301
+/servicos/encanador/             /encanador/                            301
+/servicos/encanador              /encanador/                            301
+/servicos/eletricista/           /eletricista/                          301
+/servicos/eletricista            /eletricista/                          301
+/servicos/marido-de-aluguel/     /marido-de-aluguel/                    301
+/servicos/marido-de-aluguel      /marido-de-aluguel/                    301
+/servicos/casa-inteligente/*     /casa-inteligente/                     301
+/servicos/encanador/*            /encanador/                            301
+/servicos/eletricista/*          /eletricista/                          301
+/servicos/marido-de-aluguel/*    /marido-de-aluguel/                    301
+/servicos/page/*                 /servicos/                             301
+
+# 5. WordPress Historical Specific URLs (Preservação de Tráfego e SEO)
+/marido-de-aluguel/instalacao-secadora-de-roupas-de-parede/ /marido-de-aluguel/ 301
+/marido-de-aluguel/instalacao-secadora-de-roupas-de-parede  /marido-de-aluguel/ 301
+/marido-de-aluguel/instalacao-coifa/                        /marido-de-aluguel/instalacao-de-coifa/ 301
+/marido-de-aluguel/instalacao-coifa                         /marido-de-aluguel/instalacao-de-coifa/ 301
+/encanador/instalacao-aquecedor-a-gas/                      /encanador/                            301
+/encanador/instalacao-aquecedor-a-gas                       /encanador/                            301
+/eletricista/manutencao-ar-condicionado-blumenau/           /eletricista/                          301
+/eletricista/manutencao-ar-condicionado-blumenau            /eletricista/                          301
+/eletricista/carga-de-gas-ar-condicionado-split-blumenau/   /eletricista/                          301
+/eletricista/carga-de-gas-ar-condicionado-split-blumenau    /eletricista/                          301
+
+# 6. WordPress System Routes (Evita Soft-404 / 200 da Home)
+/wp-login.php                    / 301
+/wp-admin                        / 301
+/wp-admin/*                      / 301
+/wp-content/plugins/*            / 301
+/wp-content/themes/*             / 301
+/blog                            / 301
+/blog/*                          / 301
+/feed                            / 301
+/feed/*                          / 301
