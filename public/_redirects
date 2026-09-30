@@ -37,8 +37,3 @@ http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
 /eletricista/manutencao-ar-condicionado-blumenau            /eletricista/                          301
 /eletricista/carga-de-gas-ar-condicionado-split-blumenau/   /eletricista/                          301
 /eletricista/carga-de-gas-ar-condicionado-split-blumenau    /eletricista/                          301
-
-# 6. WordPress Blog Migration (Redireciona para o blog oficial ativo)
-/blog                            https://blog.fixblu.com.br/            301
-/blog/*                          https://blog.fixblu.com.br/:splat      301
-

@@ -29,9 +29,11 @@ function getDeterministicDate(urlStr) {
   return new Date(historicalDates[index]);
 }
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://fixblu.com.br',
+  build: {
+    inlineStylesheets: 'always',
+  },
   integrations: [
     sitemap({
       filter: (page) => !page.includes('/404') && !page.includes('/avaliar'),
@@ -69,6 +71,20 @@ export default defineConfig({
           item.lastmod = new Date('2026-09-29T14:30:00.000Z');
           item.priority = 0.9;
           item.changefreq = 'weekly';
+          return item;
+        }
+
+        // Blog Hub & Artigos
+        if (cleanUrl.endsWith('/blog')) {
+          item.lastmod = new Date('2026-09-30T19:00:00.000Z');
+          item.priority = 0.8;
+          item.changefreq = 'weekly';
+          return item;
+        }
+        if (cleanUrl.includes('/blog/')) {
+          item.lastmod = new Date('2026-09-28T12:00:00.000Z');
+          item.priority = 0.7;
+          item.changefreq = 'monthly';
           return item;
         }
 

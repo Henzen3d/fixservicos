@@ -1,0 +1,197 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { blogPosts, type BlogPost } from '../../data/blogPosts';
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: BlogPost;
+}
+
+const { post } = Astro.props;
+
+const title = `${post.title} | Blog Fix Serviços Blumenau`;
+const description = post.description;
+const canonicalURL = `https://fixblu.com.br/blog/${post.slug}/`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title,
+  "description": post.description,
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalURL
+  },
+  "url": canonicalURL,
+  "image": "https://fixblu.com.br/og-fixblu.jpg",
+  "author": {
+    "@type": "Person",
+    "name": post.author.name,
+    "jobTitle": post.author.role,
+    "url": "https://fixblu.com.br/contato/"
+  },
+  "publisher": {
+    "@type": "LocalBusiness",
+    "name": "Fix Serviços",
+    "telephone": "+55-47-98804-1306",
+    "url": "https://fixblu.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Blumenau",
+      "addressRegion": "SC",
+      "addressCountry": "BR"
+    }
+  }
+};
+---
+
+<MainLayout title={title} description={description} canonicalURL={canonicalURL} noPadding={true} schema={schema}>
+  <!-- Post Header -->
+  <section class="pt-32 pb-14 sm:pt-40 sm:pb-20 bg-brand-navy text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy to-[#050B14] opacity-90 z-0"></div>
+    <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 h-80 w-80 rounded-full bg-brand-green/10 blur-[100px]"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="mb-6 flex items-center gap-2 text-xs text-white/60">
+        <a href="/" class="hover:text-brand-green no-underline text-inherit transition-colors">Início</a>
+        <span>/</span>
+        <a href="/blog/" class="hover:text-brand-green no-underline text-inherit transition-colors">Blog</a>
+        <span>/</span>
+        <span class="text-white/90 truncate max-w-[200px] sm:max-w-none">{post.category}</span>
+      </nav>
+
+      <!-- Category + Meta -->
+      <div class="flex flex-wrap items-center gap-3 mb-4 text-xs">
+        <span class="px-3 py-1 rounded-md font-bold uppercase tracking-wider bg-brand-green text-white">
+          {post.category}
+        </span>
+        <span class="text-white/70 flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          {post.readTime}
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-display tracking-tight text-white leading-tight mb-6">
+        {post.title}
+      </h1>
+
+      <!-- Author snippet -->
+      <div class="flex items-center gap-3 pt-6 border-t border-white/10 text-xs sm:text-sm">
+        <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-sm shadow-sm">
+          O
+        </div>
+        <div>
+          <span class="font-bold text-white block">{post.author.name}</span>
+          <span class="text-white/60 text-xs block">{post.author.role} · Blumenau, SC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Post Body -->
+  <section class="py-14 sm:py-20 bg-surface-2 transition-colors">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10">
+      
+      <!-- Main Content -->
+      <article class="lg:col-span-8 bg-surface-1 border border-border-main rounded-2xl p-6 sm:p-10 shadow-sm">
+        <div class="prose prose-slate dark:prose-invert max-w-none text-text-main text-base sm:text-lg leading-relaxed space-y-6">
+          {post.content.map((paragraph) => {
+            if (paragraph.startsWith('### ')) {
+              return <h2 class="text-xl sm:text-2xl font-bold font-display text-text-main pt-6 pb-2 border-b border-border-main">{paragraph.replace('### ', '')}</h2>;
+            }
+            if (paragraph.startsWith('* ')) {
+              return (
+                <div class="flex items-start gap-2.5 my-2">
+                  <span class="text-brand-green font-bold text-lg mt-0.5">•</span>
+                  <p class="text-text-main text-sm sm:text-base leading-relaxed m-0" set:html={paragraph.replace('* ', '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+                </div>
+              );
+            }
+            if (paragraph.match(/^\d+\. /)) {
+              return (
+                <div class="flex items-start gap-2.5 my-2">
+                  <span class="text-brand-navy dark:text-brand-green font-bold text-sm mt-0.5">{paragraph.split('. ')[0]}.</span>
+                  <p class="text-text-main text-sm sm:text-base leading-relaxed m-0" set:html={paragraph.replace(/^\d+\. /, '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+                </div>
+              );
+            }
+            return <p class="text-text-main text-sm sm:text-base leading-relaxed" set:html={paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />;
+          })}
+        </div>
+
+        <!-- FAQs Section if present -->
+        {post.faqs && post.faqs.length > 0 && (
+          <div class="mt-12 pt-8 border-t border-border-main">
+            <h3 class="text-xl sm:text-2xl font-bold font-display text-text-main mb-6 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
+              Perguntas Frequentes
+            </h3>
+            <div class="space-y-4">
+              {post.faqs.map((faq) => (
+                <div class="bg-surface-2 border border-border-main rounded-xl p-4 sm:p-5">
+                  <p class="font-bold text-sm sm:text-base text-text-main mb-2">{faq.question}</p>
+                  <p class="text-text-muted text-xs sm:text-sm leading-relaxed m-0">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Author Trust Box -->
+        <div class="mt-12 p-6 rounded-xl bg-surface-2 border border-border-main flex flex-col sm:flex-row items-center sm:items-start gap-4">
+          <div class="w-14 h-14 rounded-full bg-brand-navy text-white flex items-center justify-center font-bold text-xl shrink-0 shadow">
+            O
+          </div>
+          <div>
+            <h4 class="font-bold text-base text-text-main mb-1">Sobre o autor: {post.author.name}</h4>
+            <p class="text-text-muted text-xs sm:text-sm leading-relaxed mb-3">
+              Profissional com mais de 20 anos de atuação prática em Blumenau e região. Especialista em instalações elétricas com certificação NR10, manutenções hidráulicas e automação residencial.
+            </p>
+            <a href="/contato/" class="text-brand-green font-bold text-xs hover:underline uppercase tracking-wide no-underline inline-flex items-center gap-1">
+              Conhecer história da Fix Serviços &rarr;
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-4 space-y-6">
+        <!-- Direct Service Card -->
+        <div class="bg-surface-1 border-2 border-brand-green/30 rounded-2xl p-6 shadow-sm sticky top-24">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-brand-green block mb-1">Serviço Especializado</span>
+          <h3 class="text-lg font-bold font-display text-text-main mb-2">Precisa desse serviço pronto hoje?</h3>
+          <p class="text-xs text-text-muted mb-4 leading-relaxed">
+            Realizamos {post.serviceName.toLowerCase()} com garantia, pontualidade e ferramentas profissionais em toda Blumenau.
+          </p>
+
+          <a 
+            href={post.serviceLink}
+            class="block w-full text-center bg-surface-2 hover:bg-surface-3 border border-border-main text-text-main font-bold py-2.5 px-4 rounded-xl text-xs uppercase tracking-wide no-underline transition-colors mb-3"
+          >
+            Ver Detalhes do Serviço &rarr;
+          </a>
+
+          <a 
+            href={`https://wa.me/5547988041306?text=${encodeURIComponent(`Olá Técnico Osmar! Li o artigo "${post.title}" e gostaria de um orçamento para esse serviço em Blumenau.`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full text-center bg-brand-green hover:bg-brand-green-hover text-white font-bold py-3 px-4 rounded-xl text-xs uppercase tracking-wider no-underline transition-all shadow-md shadow-brand-green/20 flex items-center justify-center gap-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Solicitar Orçamento no WhatsApp
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+</MainLayout>
