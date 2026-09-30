@@ -64,27 +64,71 @@ const schema = {
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <!-- Category Badges / Intro -->
-      <div class="flex flex-wrap items-center justify-between gap-4 mb-12 pb-6 border-b border-border-main">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12 pb-6 border-b border-border-main">
         <div>
-          <h2 class="text-2xl font-bold font-display text-text-main">Todos os Artigos</h2>
+          <h2 id="blog-section-title" class="text-2xl font-bold font-display text-text-main">Todos os Artigos</h2>
           <p class="text-sm text-text-muted mt-1">Conteúdo original elaborado pelo Técnico Osmar</p>
         </div>
-        <div class="flex flex-wrap gap-2 text-xs font-semibold">
-          <span class="px-3 py-1.5 rounded-lg bg-brand-green text-white">Todos ({blogPosts.length})</span>
-          <span class="px-3 py-1.5 rounded-lg bg-surface-1 border border-border-main text-text-muted">Eletricista</span>
-          <span class="px-3 py-1.5 rounded-lg bg-surface-1 border border-border-main text-text-muted">Encanador</span>
-          <span class="px-3 py-1.5 rounded-lg bg-surface-1 border border-border-main text-text-muted">Marido de Aluguel</span>
+        <div class="flex flex-wrap items-center gap-2" role="tablist" aria-label="Filtro por categoria">
+          <button 
+            type="button" 
+            data-filter="all" 
+            class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer bg-brand-green text-white shadow-sm hover:opacity-95"
+            aria-pressed="true"
+          >
+            Todos ({blogPosts.length})
+          </button>
+          <button 
+            type="button" 
+            data-filter="Eletricista" 
+            class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer bg-surface-1 border border-border-main text-text-muted hover:text-text-main hover:border-brand-green/40"
+            aria-pressed="false"
+          >
+            Eletricista ({blogPosts.filter(p => p.category === 'Eletricista').length})
+          </button>
+          <button 
+            type="button" 
+            data-filter="Encanador" 
+            class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer bg-surface-1 border border-border-main text-text-muted hover:text-text-main hover:border-brand-green/40"
+            aria-pressed="false"
+          >
+            Encanador ({blogPosts.filter(p => p.category === 'Encanador').length})
+          </button>
+          <button 
+            type="button" 
+            data-filter="Marido de Aluguel" 
+            class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer bg-surface-1 border border-border-main text-text-muted hover:text-text-main hover:border-brand-green/40"
+            aria-pressed="false"
+          >
+            Marido de Aluguel ({blogPosts.filter(p => p.category === 'Marido de Aluguel').length})
+          </button>
+          <button 
+            type="button" 
+            data-filter="Casa Inteligente" 
+            class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer bg-surface-1 border border-border-main text-text-muted hover:text-text-main hover:border-brand-green/40"
+            aria-pressed="false"
+          >
+            Casa Inteligente ({blogPosts.filter(p => p.category === 'Casa Inteligente').length})
+          </button>
         </div>
       </div>
 
       <!-- Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {blogPosts.map((post) => (
-          <article class="flex flex-col bg-surface-1 border border-border-main rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-brand-green/40 transition-all duration-300 group">
+          <article 
+            data-category={post.category}
+            class="blog-card flex flex-col bg-surface-1 border border-border-main rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-brand-green/40 transition-all duration-300 group"
+          >
             <div class="flex items-center justify-between gap-2 mb-4 text-xs">
-              <span class="inline-block px-2.5 py-1 rounded-md font-bold uppercase tracking-wider bg-brand-green/10 text-brand-green-text dark:text-brand-green">
+              <button 
+                type="button"
+                data-tag-filter={post.category}
+                class="card-tag inline-block px-2.5 py-1 rounded-md font-bold uppercase tracking-wider bg-brand-green/10 text-brand-green-text dark:text-brand-green hover:bg-brand-green hover:text-white transition-colors cursor-pointer"
+                title={`Filtrar por ${post.category}`}
+              >
                 {post.category}
-              </span>
+              </button>
               <span class="text-text-muted flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 {post.readTime}
@@ -122,6 +166,11 @@ const schema = {
             </div>
           </article>
         ))}
+
+        <div id="no-posts" class="hidden col-span-full py-16 text-center text-text-muted bg-surface-1 rounded-2xl border border-border-main p-8">
+          <p class="text-lg font-bold text-text-main mb-1">Nenhum artigo encontrado nesta categoria</p>
+          <p class="text-sm">Clique em "Todos" para visualizar todos os artigos disponíveis.</p>
+        </div>
       </div>
 
       <!-- Bottom Banner for Direct Service Hiring -->
@@ -146,4 +195,75 @@ const schema = {
 
     </div>
   </section>
+
+  <script is:inline>
+    function initBlogFilters() {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.blog-card');
+      const cardTags = document.querySelectorAll('.card-tag');
+      const noPosts = document.getElementById('no-posts');
+      const sectionTitle = document.getElementById('blog-section-title');
+
+      if (!buttons.length || !cards.length) return;
+
+      function applyFilter(targetCategory) {
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const cardCat = card.getAttribute('data-category');
+          if (targetCategory === 'all' || cardCat === targetCategory) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (noPosts) {
+          if (visibleCount === 0) {
+            noPosts.classList.remove('hidden');
+          } else {
+            noPosts.classList.add('hidden');
+          }
+        }
+
+        if (sectionTitle) {
+          sectionTitle.textContent = targetCategory === 'all' ? 'Todos os Artigos' : `Artigos: ${targetCategory}`;
+        }
+
+        buttons.forEach((btn) => {
+          const cat = btn.getAttribute('data-filter');
+          const isActive = cat === targetCategory;
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+          if (isActive) {
+            btn.className = 'filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer bg-brand-green text-white shadow-sm hover:opacity-95';
+          } else {
+            btn.className = 'filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer bg-surface-1 border border-border-main text-text-muted hover:text-text-main hover:border-brand-green/40';
+          }
+        });
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter') || 'all';
+          applyFilter(filter);
+        });
+      });
+
+      cardTags.forEach((tag) => {
+        tag.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const filter = tag.getAttribute('data-tag-filter') || 'all';
+          applyFilter(filter);
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initBlogFilters);
+    } else {
+      initBlogFilters();
+    }
+  </script>
 </MainLayout>
