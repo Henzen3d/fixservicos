@@ -11,10 +11,6 @@ http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
 /wp-sitemap.xml                  /sitemap-index.xml                     301
 /wp-sitemap-posts-page-1.xml     /sitemap-index.xml                     301
 
-# 3. Google Avaliações (Atalho para clientes avaliarem)
-/avaliar                         https://search.google.com/local/writereview?placeid=ChIJTyGA3_ob35QR5Iu8YYSNRIY 302
-/avaliar/                        https://search.google.com/local/writereview?placeid=ChIJTyGA3_ob35QR5Iu8YYSNRIY 302
-
 # 4. WordPress Legacy Categories & Hubs
 /servicos/casa-inteligente/      /casa-inteligente/                     301
 /servicos/casa-inteligente       /casa-inteligente/                     301
