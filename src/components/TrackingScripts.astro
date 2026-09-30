@@ -4,8 +4,7 @@ const GA_ID = "G-SXJ6BKB1KM";
 // Se tiver o ID do Google Ads (ex: "AW-123456789"), insira aqui:
 const ADS_ID = "";
 ---
-<!-- Google tag (gtag.js) -->
-<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+<!-- Google tag (gtag.js) otimizado sem bloqueio de thread principal -->
 <script is:inline define:vars={{ GA_ID, ADS_ID }}>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -16,8 +15,44 @@ const ADS_ID = "";
     gtag('config', ADS_ID);
   }
 
+  // Carregamento postergado não-bloqueante para zerar o Total Blocking Time (TBT)
+  function loadGtag() {
+    if (window._gtagLoaded) return;
+    window._gtagLoaded = true;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(script);
+  }
+
+  // Dispara no primeiro toque, rolagem ou interação real do usuário
+  const userEvents = ['scroll', 'touchstart', 'mousemove', 'keydown', 'click'];
+  userEvents.forEach(function(evt) {
+    window.addEventListener(evt, loadGtag, { once: true, passive: true });
+  });
+
+  // Fallback para quando o navegador estiver ocioso após carregar
+  if (document.readyState === 'complete') {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(function() { setTimeout(loadGtag, 2500); });
+    } else {
+      setTimeout(loadGtag, 3500);
+    }
+  } else {
+    window.addEventListener('load', function() {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(function() { setTimeout(loadGtag, 2500); });
+      } else {
+        setTimeout(loadGtag, 3500);
+      }
+    });
+  }
+
   // Rastreamento automático de conversão (WhatsApp e Telefone)
   document.addEventListener('click', function(event) {
+    // Garante que o gtag esteja ativo no clique
+    loadGtag();
+
     const link = event.target.closest('a');
     if (!link) return;
     const href = link.getAttribute('href') || '';
