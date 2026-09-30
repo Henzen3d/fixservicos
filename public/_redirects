@@ -11,7 +11,7 @@ http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
 /wp-sitemap.xml                  /sitemap-index.xml                     301
 /wp-sitemap-posts-page-1.xml     /sitemap-index.xml                     301
 
-# 4. WordPress Legacy Categories & Hubs
+# 3. WordPress Legacy Services Hubs
 /servicos/casa-inteligente/      /casa-inteligente/                     301
 /servicos/casa-inteligente       /casa-inteligente/                     301
 /servicos/encanador/             /encanador/                            301
@@ -26,14 +26,189 @@ http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
 /servicos/marido-de-aluguel/*    /marido-de-aluguel/                    301
 /servicos/page/*                 /servicos/                             301
 
-# 5. WordPress Historical Specific URLs (Preservação de Tráfego e SEO)
+# 4. WordPress Climatização & Ar-Condicionado -> Redirecionado para Eletricista
+/eletricista/manutencao-ar-condicionado-blumenau/           /eletricista/ 301
+/eletricista/manutencao-ar-condicionado-blumenau            /eletricista/ 301
+/blog/eletricista/manutencao-ar-condicionado-blumenau/      /eletricista/ 301
+/blog/eletricista/manutencao-ar-condicionado-blumenau       /eletricista/ 301
+
+/eletricista/carga-de-gas-ar-condicionado-split-blumenau/   /eletricista/ 301
+/eletricista/carga-de-gas-ar-condicionado-split-blumenau    /eletricista/ 301
+/blog/eletricista/carga-de-gas-ar-condicionado-split-blumenau/ /eletricista/ 301
+/blog/eletricista/carga-de-gas-ar-condicionado-split-blumenau  /eletricista/ 301
+
+/marido-de-aluguel/temperatura-ideal-ar-condicionado/       /eletricista/ 301
+/marido-de-aluguel/temperatura-ideal-ar-condicionado        /eletricista/ 301
+/blog/marido-de-aluguel/temperatura-ideal-ar-condicionado/  /eletricista/ 301
+/blog/marido-de-aluguel/temperatura-ideal-ar-condicionado   /eletricista/ 301
+
+/faca-voce-mesmo/dicas/como-limpar-o-filtro-ar-condicionado/      /eletricista/ 301
+/faca-voce-mesmo/dicas/como-limpar-o-filtro-ar-condicionado       /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/como-limpar-o-filtro-ar-condicionado/ /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/como-limpar-o-filtro-ar-condicionado  /eletricista/ 301
+
+/faca-voce-mesmo/dicas/como-calcular-o-dimensionamento-ar-condicionado/      /eletricista/ 301
+/faca-voce-mesmo/dicas/como-calcular-o-dimensionamento-ar-condicionado       /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/como-calcular-o-dimensionamento-ar-condicionado/ /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/como-calcular-o-dimensionamento-ar-condicionado  /eletricista/ 301
+
+/faca-voce-mesmo/dicas/instalacao-de-ar-condicionado-portatil/      /eletricista/ 301
+/faca-voce-mesmo/dicas/instalacao-de-ar-condicionado-portatil       /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/instalacao-de-ar-condicionado-portatil/ /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/instalacao-de-ar-condicionado-portatil  /eletricista/ 301
+
+/faca-voce-mesmo/dicas/como-prolongar-vida-util-ar-condicionado/      /eletricista/ 301
+/faca-voce-mesmo/dicas/como-prolongar-vida-util-ar-condicionado       /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/como-prolongar-vida-util-ar-condicionado/ /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/como-prolongar-vida-util-ar-condicionado  /eletricista/ 301
+
+/category/eletrica/ar-condicionado/*        /eletricista/ 301
+/category/eletrica/ar-condicionado          /eletricista/ 301
+/blog/category/eletrica/ar-condicionado/*   /eletricista/ 301
+/blog/category/eletrica/ar-condicionado     /eletricista/ 301
+
+/category/eletrica/manutencao-ar-condicionado/*      /eletricista/ 301
+/category/eletrica/manutencao-ar-condicionado        /eletricista/ 301
+/blog/category/eletrica/manutencao-ar-condicionado/* /eletricista/ 301
+/blog/category/eletrica/manutencao-ar-condicionado   /eletricista/ 301
+
+# 5. Artigos Antigos Comerciais -> Páginas de Serviços Oficiais
+/eletrica/eletricista-em-blumenau/      /eletricista/ 301
+/eletrica/eletricista-em-blumenau       /eletricista/ 301
+/blog/eletrica/eletricista-em-blumenau/ /eletricista/ 301
+/blog/eletrica/eletricista-em-blumenau  /eletricista/ 301
+
+/marido-de-aluguel/servicos-de-marido-de-aluguel-em-blumenau-santa-catarina-conheca-a-fix-servicos/      /marido-de-aluguel/ 301
+/marido-de-aluguel/servicos-de-marido-de-aluguel-em-blumenau-santa-catarina-conheca-a-fix-servicos       /marido-de-aluguel/ 301
+/blog/marido-de-aluguel/servicos-de-marido-de-aluguel-em-blumenau-santa-catarina-conheca-a-fix-servicos/ /marido-de-aluguel/ 301
+/blog/marido-de-aluguel/servicos-de-marido-de-aluguel-em-blumenau-santa-catarina-conheca-a-fix-servicos  /marido-de-aluguel/ 301
+
+/marido-de-aluguel/marido-de-aluguel-blumenau/      /marido-de-aluguel/ 301
+/marido-de-aluguel/marido-de-aluguel-blumenau       /marido-de-aluguel/ 301
+/blog/marido-de-aluguel/marido-de-aluguel-blumenau/ /marido-de-aluguel/ 301
+/blog/marido-de-aluguel/marido-de-aluguel-blumenau  /marido-de-aluguel/ 301
+
+/marido-de-aluguel/5-melhores-marido-de-aluguel-em-blumenau/      /marido-de-aluguel/ 301
+/marido-de-aluguel/5-melhores-marido-de-aluguel-em-blumenau       /marido-de-aluguel/ 301
+/blog/marido-de-aluguel/5-melhores-marido-de-aluguel-em-blumenau/ /marido-de-aluguel/ 301
+/blog/marido-de-aluguel/5-melhores-marido-de-aluguel-em-blumenau  /marido-de-aluguel/ 301
+
+# 6. Artigos Técnicos Antigos -> Serviços Específicos Já Prontos
+/eletrica/trocar-lampadas-piscina-com-seguranca/      /eletricista/consertar-a-iluminacao-da-piscina/ 301
+/eletrica/trocar-lampadas-piscina-com-seguranca       /eletricista/consertar-a-iluminacao-da-piscina/ 301
+/blog/eletrica/trocar-lampadas-piscina-com-seguranca/ /eletricista/consertar-a-iluminacao-da-piscina/ 301
+/blog/eletrica/trocar-lampadas-piscina-com-seguranca  /eletricista/consertar-a-iluminacao-da-piscina/ 301
+
+/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas/      /marido-de-aluguel/instalacao-painel-rack-para-tv/ 301
+/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas       /marido-de-aluguel/instalacao-painel-rack-para-tv/ 301
+/blog/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas/ /marido-de-aluguel/instalacao-painel-rack-para-tv/ 301
+/blog/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas  /marido-de-aluguel/instalacao-painel-rack-para-tv/ 301
+
+/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia/      /marido-de-aluguel/instalacao-de-tv-em-blumenau/ 301
+/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia       /marido-de-aluguel/instalacao-de-tv-em-blumenau/ 301
+/blog/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia/ /marido-de-aluguel/instalacao-de-tv-em-blumenau/ 301
+/blog/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia  /marido-de-aluguel/instalacao-de-tv-em-blumenau/ 301
+
 /marido-de-aluguel/instalacao-secadora-de-roupas-de-parede/ /marido-de-aluguel/ 301
 /marido-de-aluguel/instalacao-secadora-de-roupas-de-parede  /marido-de-aluguel/ 301
 /marido-de-aluguel/instalacao-coifa/                        /marido-de-aluguel/instalacao-de-coifa/ 301
 /marido-de-aluguel/instalacao-coifa                         /marido-de-aluguel/instalacao-de-coifa/ 301
-/encanador/instalacao-aquecedor-a-gas/                      /encanador/                            301
-/encanador/instalacao-aquecedor-a-gas                       /encanador/                            301
-/eletricista/manutencao-ar-condicionado-blumenau/           /eletricista/                          301
-/eletricista/manutencao-ar-condicionado-blumenau            /eletricista/                          301
-/eletricista/carga-de-gas-ar-condicionado-split-blumenau/   /eletricista/                          301
-/eletricista/carga-de-gas-ar-condicionado-split-blumenau    /eletricista/                          301
+/encanador/instalacao-aquecedor-a-gas/                      /encanador/ 301
+/encanador/instalacao-aquecedor-a-gas                       /encanador/ 301
+
+/faca-voce-mesmo/dicas/fogao-estalando-sozinho/      /eletricista/ 301
+/faca-voce-mesmo/dicas/fogao-estalando-sozinho       /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/fogao-estalando-sozinho/ /eletricista/ 301
+/blog/faca-voce-mesmo/dicas/fogao-estalando-sozinho  /eletricista/ 301
+
+/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas/      /eletricista/ 301
+/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas       /eletricista/ 301
+/blog/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas/ /eletricista/ 301
+/blog/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas  /eletricista/ 301
+
+/destaque/premio-willy-sievert/      /contato/ 301
+/destaque/premio-willy-sievert       /contato/ 301
+/blog/destaque/premio-willy-sievert/ /contato/ 301
+/blog/destaque/premio-willy-sievert  /contato/ 301
+
+/destaque/premio-gustav-salinger-de-empreendedorismo/      /contato/ 301
+/destaque/premio-gustav-salinger-de-empreendedorismo       /contato/ 301
+/blog/destaque/premio-gustav-salinger-de-empreendedorismo/ /contato/ 301
+/blog/destaque/premio-gustav-salinger-de-empreendedorismo  /contato/ 301
+
+# 7. Artigos do WordPress Legado -> Artigos Nativos Atualizados no Blog
+# Antigo: 10 ideias para deixar a casa organizada em 2023 -> Artigo Atualizado 2026/2027
+/faca-voce-mesmo/dicas/10-ideias-para-deixar-a-casa-organizada-em-2023/      /blog/ideias-organizacao-casa-apartamento-blumenau/ 301
+/faca-voce-mesmo/dicas/10-ideias-para-deixar-a-casa-organizada-em-2023       /blog/ideias-organizacao-casa-apartamento-blumenau/ 301
+/blog/faca-voce-mesmo/dicas/10-ideias-para-deixar-a-casa-organizada-em-2023/ /blog/ideias-organizacao-casa-apartamento-blumenau/ 301
+/blog/faca-voce-mesmo/dicas/10-ideias-para-deixar-a-casa-organizada-em-2023  /blog/ideias-organizacao-casa-apartamento-blumenau/ 301
+
+# Antigo: Trocar resistência do chuveiro elétrico -> Artigo Atualizado e Detalhado
+/faca-voce-mesmo/dicas/resistencia-queimada-como-trocar/      /blog/como-trocar-resistencia-chuveiro-passo-a-passo/ 301
+/faca-voce-mesmo/dicas/resistencia-queimada-como-trocar       /blog/como-trocar-resistencia-chuveiro-passo-a-passo/ 301
+/blog/faca-voce-mesmo/dicas/resistencia-queimada-como-trocar/ /blog/como-trocar-resistencia-chuveiro-passo-a-passo/ 301
+/blog/faca-voce-mesmo/dicas/resistencia-queimada-como-trocar  /blog/como-trocar-resistencia-chuveiro-passo-a-passo/ 301
+
+# Antigo: Qual voltagem em Blumenau SC -> Artigo Atualizado e Detalhado
+/marido-de-aluguel/qual-voltagem-em-blumenau-sc/      /blog/qual-voltagem-em-blumenau-110v-ou-220v/ 301
+/marido-de-aluguel/qual-voltagem-em-blumenau-sc       /blog/qual-voltagem-em-blumenau-110v-ou-220v/ 301
+/blog/marido-de-aluguel/qual-voltagem-em-blumenau-sc/ /blog/qual-voltagem-em-blumenau-110v-ou-220v/ 301
+/blog/marido-de-aluguel/qual-voltagem-em-blumenau-sc  /blog/qual-voltagem-em-blumenau-110v-ou-220v/ 301
+
+# 8. Taxonomias do WordPress Legado (Categorias, Tags, Autores, Paginações e Páginas Úteis)
+/category/eletrica/*         /eletricista/ 301
+/category/eletrica           /eletricista/ 301
+/blog/category/eletrica/*    /eletricista/ 301
+/blog/category/eletrica      /eletricista/ 301
+
+/category/marido-de-aluguel/* /marido-de-aluguel/ 301
+/category/marido-de-aluguel   /marido-de-aluguel/ 301
+/blog/category/marido-de-aluguel/* /marido-de-aluguel/ 301
+/blog/category/marido-de-aluguel   /marido-de-aluguel/ 301
+
+/category/hidraulica/*       /encanador/ 301
+/category/hidraulica         /encanador/ 301
+/blog/category/hidraulica/*  /encanador/ 301
+/blog/category/hidraulica    /encanador/ 301
+
+/category/faca-voce-mesmo/*  /blog/ 301
+/category/faca-voce-mesmo    /blog/ 301
+/blog/category/faca-voce-mesmo/* /blog/ 301
+/blog/category/faca-voce-mesmo   /blog/ 301
+
+/category/reformas-e-construcao/* /marido-de-aluguel/ 301
+/category/reformas-e-construcao   /marido-de-aluguel/ 301
+/blog/category/reformas-e-construcao/* /marido-de-aluguel/ 301
+/blog/category/reformas-e-construcao   /marido-de-aluguel/ 301
+
+/category/ferramentas/*      /blog/ 301
+/category/ferramentas        /blog/ 301
+/blog/category/ferramentas/* /blog/ 301
+/blog/category/ferramentas   /blog/ 301
+
+/category/destaque/*         /blog/ 301
+/category/destaque           /blog/ 301
+/blog/category/destaque/*    /blog/ 301
+/blog/category/destaque      /blog/ 301
+
+/category/*                  /blog/ 301
+/blog/category/*             /blog/ 301
+
+/tag/*                       /blog/ 301
+/blog/tag/*                  /blog/ 301
+
+/author/*                    /blog/ 301
+/blog/author/*               /blog/ 301
+
+/page/*                      /blog/ 301
+/blog/page/*                 /blog/ 301
+
+/contate-nos/                /contato/ 301
+/contate-nos                 /contato/ 301
+/blog/contate-nos/           /contato/ 301
+/blog/contate-nos            /contato/ 301
+
+/politica-de-cookies-br/     /politica-de-privacidade/ 301
+/politica-de-cookies-br      /politica-de-privacidade/ 301
+/blog/politica-de-cookies-br/ /politica-de-privacidade/ 301
+/blog/politica-de-cookies-br  /politica-de-privacidade/ 301

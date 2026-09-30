@@ -33,3 +33,7 @@ pnpm-debug.log*
 .skills/**/runtime-state.json
 .skills/**/.setup.lock
 
+# python cache
+**/__pycache__/
+
+

@@ -159,5 +159,138 @@ export const blogPosts: BlogPost[] = [
         answer: 'Um varal de alumínio reforçado ancorado em laje de concreto com buchas S8 suporta com segurança entre 15 kg e 20 kg de roupas úmidas distribuídas.'
       }
     ]
+  },
+  {
+    slug: 'ideias-organizacao-casa-apartamento-blumenau',
+    title: '10 ideias práticas para organizar casa ou apartamento em Blumenau (Guia Atualizado 2026)',
+    description: 'Aprenda a verticalizar espaços, instalar nichos, suportes de TV articulados, prateleiras e organizadores sem furar canos ou fios elétricos. Dicas do Técnico Osmar.',
+    date: '2026-09-30',
+    category: 'Marido de Aluguel',
+    readTime: '6 min de leitura',
+    serviceLink: '/marido-de-aluguel/',
+    serviceName: 'Serviços de Marido de Aluguel e Fixação em Blumenau',
+    author: {
+      name: 'Técnico Osmar',
+      role: 'Marido de Aluguel e Pequenos Reparos',
+    },
+    content: [
+      'Com o crescimento de novos edifícios e apartamentos compactos em bairros como Victor Konder, Vila Nova, Itoupava Seca e Centro de Blumenau, saber aproveitar cada metro quadrado tornou-se uma necessidade essencial para o conforto da família.',
+      'Muitas vezes, a sensação de desorganização não é falta de espaço, mas sim falta de **verticalização inteligente** das paredes e cantos mortos da residência.',
+      '### 1. Verticalização inteligente com prateleiras e nichos flutuantes',
+      'As paredes são a maior área útil não aproveitada da casa. A instalação de prateleiras acima de mesas de escritório, bancadas e camas libera espaço de circulação no piso.',
+      '* **Atenção à fixação correta:** Em paredes de alvenaria com tijolo furado, use buchas universais do tipo FU ou buchas específicas para bloco oco (como Fischer UX ou SX). Buchas comuns para concreto tendem a afrouxar com o tempo quando fixadas na casca oca do tijolo cerâmico.',
+      '### 2. Suporte de TV articulado ou painel suspenso',
+      'Apoiar a TV sobre racks tradicionais consome até 50 cm de profundidade na sala de estar. A fixação da TV na parede com suporte articulado ou inclinado permite embutir a fiação com canaletas discretas e libera a área inferior para circulação ou móveis compactos.',
+      '### 3. Aproveitamento total da lavanderia',
+      '* **Varal de teto suspenso:** Libera 100% da área útil do piso.',
+      '* **Prateleiras sobre a máquina de lavar:** Excelente local para acomodar cestos organizadores, sabão em pó, amaciante e produtos de limpeza longe do alcance de crianças e animais de estimação.',
+      '* **Ganchos utilitários para vassouras e rodos:** Fixados na lateral da parede evitam que vassouras e pás fiquem jogadas nos cantos.',
+      '### 4. Cuidados vitais: como furar paredes sem furar canos ou eletrodutos',
+      'Antes de usar a furadeira na parede, lembre-se das regras fundamentais da construção civil:',
+      '1. **Em banheiros e cozinhas:** Canos de água fria e esgoto quase sempre correm em linha reta (vertical ou horizontal) a partir dos registros, pias, sifões e chuveiros. Evite qualquer furação no alinhamento direto dessas tubulações.',
+      '2. **Em salas e quartos:** Conduítes elétricos descem dos interruptores e tomadas em linha reta até o teto ou rodapé. Nunca fure exatamente acima ou abaixo de espelhos de tomadas.',
+      '3. **Use detectores de vigas e metais:** Na dúvida, profissionais utilizam scanners de parede para garantir segurança total.',
+      '### 5. Ganchos adesivos pesados vs buchas com parafusos',
+      'Em Blumenau, a alta umidade típica do Vale do Itajaí compromete a cola de ganchos adesivos convencionais após alguns meses. Para objetos acima de 1,5 kg (espelhos, quadros com moldura de vidro e porta-chaves pesados), a fixação mecânica com parafuso e bucha de nylon de 5mm ou 6mm é a única garantia de segurança contra quedas repentinas.'
+    ],
+    faqs: [
+      {
+        question: 'Qual o peso seguro que uma prateleira com suporte invisível aguenta?',
+        answer: 'Suportes invisíveis de boa procedência em parede de tijolo maciço ou bloco estrutural suportam em média de 10 a 15 kg por haste. Para cargas mais pesadas como livros grossos, recomendamos suportes tipo mão francesa de aço.'
+      },
+      {
+        question: 'É possível instalar prateleiras e nichos em paredes de gesso drywall?',
+        answer: 'Sim! No drywall utilizam-se buchas basculantes (Fly ou Toggle) ou buchas caracol metálicas, e preferencialmente faz-se a fixação ancorada diretamente nos montantes metálicos de sustentação da estrutura.'
+      }
+    ]
+  },
+  {
+    slug: 'qual-voltagem-em-blumenau-110v-ou-220v',
+    title: 'Qual é a voltagem em Blumenau? Guia definitivo sobre 220V, tomadas 10A vs 20A e segurança',
+    description: 'Descubra a voltagem oficial de Blumenau e Santa Catarina, cuidados ao trazer eletrodomésticos 110V/127V de outros estados e dimensionamento de tomadas.',
+    date: '2026-09-30',
+    category: 'Eletricista',
+    readTime: '5 min de leitura',
+    serviceLink: '/eletricista/troca-de-tomada/',
+    serviceName: 'Troca e Instalação de Tomadas em Blumenau',
+    author: {
+      name: 'Técnico Osmar',
+      role: 'Eletricista Profissional Certificado NR10',
+    },
+    content: [
+      'Uma das perguntas mais frequentes feitas por pessoas que acabaram de se mudar para Blumenau e cidades vizinhas do Vale do Itajaí (Gaspar, Pomerode, Indaial) é: **qual é a voltagem padrão das tomadas na cidade?**',
+      '### 1. A resposta direta: a tensão padrão em Blumenau é 220 Volts',
+      'Na área de concessão da Celesc (Centrais Elétricas de Santa Catarina), a rede residencial padrão de Blumenau opera em **220 Volts** fase-neutro (em redes estrela) ou fase-fase (em redes delta).',
+      'Isso significa que praticamente **todas as tomadas convencionais residenciais entregam 220V**, ao contrário de estados como São Paulo, Rio de Janeiro, Minas Gerais e Paraná (Curitiba), onde a tensão monofásica padrão costuma ser 127V (frequentemente chamada de 110V).',
+      '### 2. O que acontece ao ligar um aparelho 110V em tomada 220V?',
+      '* **Queima imediata:** Se você plugar um aparelho exclusivo 127V/110V (como cafeteiras, secadores de cabelo, aspiradores de pó ou micro-ondas) diretamente na tomada 220V de Blumenau, o motor ou a placa eletrônica queimará em frações de segundo, com fumaça e cheiro característico de isolamento derretido.',
+      '* **Aparelhos Bivolt Automáticos:** Celulares, notebooks, TVs modernas e carregadores em geral possuem fontes chaveadas bivolt (100V a 240V) e funcionam perfeitamente em Blumenau sem necessidade de qualquer adaptação.',
+      '* **Aparelhos com chave seletora manual (110V/220V):** Equipamentos como fontes de computadores desktop, batedeiras e ferramentas elétricas exigem que você mude manualmente a chave vermelha seletora para a posição **220V** antes de plugar na parede.',
+      '### 3. A diferença entre Tomada de 10A e Tomada de 20A',
+      'Você já tentou ligar um forno elétrico, air fryer, micro-ondas ou secador potente e o pino grosso simplesmente não entrou na tomada?',
+      '* **Tomadas de 10 Amperes (furo fino de 4,0 mm):** Projetadas para eletrodomésticos leves (TVs, luminárias, carregadores, computadores) com potência de até 2.200 Watts em 220V.',
+      '* **Tomadas de 20 Amperes (furo grosso de 4,8 mm):** Obrigatórias por norma para aparelhos de alta potência resistiva e térmica (Air Fryer, forno elétrico, micro-ondas, ferro de passar, lava-louças e ar-condicionado).',
+      '### 4. O perigo de lixar o pino ou usar adaptadores "Benjamim"',
+      '**NUNCA force nem lixe o pino de 20A** para caber na tomada fina de 10A, e evite adaptadores plásticos. A alta corrente elétrica faz a tomada de 10A superaquecer internamente, derretendo o espelho plástico e gerando risco real de incêndio no circuito elétrico.'
+    ],
+    faqs: [
+      {
+        question: 'Vale a pena comprar um autotransformador para usar aparelhos 110V em Blumenau?',
+        answer: 'Para aparelhos pequenos e eletrônicos caros sim. Porém, para aparelhos de alto aquecimento (ferro de passar, secador ou fritadeira), o transformador precisa ser muito pesado e caro (acima de 3000 VA). Nesses casos, costuma ser mais econômico e seguro substituir o eletrodoméstico por um modelo 220V nativo.'
+      },
+      {
+        question: 'Um eletricista pode puxar uma linha 110V dedicada em Blumenau?',
+        answer: 'Na rede pública da Celesc onde a tensão monofásica é 220V entre fase e neutro, não há neutro a 127V disponível. Para obter 127V é necessário instalar um autotransformador dedicado de quadro ou individual.'
+      }
+    ]
+  },
+  {
+    slug: 'como-trocar-resistencia-chuveiro-passo-a-passo',
+    title: 'Como trocar a resistência do chuveiro elétrico sem queimar a peça nova: passo a passo',
+    description: 'Chuveiro queimou e a água ficou gelada? Veja o passo a passo seguro para substituir a resistência sem risco de choque e sem queimar o refil novo no primeiro uso.',
+    date: '2026-09-30',
+    category: 'Eletricista',
+    readTime: '5 min de leitura',
+    serviceLink: '/eletricista/troca-de-resistencia-de-chuveiro-queimado/',
+    serviceName: 'Troca de Resistência de Chuveiro em Blumenau',
+    author: {
+      name: 'Técnico Osmar',
+      role: 'Eletricista Profissional Certificado NR10',
+    },
+    content: [
+      'No inverno rigoroso de Blumenau e do Vale do Itajaí, poucas coisas são mais frustrantes do que entrar no banho e sentir a água esfriar de repente com um estalo vindo do chuveiro.',
+      'A queima da resistência elétrica é a ocorrência residencial mais frequente nos meses frios, decorrente do uso contínuo na potência máxima ("modo inverno").',
+      'Embora a substituição pareça simples, milhares de pessoas queimam a resistência novinha em menos de 3 segundos simplesmente por pularem uma etapa elementar.',
+      '### 1. Regra fundamental de segurança: desligue o disjuntor',
+      'Água e eletricidade formam uma combinação fatal. **NUNCA confie apenas na chave seletora do chuveiro desligada.**',
+      '1. Dirija-se até o quadro de distribuição de energia (QDC) da sua casa.',
+      '2. Identifique e desligue o disjuntor exclusivo do circuito do chuveiro.',
+      '3. Teste o chuveiro abrindo o registro para ter 100% de certeza de que não há corrente circulando.',
+      '### 2. Escolha o modelo exato para a sua ducha (Potência e Voltagem)',
+      'Antes de ir à loja de materiais elétricos:',
+      '* Leve a resistência queimada ou tire uma foto legível da etiqueta superior do chuveiro.',
+      '* Verifique a **tensão (220V em Blumenau)** e a **potência (ex: 5500W, 6800W ou 7500W)**.',
+      '* Modelos modernos blindados ou planos (como Lorenzetti Acqua Duo, Ducha Advanced, Corona ou Hydra) utilizam cartuchos de encaixe rápido que não podem ser dobrados com alicate.',
+      '### 3. O passo a passo da substituição',
+      '1. Desrosqueie a câmara inferior ou o espalhador de água com cuidado para não danificar o diafragma de borracha.',
+      '2. Remova os restos do filamento rompido com um alicate de bico, observando os pontos de contato A, B e C.',
+      '3. Encaixe a resistência nova firmemente nos polos metálicos, garantindo contato perfeito sem folgas.',
+      '4. Limpe os furinhos do espalhador de água com uma escovinha para remover o limo e calcário antes de fechar.',
+      '### 4. O segredo de ouro: o "Banho Frio" obrigatório',
+      'Este é o passo que evita que você jogue fora o dinheiro da resistência nova:',
+      '**ANTES de religar o disjuntor no quadro de luz**, abra o registro de água no modo totalmente frio.',
+      'Deixe a água escorrer por cerca de 30 a 60 segundos até o jato sair uniforme e encher completamente o copo interno do chuveiro.',
+      'Se você religar o disjuntor com a câmara de aquecimento cheia de ar, a resistência atinge mais de 1000°C instantaneamente no vácuo e queima imediatamente a seco!'
+    ],
+    faqs: [
+      {
+        question: 'Vale a pena esticar e emendar uma resistência queimada?',
+        answer: 'NUNCA faça isso. Ao emendar a espiral rompida, o comprimento total diminui, o que reduz a resistência ôhmica e aumenta perigosamente a corrente elétrica, podendo superaquecer a fiação e provocar derretimento da carcaça plástica do chuveiro.'
+      },
+      {
+        question: 'Por que o chuveiro queima a resistência toda hora?',
+        answer: 'Queimas frequentes geralmente são causadas por baixa pressão de água (ar na tubulação), fiação frouxa superaquecendo os conectores, ou oscilações de pico de tensão da rede.'
+      }
+    ]
   }
 ];
