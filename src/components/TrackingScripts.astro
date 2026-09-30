@@ -25,28 +25,17 @@ const ADS_ID = "";
     document.head.appendChild(script);
   }
 
-  // Dispara no primeiro toque, rolagem ou interação real do usuário
-  const userEvents = ['scroll', 'touchstart', 'mousemove', 'keydown', 'click'];
-  userEvents.forEach(function(evt) {
-    window.addEventListener(evt, loadGtag, { once: true, passive: true });
-  });
-
-  // Fallback para quando o navegador estiver ocioso após carregar
-  if (document.readyState === 'complete') {
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(function() { setTimeout(loadGtag, 2500); });
-    } else {
-      setTimeout(loadGtag, 3500);
-    }
-  } else {
-    window.addEventListener('load', function() {
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(function() { setTimeout(loadGtag, 2500); });
-      } else {
-        setTimeout(loadGtag, 3500);
-      }
+  // Dispara no primeiro gesto ou interação real do usuário (toque, rolagem, clique, mouse)
+  const userEvents = ['scroll', 'touchstart', 'pointerdown', 'mousemove', 'keydown', 'click'];
+  function onUserInteraction() {
+    loadGtag();
+    userEvents.forEach(function(evt) {
+      window.removeEventListener(evt, onUserInteraction, { passive: true });
     });
   }
+  userEvents.forEach(function(evt) {
+    window.addEventListener(evt, onUserInteraction, { once: true, passive: true });
+  });
 
   // Rastreamento automático de conversão (WhatsApp e Telefone)
   document.addEventListener('click', function(event) {
