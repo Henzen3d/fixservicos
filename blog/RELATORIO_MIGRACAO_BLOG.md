@@ -54,7 +54,7 @@ O blog opera de forma nativa e integrada à identidade visual da Fix Serviços:
 
 ---
 
-## 📚 3. Artigos Publicados em Produção (7 Artigos Oficiais)
+## 📚 3. Artigos Publicados em Produção (8 Artigos Oficiais)
 
 | # | Artigo | Categoria | URL | Página de Serviço Vinculada |
 | :-: | :--- | :--- | :--- | :--- |
@@ -65,6 +65,7 @@ O blog opera de forma nativa e integrada à identidade visual da Fix Serviços:
 | 5 | **10 ideias práticas para organizar casa ou apartamento em Blumenau (Atualizado 2026)** | Marido de Aluguel | `/blog/ideias-organizacao-casa-apartamento-blumenau/` | `/marido-de-aluguel/` |
 | 6 | **Qual é a voltagem em Blumenau? Guia definitivo sobre 220V, tomadas 10A vs 20A e segurança** | Eletricista | `/blog/qual-voltagem-em-blumenau-110v-ou-220v/` | `/eletricista/troca-de-tomada/` |
 | 7 | **Como trocar a resistência do chuveiro elétrico sem queimar a peça nova: passo a passo** | Eletricista | `/blog/como-trocar-resistencia-chuveiro-passo-a-passo/` | `/eletricista/troca-de-resistencia-de-chuveiro-queimado/` |
+| 8 | **As vantagens das instalações elétricas subterrâneas em Blumenau: segurança, estética e normas NBR 5410** | Eletricista | `/blog/as-vantagens-das-instalacoes-eletricas-subterraneas/` | `/eletricista/` |
 
 ---
 
@@ -92,11 +93,11 @@ Foram mapeadas todas as rotas legadas nas duas variações (`/rota` e `/blog/rot
 * `/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas/` ➔ `/marido-de-aluguel/instalacao-painel-rack-para-tv/`
 * `/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia/` ➔ `/marido-de-aluguel/instalacao-de-tv-em-blumenau/`
 * `/faca-voce-mesmo/dicas/fogao-estalando-sozinho/` ➔ `/eletricista/`
-* `/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas/` ➔ `/eletricista/`
 * `/destaque/premio-willy-sievert/` ➔ `/contato/`
 * `/destaque/premio-gustav-salinger-de-empreendedorismo/` ➔ `/contato/`
 
 ### D. Artigos Antigos com Migração e Atualização de Conteúdo
+* `/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas/` ➔ `/blog/as-vantagens-das-instalacoes-eletricas-subterraneas/`
 * `/faca-voce-mesmo/dicas/10-ideias-para-deixar-a-casa-organizada-em-2023/` ➔ `/blog/ideias-organizacao-casa-apartamento-blumenau/`
 * `/faca-voce-mesmo/dicas/resistencia-queimada-como-trocar/` ➔ `/blog/como-trocar-resistencia-chuveiro-passo-a-passo/`
 * `/marido-de-aluguel/qual-voltagem-em-blumenau-sc/` ➔ `/blog/qual-voltagem-em-blumenau-110v-ou-220v/`

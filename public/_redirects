@@ -120,12 +120,6 @@ http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
 /faca-voce-mesmo/dicas/fogao-estalando-sozinho       /eletricista/ 301
 /blog/faca-voce-mesmo/dicas/fogao-estalando-sozinho/ /eletricista/ 301
 /blog/faca-voce-mesmo/dicas/fogao-estalando-sozinho  /eletricista/ 301
-
-/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas/      /eletricista/ 301
-/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas       /eletricista/ 301
-/blog/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas/ /eletricista/ 301
-/blog/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas  /eletricista/ 301
-
 /destaque/premio-willy-sievert/      /contato/ 301
 /destaque/premio-willy-sievert       /contato/ 301
 /blog/destaque/premio-willy-sievert/ /contato/ 301
@@ -137,6 +131,12 @@ http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
 /blog/destaque/premio-gustav-salinger-de-empreendedorismo  /contato/ 301
 
 # 7. Artigos do WordPress Legado -> Artigos Nativos Atualizados no Blog
+# Antigo: Instalações elétricas subterrâneas -> Artigo Atualizado e Detalhado
+/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas/      /blog/as-vantagens-das-instalacoes-eletricas-subterraneas/ 301
+/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas       /blog/as-vantagens-das-instalacoes-eletricas-subterraneas/ 301
+/blog/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas/ /blog/as-vantagens-das-instalacoes-eletricas-subterraneas/ 301
+/blog/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas  /blog/as-vantagens-das-instalacoes-eletricas-subterraneas/ 301
+
 # Antigo: 10 ideias para deixar a casa organizada em 2023 -> Artigo Atualizado 2026/2027
 /faca-voce-mesmo/dicas/10-ideias-para-deixar-a-casa-organizada-em-2023/      /blog/ideias-organizacao-casa-apartamento-blumenau/ 301
 /faca-voce-mesmo/dicas/10-ideias-para-deixar-a-casa-organizada-em-2023       /blog/ideias-organizacao-casa-apartamento-blumenau/ 301
