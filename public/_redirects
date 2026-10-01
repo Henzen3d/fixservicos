@@ -99,15 +99,16 @@ http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
 /blog/eletrica/trocar-lampadas-piscina-com-seguranca/ /eletricista/consertar-a-iluminacao-da-piscina/ 301
 /blog/eletrica/trocar-lampadas-piscina-com-seguranca  /eletricista/consertar-a-iluminacao-da-piscina/ 301
 
-/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas/      /marido-de-aluguel/instalacao-painel-rack-para-tv/ 301
-/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas       /marido-de-aluguel/instalacao-painel-rack-para-tv/ 301
-/blog/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas/ /marido-de-aluguel/instalacao-painel-rack-para-tv/ 301
-/blog/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas  /marido-de-aluguel/instalacao-painel-rack-para-tv/ 301
+# Antigo: Tipos de suporte para TV + 4 sinais que instalar TV sem saber (Fundidos no novo Guia Definitivo)
+/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas/      /blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/ 301
+/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas       /blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/ 301
+/blog/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas/ /blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/ 301
+/blog/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas  /blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/ 301
 
-/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia/      /marido-de-aluguel/instalacao-de-tv-em-blumenau/ 301
-/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia       /marido-de-aluguel/instalacao-de-tv-em-blumenau/ 301
-/blog/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia/ /marido-de-aluguel/instalacao-de-tv-em-blumenau/ 301
-/blog/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia  /marido-de-aluguel/instalacao-de-tv-em-blumenau/ 301
+/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia/      /blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/ 301
+/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia       /blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/ 301
+/blog/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia/ /blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/ 301
+/blog/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia  /blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/ 301
 
 /marido-de-aluguel/instalacao-secadora-de-roupas-de-parede/ /marido-de-aluguel/ 301
 /marido-de-aluguel/instalacao-secadora-de-roupas-de-parede  /marido-de-aluguel/ 301
@@ -116,10 +117,12 @@ http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
 /encanador/instalacao-aquecedor-a-gas/                      /encanador/ 301
 /encanador/instalacao-aquecedor-a-gas                       /encanador/ 301
 
-/faca-voce-mesmo/dicas/fogao-estalando-sozinho/      /eletricista/ 301
-/faca-voce-mesmo/dicas/fogao-estalando-sozinho       /eletricista/ 301
-/blog/faca-voce-mesmo/dicas/fogao-estalando-sozinho/ /eletricista/ 301
-/blog/faca-voce-mesmo/dicas/fogao-estalando-sozinho  /eletricista/ 301
+# Antigo: Fogão estalando sozinho -> Artigo Atualizado e Detalhado
+/faca-voce-mesmo/dicas/fogao-estalando-sozinho/      /blog/fogao-cooktop-estalando-sozinho-o-que-fazer/ 301
+/faca-voce-mesmo/dicas/fogao-estalando-sozinho       /blog/fogao-cooktop-estalando-sozinho-o-que-fazer/ 301
+/blog/faca-voce-mesmo/dicas/fogao-estalando-sozinho/ /blog/fogao-cooktop-estalando-sozinho-o-que-fazer/ 301
+/blog/faca-voce-mesmo/dicas/fogao-estalando-sozinho  /blog/fogao-cooktop-estalando-sozinho-o-que-fazer/ 301
+
 /destaque/premio-willy-sievert/      /contato/ 301
 /destaque/premio-willy-sievert       /contato/ 301
 /blog/destaque/premio-willy-sievert/ /contato/ 301

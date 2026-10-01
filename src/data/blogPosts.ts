@@ -340,6 +340,103 @@ export const blogPosts: BlogPost[] = [
         answer: 'O padrão de entrada recebe a energia da concessionária e dela sai um eletroduto subterrâneo que corre até o Quadro de Distribuição (QDC) da residência, com curvas suaves de raio longo para permitir a puxada dos condutores de alta bitola.'
       }
     ]
+  },
+  {
+    slug: 'tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar',
+    title: 'Tipos de suporte para TV em painel e parede: como escolher e 4 cuidados para não danificar seu aparelho',
+    description: 'Guia completo para escolher entre suporte fixo, inclinável ou articulado em painel de MDF ou alvenaria. Veja 4 sinais de alerta e evite acidentes em Blumenau.',
+    date: '2026-09-30',
+    category: 'Marido de Aluguel',
+    readTime: '6 min de leitura',
+    serviceLink: '/marido-de-aluguel/instalacao-de-tv-em-blumenau/',
+    serviceName: 'Instalação de TV e Suportes em Blumenau',
+    author: {
+      name: 'Técnico Osmar',
+      role: 'Marido de Aluguel e Pequenos Reparos',
+    },
+    content: [
+      'Ter uma Smart TV de tela grande (seja LED, QLED ou OLED) instalada na parede ou em um painel planejado valoriza a sala de estar, melhora o ângulo de visão e elimina móveis volumosos do caminho.',
+      'No entanto, a fixação incorreta é uma das maiores causas de acidentes residenciais: suportes mal dimensionados que cedem com o peso, parafusos que soltam do painel de MDF e até perfurações desastrosas de canos e eletrodutos escondidos na parede.',
+      '### 1. Os 3 tipos de suporte para TV: prós, contras e onde usar',
+      'Antes de comprar o suporte, é fundamental escolher o modelo certo para a dinâmica do seu cômodo:',
+      '* **Suporte Fixo (Universal ou Slim):** Mantém a TV praticamente colada à parede (cerca de 2 a 3 cm de distância). Vantagem: visual ultralimpo e minimalista de quadro. Desvantagem: dificulta plugar cabos HDMI, ópticos e USB traseiros após fixado. É a escolha perfeita quando a TV fica exatamente na linha direta dos olhos em relação ao sofá da sala.',
+      '* **Suporte Inclinável (Tilt):** Permite ajuste vertical para baixo em até 15 graus. Indispensável para quartos onde a TV é instalada em ponto mais alto em relação à cama, permitindo direcionar a tela para o olhar de quem está deitado e eliminando reflexos incômodos de luzes de teto e janelas.',
+      '* **Suporte Articulado (Braço Simples ou Duplo):** Permite afastar a TV da parede e girá-la para a esquerda ou direita em até 90 graus. Ideal para ambientes integrados (como sala de estar conjugada com sala de jantar ou cozinha americana). Exige máxima atenção à ancoragem estrutural devido ao efeito de alavanca com o braço estendido.',
+      '### 2. O Padrão VESA e o peso da tela: o que você precisa conferir',
+      'Nunca compre um suporte baseando-se apenas na informação de polegadas impressa na caixa:',
+      '* **Padrão VESA:** É a distância padronizada em milímetros entre os 4 furos de rosca na traseira da sua TV (ex: 200x200mm, 400x200mm, 400x400mm). O suporte precisa ser compatível com essa furação exata.',
+      '* **Carga Máxima (kg):** Verifique o peso líquido da TV no manual do fabricante. O suporte e a parede devem suportar com folga de pelo menos 30% esse peso.',
+      '### 3. Parede de Alvenaria vs Painel de MDF vs Gesso Drywall',
+      '* **Em Painel de Madeira ou MDF:** Painéis decorativos de 15mm de espessura não foram projetados para segurar sozinhos suportes articulados pesados com TV de 65 polegadas. Nesses casos, o instalador deve utilizar parafusos passantes ancorados na alvenaria que fica por trás do móvel.',
+      '* **Em Paredes de Alvenaria (Tijolo Furado de Blumenau):** O tijolo cerâmico oco quebra com buchas comuns de concreto. É obrigatório o uso de buchas universais de nylon (Fischer UX ou SX 8mm/10mm) que criam nós de travamento dentro da cavidade do tijolo.',
+      '* **Em Paredes de Drywall:** Suportes pesados devem ser aparafusados diretamente nos montantes metálicos estruturais da divisória de gesso, com auxílio de detector de metais.',
+      '### 4. Os 4 sinais de perigo ao tentar instalar sozinho',
+      'No acervo da Fix Serviços, identificamos 4 situações clássicas em que fazer a instalação sem auxílio profissional resulta em prejuízo:',
+      '1. **Você não sabe onde passam as tubulações hidráulicas e conduítes elétricos:** Na maioria dos apartamentos de Blumenau, tomadas e conduítes de cabos de rede sobem exatamente pelo eixo central onde o suporte da TV será parafusado. Perfurar um cano de água ou cortar o conduíte elétrico exige quebrar a parede para consertar.',
+      '2. **Falta de ferramentas de nivelamento de precisão:** Furar apenas 3 milímetros fora de nível deixa a TV visivelmente torta na parede, forçando novas furações indesejadas no revestimento.',
+      '3. **Tentar levantar e travar a TV sozinho:** Telas modernas acima de 50 polegadas possuem molduras ultrafinas e não suportam pressão de dedos diretamente sobre o painel de cristal líquido ou OLED. Levantar sozinho sem apoio de uma segunda pessoa pode torcer a carcaça e quebrar a tela internamente.',
+      '4. **Usar parafusos inadequados fornecidos no kit:** Kits universais de suporte acompanham parafusos de diversos comprimentos. Usar um parafuso longo demais pode perfurar a placa lógica interna da TV ao apertar com força.'
+    ],
+    faqs: [
+      {
+        question: 'A que altura do chão a TV deve ficar instalada?',
+        answer: 'A regra de ouro da ergonomia recomenda que o centro da tela fique na linha dos olhos de quem está sentado confortavelmente no sofá, geralmente entre 1,20m e 1,30m do piso acabado.'
+      },
+      {
+        question: 'Posso usar suporte articulado em qualquer painel de MDF?',
+        answer: 'Não. Suportes articulados exercem forte força de alavanca ao serem puxados para frente. Se o painel for fino ou estiver apenas colado, o suporte arrancará o MDF da parede. A fixação deve obrigatoriamente transpassar o painel e alcançar a parede de alvenaria atrás.'
+      }
+    ]
+  },
+  {
+    slug: 'fogao-cooktop-estalando-sozinho-o-que-fazer',
+    title: 'Fogão ou cooktop estalando sozinho sem parar? Descubra as causas e como resolver',
+    description: 'Acendimento automático do cooktop ou fogão disparou e não para de fazer tique-tique? Veja o que fazer imediatamente, causas de umidade e solução segura com o Técnico Osmar.',
+    date: '2026-09-30',
+    category: 'Eletricista',
+    readTime: '5 min de leitura',
+    serviceLink: '/eletricista/',
+    serviceName: 'Serviços de Manutenção Elétrica em Blumenau',
+    author: {
+      name: 'Técnico Osmar',
+      role: 'Eletricista Profissional Certificado NR10',
+    },
+    content: [
+      'Você acabou de limpar a cozinha ou preparar o almoço e, de repente, começa a ouvir um barulho repetitivo e incessante de faíscas vindo do fogão: o famoso "tique-tique-tique" contínuo do centelhador elétrico.',
+      'Esse comportamento de fogão ou cooktop que fica estalando sozinho sem parar é uma das queixas elétricas residenciais mais comuns em Blumenau e costuma assustar moradores devido ao risco associado ao gás e eletricidade.',
+      '### 1. O que fazer IMEDIATAMENTE (Procedimento de Segurança)',
+      'Antes de tentar qualquer intervenção na bancada da cozinha, execute estes passos de segurança:',
+      '* **1º Passo: Desconecte o fogão da tomada:** Ao retirar o plugue de 220V da tomada, a usina de ignição perde alimentação elétrica e os estalos param imediatamente. Isso evita que a bobina da usina superaqueça e queime por operar continuamente.',
+      '* **2º Passo: Verifique se não há cheiro de gás:** O centelhador elétrico gera faíscas reais projetadas para acender a chama. Se houver qualquer vazamento simultâneo na mangueira ou registro de gás, a centelha contínua pode provocar combustão repentina. Se sentir cheiro de gás, feche imediatamente o registro do botijão ou da tubulação predial.',
+      '### 2. As causas principais do acendimento automático disparado',
+      'Na grande maioria das ocorrências atendidas pela Fix Serviços em marcas como Mueller, Fischer, Brastemp, Electrolux e Consul, a causa é uma das quatro a seguir:',
+      '* **1. Umidade ou água acumulada nos botões após limpeza (Causa nº 1):** Ao lavar a mesa do cooktop com esponja muito molhada ou borrifar desengordurante em excesso, a água escorre pela fresta dos registros (manípulos) e atinge os interruptores elétricos internos. A água é condutora e fecha o contato elétrico, fazendo a usina interpretar que o botão está sendo pressionado sem parar.',
+      '* **2. Gordura espessa travando a mola do manípulo:** Em frituras constantes, resíduos de gordura penetram no mecanismo do registro. A mola de retorno perde pressão e o contato elétrico fica fisicamente preso na posição de acionamento.',
+      '* **3. Vela de ignição (eletrodo cerâmico) suja ou trincada:** O pino de porcelana branca ao lado do queimador pode acumular gordura carbonizada ou líquidos de cozimento derramados (como leite ou café fervido), gerando fuga de corrente para a mesa de inox ou vidro.',
+      '* **4. Usina de ignição eletrônica em curto:** A usina é o módulo sob o fogão que eleva a tensão para gerar a faísca. Se o componente sofreu pico de tensão ou infiltração interna, o circuito pode travar ligado em curto-circuito.',
+      '### 3. Como resolver o problema em casa (Dica do Técnico Osmar)',
+      'Se o problema começou logo após uma faxina ou derramamento de líquidos, você mesmo pode tentar solucionar com segurança:',
+      '* **Remova os botões plásticos:** Puxe os botões (manípulos) retos para cima com as mãos para ter acesso ao eixo metálico.',
+      '* **O truque do secador de cabelos:** Com o fogão totalmente FORA DA TOMADA, ligue um secador de cabelo em temperatura morna (nunca em calor escaldante para não derreter borrachas de vedação) e sopre o ar quente sobre as frestas dos eixos dos botões por 5 a 10 minutos.',
+      '* **Aguarde a evaporação:** Deixe o aparelho descansar ventilado por algumas horas para garantir que toda a condensação interna se dissipe.',
+      '* **Teste seguro:** Conecte novamente o cabo na tomada. Em mais de 80% dos casos simples de umidade pós-limpeza, o estalo cessa completamente após a secagem correta.',
+      '### 4. O que NUNCA fazer',
+      '* **Nunca enfie facas ou arames:** Jamais utilize pontas de faca, tesouras ou clipes metálicos para tentar soltar o botão por dentro, pois há risco de perfurar a fiação interna e provocar curto-circuito ou vazamento de gás.',
+      '* **Nunca jogue álcool comum líquido no registro:** O álcool 70% contém água e é altamente inflamável. Para limpar componentes elétricos, utiliza-se apenas limpa-contato elétrico spray ou álcool isopropílico 99,8% com o aparelho desenergizado.',
+      '### 5. Quando chamar um eletricista profissional em Blumenau',
+      'Se mesmo após secar completamente o fogão continuar estalando no momento em que é ligado na tomada, os interruptores do chicote elétrico ou a própria usina de ignição sofreram curto-circuito permanente e precisam ser substituídos com peças técnicas originais e testes de isolação com multímetro.'
+    ],
+    faqs: [
+      {
+        question: 'O fogão estalando sozinho pode explodir?',
+        answer: 'O estalo elétrico em si não explode o aparelho. No entanto, como ele gera faíscas contínuas, se houver qualquer vazamento de gás na cozinha há risco grave de ignição. Desconecte sempre o aparelho da tomada imediatamente ao notar os estalos contínuos.'
+      },
+      {
+        question: 'Fogão com acendimento automático precisa de aterramento na tomada em Blumenau?',
+        answer: 'Sim, indispensável. Em tomadas 220V de Blumenau, o pino central de aterramento protege o usuário contra choques elétricos na mesa de inox e previne que ruídos de alta frequência da usina danifiquem placas eletrônicas de outros aparelhos na casa.'
+      }
+    ]
   }
 ];
+
 

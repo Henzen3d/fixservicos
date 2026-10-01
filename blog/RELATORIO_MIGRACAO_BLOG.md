@@ -54,7 +54,7 @@ O blog opera de forma nativa e integrada à identidade visual da Fix Serviços:
 
 ---
 
-## 📚 3. Artigos Publicados em Produção (8 Artigos Oficiais)
+## 📚 3. Artigos Publicados em Produção (10 Artigos Oficiais)
 
 | # | Artigo | Categoria | URL | Página de Serviço Vinculada |
 | :-: | :--- | :--- | :--- | :--- |
@@ -66,6 +66,8 @@ O blog opera de forma nativa e integrada à identidade visual da Fix Serviços:
 | 6 | **Qual é a voltagem em Blumenau? Guia definitivo sobre 220V, tomadas 10A vs 20A e segurança** | Eletricista | `/blog/qual-voltagem-em-blumenau-110v-ou-220v/` | `/eletricista/troca-de-tomada/` |
 | 7 | **Como trocar a resistência do chuveiro elétrico sem queimar a peça nova: passo a passo** | Eletricista | `/blog/como-trocar-resistencia-chuveiro-passo-a-passo/` | `/eletricista/troca-de-resistencia-de-chuveiro-queimado/` |
 | 8 | **As vantagens das instalações elétricas subterrâneas em Blumenau: segurança, estética e normas NBR 5410** | Eletricista | `/blog/as-vantagens-das-instalacoes-eletricas-subterraneas/` | `/eletricista/` |
+| 9 | **Tipos de suporte para TV em painel e parede: como escolher e 4 cuidados para não danificar seu aparelho** | Marido de Aluguel | `/blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/` | `/marido-de-aluguel/instalacao-de-tv-em-blumenau/` |
+| 10 | **Fogão ou cooktop estalando sozinho sem parar? Descubra as causas e como resolver** | Eletricista | `/blog/fogao-cooktop-estalando-sozinho-o-que-fazer/` | `/eletricista/` |
 
 ---
 
@@ -88,15 +90,15 @@ Foram mapeadas todas as rotas legadas nas duas variações (`/rota` e `/blog/rot
 * `/marido-de-aluguel/marido-de-aluguel-blumenau/` ➔ `/marido-de-aluguel/`
 * `/marido-de-aluguel/5-melhores-marido-de-aluguel-em-blumenau/` ➔ `/marido-de-aluguel/`
 
-### C. Artigos Específicos Antigos (Destino: Serviços Diretos)
+### C. Artigos Específicos Antigos (Destino: Serviços Diretos e Contato)
 * `/eletrica/trocar-lampadas-piscina-com-seguranca/` ➔ `/eletricista/consertar-a-iluminacao-da-piscina/`
-* `/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas/` ➔ `/marido-de-aluguel/instalacao-painel-rack-para-tv/`
-* `/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia/` ➔ `/marido-de-aluguel/instalacao-de-tv-em-blumenau/`
-* `/faca-voce-mesmo/dicas/fogao-estalando-sozinho/` ➔ `/eletricista/`
 * `/destaque/premio-willy-sievert/` ➔ `/contato/`
 * `/destaque/premio-gustav-salinger-de-empreendedorismo/` ➔ `/contato/`
 
 ### D. Artigos Antigos com Migração e Atualização de Conteúdo
+* `/marido-de-aluguel/tipos-de-suporte-para-tv-em-painel-entenda-as-diferencas/` ➔ `/blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/`
+* `/faca-voce-mesmo/dicas/4-sinais-que-instalar-uma-tv-sem-saber-nao-e-uma-boa-ideia/` ➔ `/blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/`
+* `/faca-voce-mesmo/dicas/fogao-estalando-sozinho/` ➔ `/blog/fogao-cooktop-estalando-sozinho-o-que-fazer/`
 * `/eletrica/as-vantagens-das-instalacoes-eletricas-subterraneas/` ➔ `/blog/as-vantagens-das-instalacoes-eletricas-subterraneas/`
 * `/faca-voce-mesmo/dicas/10-ideias-para-deixar-a-casa-organizada-em-2023/` ➔ `/blog/ideias-organizacao-casa-apartamento-blumenau/`
 * `/faca-voce-mesmo/dicas/resistencia-queimada-como-trocar/` ➔ `/blog/como-trocar-resistencia-chuveiro-passo-a-passo/`
