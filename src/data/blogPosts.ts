@@ -1,6 +1,7 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  metaTitle?: string;
   description: string;
   date: string;
   category: 'Eletricista' | 'Encanador' | 'Marido de Aluguel' | 'Casa Inteligente';
@@ -19,6 +20,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'como-escolher-disjuntor-chuveiro-blumenau',
     title: 'Como escolher o disjuntor e a fiação corretos para chuveiro em Blumenau (110V vs 220V)',
+    metaTitle: 'Disjuntor e Fiação para Chuveiro em Blumenau | Fix Serviços',
     description: 'Aprenda a dimensionar disjuntor e bitola de cabo para chuveiros elétricos de 5500W a 7800W. Evite quedas de energia e riscos elétricos com dicas do Técnico Osmar.',
     date: '2026-09-28',
     category: 'Eletricista',
@@ -163,6 +165,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'ideias-organizacao-casa-apartamento-blumenau',
     title: '10 ideias práticas para organizar casa ou apartamento em Blumenau (Guia Atualizado 2026)',
+    metaTitle: '10 Ideias para Organizar sua Casa em Blumenau | Fix Serviços',
     description: 'Aprenda truques práticos por cômodo, móveis funcionais, prateleiras suspensas e organização sem perfurar canos ou conduítes elétricos. Dicas do Técnico Osmar.',
     date: '2026-09-30',
     category: 'Marido de Aluguel',
@@ -210,6 +213,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'qual-voltagem-em-blumenau-110v-ou-220v',
     title: 'Qual é a voltagem em Blumenau? Guia definitivo sobre 220V, tomadas 10A vs 20A e segurança',
+    metaTitle: 'Qual a Voltagem em Blumenau? Guia 110V vs 220V | Fix Serviços',
     description: 'Descubra a voltagem oficial de Blumenau e Santa Catarina, cuidados ao trazer eletrodomésticos 110V/127V de outros estados, transformadores e frequência 60Hz.',
     date: '2026-09-30',
     category: 'Eletricista',
@@ -255,6 +259,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'como-trocar-resistencia-chuveiro-passo-a-passo',
     title: 'Como trocar a resistência do chuveiro elétrico sem queimar a peça nova: passo a passo',
+    metaTitle: 'Como Trocar Resistência do Chuveiro sem Queimar | Fix Serviços',
     description: 'Chuveiro queimou e a água ficou gelada? Veja o passo a passo seguro para testar o disjuntor, checar a pressão do diafragma e trocar a resistência sem risco de queima a seco.',
     date: '2026-09-30',
     category: 'Eletricista',
@@ -299,6 +304,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'as-vantagens-das-instalacoes-eletricas-subterraneas',
     title: 'As vantagens das instalações elétricas subterrâneas em Blumenau: segurança, estética e normas NBR 5410',
+    metaTitle: 'Instalações Elétricas Subterrâneas em Blumenau (NBR 5410) | Fix',
     description: 'Entenda os benefícios da fiação subterrânea contra tempestades e quedas de árvores em Blumenau, regras da NBR 5410 para cabos de 1kV e profundidades seguras de valas.',
     date: '2026-09-30',
     category: 'Eletricista',
@@ -344,6 +350,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar',
     title: 'Tipos de suporte para TV em painel e parede: como escolher e 4 cuidados para não danificar seu aparelho',
+    metaTitle: 'Tipos de Suporte para TV em Painel: Guia Prático | Fix Serviços',
     description: 'Guia completo para escolher entre suporte fixo, inclinável ou articulado em painel de MDF ou alvenaria. Veja 4 sinais de alerta e evite acidentes em Blumenau.',
     date: '2026-09-30',
     category: 'Marido de Aluguel',

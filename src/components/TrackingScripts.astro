@@ -37,6 +37,15 @@ const ADS_ID = "";
     window.addEventListener(evt, onUserInteraction, { once: true, passive: true });
   });
 
+  // Fallback de segurança: Garante que visitas sem interação imediata (ex: leitura estática ou bounce) sejam contabilizadas no GA4
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(function() {
+      setTimeout(loadGtag, 3500);
+    });
+  } else {
+    setTimeout(loadGtag, 3500);
+  }
+
   // Rastreamento automático de conversão (WhatsApp e Telefone)
   document.addEventListener('click', function(event) {
     // Garante que o gtag esteja ativo no clique

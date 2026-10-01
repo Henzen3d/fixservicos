@@ -21,10 +21,15 @@ interface Props {
 
 const { post, prevPost, nextPost } = Astro.props;
 
-
-const title = `${post.title} | Blog Fix Serviços Blumenau`;
+const title = post.metaTitle ? post.metaTitle : `${post.title} | Blog Fix Serviços Blumenau`;
 const description = post.description;
 const canonicalURL = `https://fixblu.com.br/blog/${post.slug}/`;
+
+const formattedDate = new Date(`${post.date}T12:00:00Z`).toLocaleDateString('pt-BR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
 
 const schema = {
   "@context": "https://schema.org",
@@ -91,6 +96,11 @@ function formatMarkdown(text: string): string {
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           {post.readTime}
         </span>
+        <span class="text-white/40 hidden sm:inline">•</span>
+        <time datetime={post.date} class="text-white/70 flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Publicado em {formattedDate}
+        </time>
       </div>
 
       <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-display tracking-tight text-white leading-tight mb-6">
@@ -104,7 +114,7 @@ function formatMarkdown(text: string): string {
         </div>
         <div>
           <span class="font-bold text-white block">{post.author.name}</span>
-          <span class="text-white/60 text-xs block">{post.author.role} · Blumenau, SC</span>
+          <span class="text-white/60 text-xs block">{post.author.role} · Blumenau, SC · Revisado em {formattedDate}</span>
         </div>
       </div>
     </div>

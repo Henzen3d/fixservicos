@@ -44,3 +44,11 @@ Esta pasta reúne a documentação executiva desenvolvida para apoiar a nova fas
    * Palavras-chave qualificadas prontas (correspondência de frase e exata) por serviço.
    * Textos completos de anúncios responsivos (títulos e descrições prontos para copiar).
    * Mapeamento de URLs finais e extensões recomendadas.
+
+7. [07_PROXIMOS_PASSOS_E_CRESCIMENTO_ORGANICO.md](file:///j:/Arquivos%20Osmar/Reforma%20Divi%20FixBlu/Referencias/Docs/07_PROXIMOS_PASSOS_E_CRESCIMENTO_ORGANICO.md)
+   * Plano de ação pós-migração e consolidação do tráfego orgânico em Blumenau.
+   * Estratégia de enriquecimento do blog e publicação do 3º artigo emergencial (Chuveiro queimando).
+   * Pilares de SEO Local (hiperlocalização por bairros, rotina de avaliações 5 estrelas no Google Maps).
+   * Autoridade E-E-A-T (destaque do SENAI, 4 NRs oficiais e gestão da Vera).
+   * Preparação para buscas inteligentes por IA (GEO, rastreadores LLM e llms.txt).
+   * Rotina semanal simplificada de 15 minutos para captação contínua de clientes.

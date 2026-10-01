@@ -30,3 +30,9 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+/linktree/*
+  X-Robots-Tag: noindex, nofollow
+
+/linktree
+  X-Robots-Tag: noindex, nofollow
+
