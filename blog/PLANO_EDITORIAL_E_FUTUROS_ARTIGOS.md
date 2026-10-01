@@ -35,13 +35,18 @@ Este documento estabelece o guia estratégico de produção de conteúdo, o back
 1. **[PUBLICADO] Disjuntor desarmando toda hora: causas e quando chamar um eletricista.**
    * *URL Canônica:* [`/blog/disjuntor-desarmando-toda-hora-causas/`](/blog/disjuntor-desarmando-toda-hora-causas/)
    * *Status:* No ar em produção com 1.300 palavras, tabela de sintomas, diagrama de dispositivos (Disjuntor/DR/DPS) e FAQs Schema.
-2. **Chuveiro elétrico não esquenta ou queima: diagnóstico completo.**
+2. **[PUBLICADO] Lâmpada de LED acesa mesmo desligada: por que acontece e como resolver.**
+   * *URL Canônica:* [`/blog/lampada-led-acesa-mesmo-desligada-por-que/`](/blog/lampada-led-acesa-mesmo-desligada-por-que/)
+   * *Status:* No ar em produção com diagnóstico do interruptor piloto, fiação invertida no neutro, filtro supressor e FAQs Schema.
+3. **[PRIORIDADE MÁXIMA] Cheiro de queimado no chuveiro elétrico ou durante o banho: causas, riscos e o que fazer.**
+   * *Justificativa Direta do Técnico Osmar:* Problema extremamente comum em Blumenau com dezenas de chamados recorrentes. Acontece quando o morador toma banho quente no inverno e o chuveiro exige sua potência máxima (puxando 30A a 35A contínuos em 220V). A emenda frouxa, uso de fita isolante simples ou tomada de 3 pinos inadequada superaquece violentamente (efeito Joule). Se não for corrigido, evolui para curto-circuito e princípio de incêndio. Embora os materiais elétricos modernos (caixas 4x2 e conectores) sejam em termoplástico anti-chama autoextinguível (o que evita que a chama se propague), o calor derrete a capa de PVC dos cabos, destrói conduítes e pode queimar forros de gesso ou PVC. Altíssima intenção de contratação imediata!
+4. **Chuveiro elétrico não esquenta ou queima: diagnóstico completo.**
    * *Justificativa:* Cobre o que a resistência não cobre (chave de temperatura, fiação carbonizada, disjuntor, neutro frouxo). Linka com os posts da resistência e do disjuntor.
-3. **Choque ao tocar na torneira, geladeira ou chuveiro: o que fazer.**
+5. **Choque ao tocar na torneira, geladeira ou chuveiro: o que fazer.**
    * *Justificativa:* Aborda aterramento, falta de fio terra e Dispositivo DR. Assunto crítico de segurança que gera confiança e contato imediato.
-4. **DPS e proteção contra raios e queda de energia em Blumenau.**
+6. **DPS e proteção contra raios e queda de energia em Blumenau.**
    * *Justificativa:* Ângulo local fortíssimo devido às tempestades elétricas do Vale do Itajaí e queima de placas eletrônicas de eletrodomésticos.
-5. **Quanto custa um eletricista em Blumenau: o que influencia o preço.**
+7. **Quanto custa um eletricista em Blumenau: o que influencia o preço.**
    * *Justificativa:* Termo com alta intenção comercial no Google. Usar faixas e fatores explicativos, explicando como o orçamento técnico é composto e convidando para avaliação.
 
 ### B. Encanador (Urgência Hidráulica)
@@ -197,6 +202,58 @@ Este documento estabelece o guia estratégico de produção de conteúdo, o back
 * **Links Internos:**
   - Para `/blog/as-vantagens-das-instalacoes-eletricas-subterraneas/`
   - Para `/eletricista/` (Hub de Serviços)
+
+---
+
+### POST 4: Cheiro de Queimado no Chuveiro Elétrico Durante o Banho
+* **Slug:** `/blog/cheiro-de-queimado-chuveiro-eletrico-o-que-fazer/`
+* **Palavra-chave Principal:** `cheiro de queimado no chuveiro`
+* **Secundárias:** `chuveiro com cheiro de queimado no banho`, `fio do chuveiro derretendo`, `tomada do chuveiro esquentando`, `conector do chuveiro queimando`, `chuveiro cheirando queimado 220v`
+* **Title (54 caracteres):** `Cheiro de Queimado no Chuveiro no Banho? O Que Fazer`
+* **Meta Description:** `Sentiu cheiro de queimado no chuveiro durante o banho? Veja as causas (emenda frouxa, tomada inadequada), o perigo real, o papel do material anti-chama e o que fazer.`
+* **H1:** `Cheiro de Queimado no Chuveiro Elétrico Durante o Banho: Causas, Riscos e Como Resolver`
+
+#### Contexto Técnico do Eletricista (Técnico Osmar - Blumenau):
+* O chuveiro elétrico é o aparelho residencial de maior demanda de corrente. Em Blumenau (220V), modelos de 6.800W a 7.800W exigem de **30A a 35,5A contínuos** durante o banho de inverno.
+* Quando a conexão do chuveiro possui folga mecânica ou emenda improvisada com fita isolante simples, surge o **efeito Joule** (resistência de contato). A temperatura no ponto de emenda ultrapassa facilmente 120°C a 180°C.
+* **A fita isolante derrete**, os fios de cobre oxidam e o cheiro forte de plástico queimado invade o banheiro.
+* **O perigo de evolução:** Se o morador ignorar o cheiro e continuar tomando banho, a capa isolante dos condutores derrete por completo, os fios fase e neutro se tocam e provocam um **curto-circuito repentino**, rompimento da fiação ou princípio de incêndio.
+* **O papel do material anti-chama:** Por exigência das normas da ABNT (NBR NM 60669 / NBR 5410), caixas de embutir 4x2 e corpos de tomadas e conectores modernos são fabricados em **termoplástico com aditivo anti-chama (autoextinguível)**. Isso significa que o plástico não sustenta nem propaga chamas ativas sem uma fonte externa de fogo, o que geralmente impede que a caixinha pegue fogo aberta. No entanto, o superaquecimento extremo queima e derrete a fiação por dentro do eletroduto, derrete forros plásticos de PVC ou sancas de gesso rebaixadas e inutiliza a fiação do circuito.
+* **A solução definitiva da Fix Serviços:**
+  1. Banir tomadas de pino para chuveiro elétrico (mesmo tomadas de 20A não foram projetadas para suportar 35A contínuos de chuveiro moderno).
+  2. Substituir emendas de fita isolante por **conectores cerâmicos de porcelana** ou **conectores de torção/alavanca certificados (WAGO Linha 221 para até 41A)**.
+  3. Cortar e decapar novamente a ponta do cabo de cobre que sofreu aquecimento (cobre queimado/oxidado tem baixa condutividade e volta a esquentar).
+  4. Revisar bitola mínima da fiação (mínimo de 6,0 mm² ou 10,0 mm² conforme a potência e distância até o quadro) e o disjuntor correspondente.
+
+#### Estrutura do Conteúdo:
+* **Box de Alerta de Emergência:** Desligue o chuveiro agora! O que fazer nos primeiros 30 segundos.
+* **Intro:** O susto do cheiro de queimado no box e por que nunca relevar esse sintoma térmico.
+* **H2: Por que o chuveiro começa a cheirar queimado durante o banho? As 4 causas principais**
+  * 1. Mau contato em emendas improvisadas com fita isolante comum (efeito Joule e calor concentrado).
+  * 2. Uso indevido de tomada tradicional de 3 pinos (tomada 20A suporta no máximo 4.400W em 220V; chuveiros modernos passam de 7.500W).
+  * 3. Fiação subdimensionada (fios finos de 2,5 mm² ou 4,0 mm² aquecendo dentro da parede).
+  * 4. Parafusos frouxos no conector cerâmico ou borne do disjuntor.
+* **H2: O chuveiro pode pegar fogo? (O papel do material anti-chama)**
+  * A tecnologia autoextinguível das caixas 4x2 e conectores modernos: por que o fogo geralmente não se propaga.
+  * O perigo oculto: derretimento da isolação interna, fumaça tóxica, danos irreversíveis aos conduítes e risco para forros de PVC e gesso.
+* **H2: O que fazer IMEDIATAMENTE ao sentir cheiro de queimado no chuveiro**
+  * Passo 1: Fechar o registro de água na hora.
+  * Passo 2: Desligar o disjuntor exclusivo do chuveiro no quadro de distribuição.
+  * Passo 3: Não tentar religar em temperatura "morna" (o circuito já está comprometido).
+  * Passo 4: Inspeção visual segura da caixinha de conexão na parede.
+* **H2: Como resolver de forma definitiva e segura**
+  * Por que eliminar de vez a tomada tradicional.
+  * Conectores de porcelana vs Conectores WAGO de alavanca para alta corrente.
+  * A importância de cortar a ponta do cobre oxidado antes de refazer a emenda.
+* **H2: Quando chamar um eletricista profissional em Blumenau**
+  * Sinais de cabos colados dentro do conduíte, disjuntor que desarma junto ou cheiro persistente.
+* **CTA WhatsApp:** Envie uma foto da caixinha de fiação do chuveiro e o Técnico Osmar orienta o diagnóstico e realiza a troca segura da conexão.
+* **Links Internos:**
+  - Para `/blog/como-escolher-disjuntor-chuveiro-blumenau/`
+  - Para `/blog/como-trocar-resistencia-chuveiro-passo-a-passo/`
+  - Para `/blog/disjuntor-desarmando-toda-hora-causas/`
+  - Para `/blog/qual-voltagem-em-blumenau-110v-ou-220v/`
+  - Para `/eletricista/instalacao-de-chuveiro/`
 
 ---
 
