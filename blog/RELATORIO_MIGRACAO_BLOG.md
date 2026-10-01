@@ -1,8 +1,8 @@
 # 📑 Relatório de Migração e Implementação do Blog — Fix Serviços Blumenau
 
 **Data de Atualização:** 30 de Setembro de 2026  
-**Status Atual:** Blog nativo em Astro em produção com 11 artigos de alto valor, sitemaps canônicos e matriz de redirecionamento 301 completa cobrindo 100% das URLs legadas do WordPress.  
-**Build de Produção:** Testado e aprovado com 55 páginas estáticas geradas com sucesso via `npm run build`.
+**Status Atual:** Blog nativo em Astro em produção com 12 artigos de alto valor, sitemaps canônicos e matriz de redirecionamento 301 completa cobrindo 100% das URLs legadas do WordPress.  
+**Build de Produção:** Testado e aprovado com 56 páginas estáticas geradas com sucesso via `npm run build`.
 
 ---
 
@@ -55,7 +55,7 @@ O blog opera de forma nativa e integrada à identidade visual da Fix Serviços:
 
 ---
 
-## 📚 3. Artigos Publicados em Produção (11 Artigos Oficiais)
+## 📚 3. Artigos Publicados em Produção (12 Artigos Oficiais)
 
 | # | Artigo | Categoria | URL | Página de Serviço Vinculada |
 | :-: | :--- | :--- | :--- | :--- |
@@ -70,6 +70,7 @@ O blog opera de forma nativa e integrada à identidade visual da Fix Serviços:
 | 9 | **Tipos de suporte para TV em painel e parede: como escolher e 4 cuidados para não danificar seu aparelho** | Marido de Aluguel | `/blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/` | `/marido-de-aluguel/instalacao-de-tv-em-blumenau/` |
 | 10 | **Fogão ou cooktop estalando sozinho sem parar? Descubra as causas e como resolver** | Eletricista | `/blog/fogao-cooktop-estalando-sozinho-o-que-fazer/` | `/eletricista/` |
 | 11 | **Disjuntor Desarmando Toda Hora: Causas e o Que Fazer** | Eletricista | `/blog/disjuntor-desarmando-toda-hora-causas/` | `/eletricista/` |
+| 12 | **Lâmpada LED Acesa Mesmo Desligada? Causas e Solução** | Eletricista | `/blog/lampada-led-acesa-mesmo-desligada-por-que/` | `/eletricista/` |
 
 ---
 

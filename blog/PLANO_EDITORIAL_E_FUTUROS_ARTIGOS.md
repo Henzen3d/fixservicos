@@ -9,9 +9,10 @@ Este documento estabelece o guia estratégico de produção de conteúdo, o back
 > [!IMPORTANT]
 > **Prioridade Absoluta:** Usuários que têm o problema agora e precisam contratar com urgência em Blumenau, e não apenas quem busca curiosidades ou tutoriais "faça você mesmo" sem intenção comercial.
 
-### Panorama dos 11 Artigos Atuais:
+### Panorama dos 12 Artigos Atuais:
 * **Alta Conversão (Dor Imediata):** 
-  - [Disjuntor desarmando toda hora: causas e o que fazer](/blog/disjuntor-desarmando-toda-hora-causas/) **(Novo - Publicado)**
+  - [Lâmpada LED acesa mesmo desligada? Causas e solução](/blog/lampada-led-acesa-mesmo-desligada-por-que/) **(Novo - Publicado)**
+  - [Disjuntor desarmando toda hora: causas e o que fazer](/blog/disjuntor-desarmando-toda-hora-causas/) **(Publicado)**
   - [Como trocar a resistência do chuveiro sem queimar](/blog/como-trocar-resistencia-chuveiro-passo-a-passo/)
   - [Dimensionamento de disjuntor e fiação de chuveiro](/blog/como-escolher-disjuntor-chuveiro-blumenau/)
   - [Válvula Hydra disparada ou vazando sem quebrar parede](/blog/valvula-hydra-disparada-como-consertar/)
