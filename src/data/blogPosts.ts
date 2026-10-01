@@ -436,7 +436,119 @@ export const blogPosts: BlogPost[] = [
         answer: 'Sim, indispensável. Em tomadas 220V de Blumenau, o pino central de aterramento protege o usuário contra choques elétricos na mesa de inox e previne que ruídos de alta frequência da usina danifiquem placas eletrônicas de outros aparelhos na casa.'
       }
     ]
+  },
+  {
+    slug: 'disjuntor-desarmando-toda-hora-causas',
+    title: 'Disjuntor Desarmando Toda Hora: Causas e o Que Fazer',
+    description: 'Disjuntor desarmando toda hora? Veja as causas (sobrecarga, curto, fuga), o teste seguro para fazer em casa e quando chamar eletricista em Blumenau.',
+    date: '2026-09-30',
+    category: 'Eletricista',
+    readTime: '6 min de leitura',
+    serviceLink: '/eletricista/',
+    serviceName: 'Serviços de Eletricista em Blumenau',
+    author: {
+      name: 'Técnico Osmar',
+      role: 'Eletricista Profissional Certificado NR10',
+    },
+    content: [
+      'Se o disjuntor desarma toda hora, ele está fazendo exatamente o trabalho para o qual foi projetado: cortar a passagem de corrente elétrica antes que os fios aqueçam além do limite de segurança ou ocorra um princípio de incêndio.',
+      'Na esmagadora maioria dos casos atendidos em residências de Blumenau, o motivo está associado a **sobrecarga** (excesso de aparelhos potentes operando no mesmo circuito), **curto-circuito** ou **defeito interno em algum eletrodoméstico**.',
+      'Se o disjuntor desarmou uma única vez após você ligar simultaneamente vários equipamentos, pode ser apenas excesso pontual de carga. Porém, se ele **desarma novamente logo após ser religado**, pare imediatamente de insistir. Forçar o religamento repetidas vezes aquece a fiação embutida e pode fundir os cabos dentro dos conduítes.',
+      'Neste guia prático, você entenderá as causas mais frequentes, aprenderá um teste seguro para fazer em sua casa, saberá o que nunca fazer e identificará os sinais de que é hora de acionar um eletricista profissional.',
+      '> **Resumo rápido de segurança:** Desarmou uma vez com muitos aparelhos ligados? Desligue alguns e religue. Desarma de novo imediatamente ao religar? Não insista e chame um profissional. Desarma sem nada ligado, com cheiro de queimado, faísca ou choque? Desligue a chave geral e procure atendimento técnico imediato.',
+      '## Por que o disjuntor desarma? As 5 causas mais comuns',
+      'Um disjuntor comum (termomagnético) protege contra dois problemas físicos primordiais: corrente acima da capacidade suportada pelo condutor (**sobrecarga**) e corrente de alta intensidade que surge de repente (**curto-circuito**). Ao detectar qualquer uma dessas anomalias, ele abre o contato mecânico e corta a energia.',
+      '### 1. Sobrecarga elétrica',
+      'É a causa mais comum no cotidiano residencial. Acontece quando ligamos no mesmo circuito mais aparelhos do que os fios e o disjuntor foram dimensionados para suportar.',
+      'Exemplos diários em residências são ferro de passar roupas, air fryer, micro-ondas e chaleira elétrica ligados na mesma régua ou tomada múltipla (benjamim/T), ou o aparelho de ar-condicionado dividindo a fiação com as tomadas de uso geral do quarto.',
+      'O desarme por sobrecarga geralmente ocorre após alguns minutos de funcionamento contínuo, e não no exato instante em que o aparelho é ligado, porque a lâmina bimetálica interna do disjuntor precisa de tempo para aquecer.',
+      '### 2. Curto-circuito',
+      'Ocorre quando os fios condutores de fase e neutro (ou fase e terra, ou duas fases na rede 220V) entram em contato físico direto sem qualquer resistência intermediária.',
+      'O disjuntor desarma de forma **instantânea**, frequentemente acompanhado de um estalo forte e eventual faísca. As causas mais recorrentes são fios desencapados pelo ressecamento dentro do conduíte, tomadas quebradas ou peças internas de eletrodomésticos em falha catastrófica.',
+      '### 3. Aparelho com defeito interno',
+      'Um equipamento elétrico com falha em seus enrolamentos ou componentes internos pode demandar uma corrente anormal e derrubar a chave de proteção.',
+      'Entre os casos mais frequentes estão chuveiros elétricos com resistência empenada encostando no corpo, compressores travados de geladeira ou ar-condicionado e motores de máquinas de lavar.',
+      'Se o disjuntor do seu banheiro desarma sempre que você liga o banho, confira também nossos guias dedicados: [como trocar resistência de chuveiro passo a passo](/blog/como-trocar-resistencia-chuveiro-passo-a-passo/) e [como escolher o disjuntor e a fiação corretos para chuveiro](/blog/como-escolher-disjuntor-chuveiro-blumenau/).',
+      '### 4. Conexões frouxas ou fiação envelhecida',
+      'Um parafuso de borne com aperto deficiente no disjuntor ou na tomada cria alta resistência elétrica de contato, gerando superaquecimento (efeito Joule).',
+      'Em imóveis construídos há mais de 20 anos em Blumenau, a capa plástica isolante dos condutores perde a flexibilidade e resseca. Os sintomas de alerta são tampa do quadro elétrica morna, espelhos de tomada amarelados ou escurecidos e odor característico de plástico queimado.',
+      '### 5. Disjuntor desgastado ou mal dimensionado',
+      'Disjuntores possuem vida útil definida. Após suportar múltiplos arcos elétricos e desarmes sucessivos sob sobrecarga, os contatos internos oxidam e perdem a calibração de fábrica, passando a desarmar mesmo sob correntes baixas.',
+      'No entanto, essa confirmação técnica **só deve ser emitida por um eletricista habilitado com auxílio de alicate amperímetro**. Substituir o disjuntor por um de capacidade maior sem redimensionar os cabos é um dos erros mais perigosos na elétrica residencial.',
+      '<div class="overflow-x-auto my-6"><table class="w-full text-left border-collapse border border-border-main rounded-xl overflow-hidden text-xs sm:text-sm"><thead class="bg-surface-2 text-text-main font-bold border-b border-border-main"><tr><th class="p-3 sm:p-4">O que acontece</th><th class="p-3 sm:p-4">Causa mais provável</th></tr></thead><tbody class="divide-y divide-border-main bg-surface-1"><tr><td class="p-3 sm:p-4 font-medium text-text-main">Desarma após alguns minutos com vários aparelhos ligados</td><td class="p-3 sm:p-4 text-text-muted">Sobrecarga elétrica no circuito</td></tr><tr><td class="p-3 sm:p-4 font-medium text-text-main">Desarma no exato segundo em que liga um aparelho específico</td><td class="p-3 sm:p-4 text-text-muted">Defeito interno ou curto no próprio aparelho</td></tr><tr><td class="p-3 sm:p-4 font-medium text-text-main">Desarma imediatamente ao religar a alavanca, com estalo</td><td class="p-3 sm:p-4 text-text-muted">Curto-circuito direto na fiação ou na tomada</td></tr><tr><td class="p-3 sm:p-4 font-medium text-text-main">Desarma sem nenhum equipamento conectado às tomadas</td><td class="p-3 sm:p-4 text-text-muted">Problema embutido na fiação ou umidade no conduíte</td></tr><tr><td class="p-3 sm:p-4 font-medium text-text-main">Desarma preferencialmente em dias de chuva constante</td><td class="p-3 sm:p-4 text-text-muted">Infiltração em condutos externos e fuga de corrente (DR)</td></tr><tr><td class="p-3 sm:p-4 font-medium text-text-main">Disjuntor ou tomada quente com cheiro de queimado</td><td class="p-3 sm:p-4 text-text-muted">Conexão frouxa (mau contato) ou subdimensionamento</td></tr></tbody></table></div>',
+      '## Disjuntor, DR e DPS: qual deles está desarmando no seu quadro?',
+      'No quadro de distribuição residencial moderno, é comum encontrar três tipos diferentes de dispositivos modulares DIN. Cada um tem uma função indispensável e inconfundível:',
+      '* **Disjuntor termomagnético:** Protege os fios e cabos contra sobrecarga e curto-circuito. É o módulo tradicional identificado por correntes como 10A, 16A, 20A, 25A, 32A, 40A ou 50A.',
+      '* **Dispositivo DR (Diferencial Residual):** Protege **vidas humanas** contra choques elétricos. Ele desarma ao detectar fugas mínimas de corrente para a terra (superiores a 30 miliamperes). É facilmente identificado pelo botão frontal de teste marcado com a letra **"T"**.',
+      '* **Módulo DPS (Proteção contra Surtos):** Protege eletrodomésticos e eletrônicos contra queima provocada por raios ou picos de tensão da concessionária. Ele não possui alavanca de rearme: seu estado é indicado por um visor que fica verde quando ativo e vermelho quando atinge o fim da vida útil.',
+      '<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6"><div class="p-4 rounded-xl bg-surface-2 border border-border-main text-center"><div class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-navy/10 dark:bg-white/10 text-brand-navy dark:text-white font-bold mb-2">1</div><h4 class="font-bold text-sm text-text-main mb-1">Disjuntor</h4><p class="text-xs text-text-muted m-0">Protege <strong>fios e instalações</strong> contra excesso de corrente e curto-circuito.</p></div><div class="p-4 rounded-xl bg-surface-2 border-2 border-brand-green/50 text-center"><div class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-green/20 text-brand-green font-bold mb-2">2</div><h4 class="font-bold text-sm text-text-main mb-1">Interruptor DR</h4><p class="text-xs text-text-muted m-0">Protege <strong>pessoas</strong> contra choque e fuga de corrente. Possui botão <strong>"T"</strong> de teste.</p></div><div class="p-4 rounded-xl bg-surface-2 border border-border-main text-center"><div class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-navy/10 dark:bg-white/10 text-brand-navy dark:text-white font-bold mb-2">3</div><h4 class="font-bold text-sm text-text-main mb-1">Módulo DPS</h4><p class="text-xs text-text-muted m-0">Protege <strong>eletrônicos</strong> contra raios e oscilações da rede. Visor verde/vermelho.</p></div></div>',
+      'Entender essa distinção é fundamental: se **o DR** é o dispositivo que está desarmando, o motivo não é sobrecarga de aparelhos, mas sim **fuga de corrente** (umidade em luminárias externas, fio desencapado tocando a carcaça de uma máquina de lavar ou resistência de chuveiro trincada).',
+      'Se o seu quadro de luz não possui DR instalado, consulte um eletricista para providenciar a instalação. O DR é obrigatório pela norma NBR 5410 em áreas molhadas (banheiros, cozinhas, lavanderias e áreas externas).',
+      '## O que fazer quando o disjuntor desarma (Passo a passo seguro)',
+      'Estes passos podem ser realizados por qualquer morador com segurança, **sem necessidade de abrir tampas ou tocar nos fios do quadro**:',
+      '1. **Desconecte todos os aparelhos das tomadas do circuito afetado:** Retire os plugues das tomadas dos cômodos que ficaram sem energia.',
+      '2. **Religue o disjuntor com mãos e calçados secos:** Certifique-se de que o piso não está úmido. Em muitos modelos modernos de disjuntores DIN, a alavanca fica em posição intermediária (entre ligado e desligado) ao desarmar. Para religar corretamente, empurre a alavanca primeiro totalmente para baixo (posição OFF/desligado) até ouvir um clique mecânico e, em seguida, empurre-a com firmeza para cima (posição ON/ligado).',
+      '3. **Conecte os aparelhos de volta, um de cada vez:** Ligue o primeiro equipamento e observe por alguns instantes. Depois ligue o segundo. No momento em que um aparelho fizer o disjuntor desarmar de imediato, você descobriu a causa. Mantenha esse equipamento fora da tomada.',
+      '4. **Se o disjuntor desarmar sem nenhum aparelho conectado, pare:** Não force a alavanca. Isso comprova que a anomalia reside na fiação embutida ou na própria chave de proteção.',
+      '> **O que você pode fazer com segurança:** Testes de triagem desconectando tomadas e rearme externo da alavanca. **O que exige eletricista credenciado:** Abrir o painel de proteção, manipular conexões de barramento, testar isolamento de condutores com instrumentos ou substituir disjuntores.',
+      'Se você confirmou que a causa é sobrecarga, a solução imediata é redistribuir os equipamentos entre tomadas de circuitos diferentes. Se a sobrecarga for recorrente, solicite a um eletricista a passagem de um circuito novo e exclusivo.',
+      '## O que você NUNCA deve fazer em um disjuntor',
+      '* **Nunca substitua o disjuntor por outro de amperagem maior sem redimensionar os condutores:** O disjuntor tem a missão primordial de proteger o cabo contra incêndio. Se você substitui um disjuntor de 20A por um de 32A mantendo a fiação de 2,5 mm², o disjuntor deixará de desarmar, mas os condutores atingirão temperaturas superiores a 150°C dentro da parede, provocando incêndio estrutural.',
+      '* **Nunca amarre, prenda ou calce a alavanca na posição ligada:** Disjuntores modernos contam com mecanismo trip-free (desarme livre). O módulo desarmará internamente mesmo com a alavanca travada. Forçar o mecanismo apenas destrói a chave e anula a proteção contra curto.',
+      '* **Nunca faça "gambiarras" ou pontes diretas no quadro:** Jamais substitua o disjuntor por pedaços de arame ou conexões diretas. Essa prática elimina qualquer proteção e invalida coberturas de seguro residencial.',
+      '* **Nunca manipule o quadro elétrico descalço ou com mãos molhadas:** A umidade reduz a resistência da pele humana a quase zero, transformando contatos acidentais em choques graves ou fatais.',
+      '* **Nunca ignore um interruptor DR que vive desarmando:** O DR desarma para salvar vidas contra choques. Jamais remova o DR do quadro para contornar o problema.',
+      '## Quando chamar um eletricista profissional',
+      'Acione um eletricista habilitado quando verificar qualquer uma das seguintes situações:',
+      '* O disjuntor **desarma novamente no mesmo segundo em que você o religa**, mesmo com todos os aparelhos desligados.',
+      '* Há **cheiro característico de queimado**, ruído de estalos ou chiado vindo de dentro do quadro.',
+      '* O disjuntor, a tampa frontal do painel ou os espelhos das tomadas estão **quentes ao toque**.',
+      '* Você nota **faíscas visíveis ou fumaça** em qualquer ponto da instalação.',
+      '* Alguém na residência sente **formigamentos ou choques leves** ao tocar em registros de chuveiro, torneiras ou na carcaça metálica de eletrodomésticos.',
+      '* O quadro ainda utiliza **chaves com fusíveis antigos de rolha/cartucho** ou não possui dispositivo DR.',
+      '* O problema **se repete com frequência**, mesmo após você redistribuir os aparelhos entre diferentes tomadas.',
+      '<div class="my-8 p-6 rounded-2xl bg-brand-green/10 border-2 border-brand-green/40 flex flex-col sm:flex-row items-center justify-between gap-4"><div class="text-left"><h4 class="font-bold text-base sm:text-lg text-text-main mb-1">Disjuntor desarmando e não achou a causa?</h4><p class="text-xs sm:text-sm text-text-muted m-0">Envie uma foto do seu quadro elétrico pelo WhatsApp. O Técnico Osmar orienta você e analisa o que está acontecendo.</p></div><a href="https://wa.me/5547988041306?text=Ol%C3%A1%20T%C3%A9cnico%20Osmar!%20Meu%20disjuntor%20est%C3%A1%20desarmando%20e%20gostaria%20de%20uma%20avalia%C3%A7%C3%A3o.%20Li%20o%20artigo%20no%20site%20da%20Fix%20Servi%C3%A7os." target="_blank" rel="noopener noreferrer" class="shrink-0 bg-brand-green hover:bg-brand-green-hover text-white font-bold py-3 px-5 rounded-xl text-xs uppercase tracking-wider no-underline transition-all shadow-md flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Falar com o Técnico Osmar</a></div>',
+      'Quer saber mais sobre nossos procedimentos e padrões de segurança? Acesse nossa página completa de [serviços de eletricista em Blumenau](/eletricista/).',
+      '## Em Blumenau: chuva, umidade e desarme do disjuntor',
+      'Na nossa região do Vale do Itajaí, o clima subtropical úmido e o expressivo volume pluviométrico têm influência direta sobre as instalações elétricas.',
+      'Durante períodos de temporais e chuva contínua, a água pode infiltrar em caixas de passagem subterrâneas, tubulações embutidas em lajes mal impermeabilizadas, arandelas de fachada, holofotes de jardim ou tomadas externas da garagem. Essa umidade cria pequenas fugas de corrente para a alvenaria, fazendo o interruptor DR (ou o disjuntor geral) desarmar intermitentemente.',
+      'Se o seu disjuntor só desarma quando chove forte, desligue o circuito externo na chave individual até que a tubulação seja inspecionada e as vedações refeitas. Caso o imóvel tenha enfrentado inundação ou alagamento de tomada, nunca religue a chave geral antes de uma secagem técnica e testes de isolação com megômetro.',
+      '## Quanto custa resolver o disjuntor que desarma?',
+      'O investimento para corrigir o desarme depende da causa raiz comprovada no diagnóstico. Os principais fatores de custo englobam:',
+      '* **Localização da anomalia:** Se o problema restringe-se a um eletrodoméstico específico ou exige intervenção na tubulação e no quadro elétrico.',
+      '* **Substituição de peças:** Troca de disjuntor termomagnético desgastado, instalação de novo interruptor DR, troca de módulos DPS ou substituição de tomadas e conectores derretidos.',
+      '* **Refazer fiação ou passar novo circuito:** Necessidade de puxar novos cabos de cobre de maior bitola pelo eletroduto para alimentar individualmente ar-condicionado ou forno elétrico.',
+      '* **Acessibilidade do painel:** Facilidade de acesso aos conduítes e ao quadro geral de distribuição.',
+      'Na Fix Serviços, prezamos pela clareza total: realizamos uma avaliação preliminar ágil via WhatsApp. Caso seja necessária a visita diagnóstica presencial para desmontagem do painel e medições de corrente com instrumentos de precisão, o valor da visita é previamente informado com transparência e abatido do orçamento na execução do serviço.',
+      '## Conclusão',
+      'O disjuntor que desarma é um aviso protetor indispensável, e não o vilão da instalação. Se desarmou uma única vez e você sabe o motivo (excesso de aparelhos operando juntos), redistribua os equipamentos e observe.',
+      'Se o desarme for recorrente, acontecer sem aparelhos ligados ou apresentar aquecimento, estalos ou cheiro de queimado, **não coloque em risco seu patrimônio nem a segurança da sua família**: desligue o circuito afetado e consulte um profissional habilitado.',
+      '**Leia também em nosso blog:**',
+      '* [Como trocar a resistência do chuveiro passo a passo](/blog/como-trocar-resistencia-chuveiro-passo-a-passo/)',
+      '* [Como escolher o disjuntor e a fiação corretos para chuveiro em Blumenau](/blog/como-escolher-disjuntor-chuveiro-blumenau/)',
+      '* [Qual a voltagem residencial em Blumenau: 110V ou 220V?](/blog/qual-voltagem-em-blumenau-110v-ou-220v/)',
+      '* [As vantagens e segurança das instalações elétricas subterrâneas](/blog/as-vantagens-das-instalacoes-eletricas-subterraneas/)'
+    ],
+    faqs: [
+      {
+        question: 'O disjuntor desarmando repetidas vezes pode queimar aparelhos?',
+        answer: 'Sim. As quedas bruscas de energia e oscilações de tensão causadas por mau contato ou desarmes mecânicos sucessivos podem queimar placas eletrônicas sensíveis de televisores, compressores inverter e computadores.'
+      },
+      {
+        question: 'Posso trocar o disjuntor por um de amperagem maior para resolver?',
+        answer: 'Não. O disjuntor protege a espessura do fio contra incêndio. Ao aumentar a amperagem do disjuntor sem trocar a fiação, o cabo superaquecerá sem que o disjuntor desarme, derretendo conduítes e gerando alto risco de incêndio.'
+      },
+      {
+        question: 'Qual a diferença entre o disjuntor e o interruptor DR?',
+        answer: 'O disjuntor protege a instalação contra sobrecarga e curto-circuito. O interruptor DR protege as pessoas contra choques elétricos decorrentes de fugas de corrente para a terra, sendo obrigatório por norma em áreas úmidas.'
+      },
+      {
+        question: 'Por que o disjuntor só desarma em dias chuvosos em Blumenau?',
+        answer: 'A umidade excessiva e a infiltração de água da chuva em caixas de passagem no solo, luminárias de jardim ou tomadas de garagem causam fuga de corrente para a terra, desarmando imediatamente o dispositivo DR ou o disjuntor geral.'
+      }
+    ]
   }
 ];
+
 
 

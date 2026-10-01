@@ -9,8 +9,9 @@ Este documento estabelece o guia estratégico de produção de conteúdo, o back
 > [!IMPORTANT]
 > **Prioridade Absoluta:** Usuários que têm o problema agora e precisam contratar com urgência em Blumenau, e não apenas quem busca curiosidades ou tutoriais "faça você mesmo" sem intenção comercial.
 
-### Panorama dos 10 Artigos Atuais:
+### Panorama dos 11 Artigos Atuais:
 * **Alta Conversão (Dor Imediata):** 
+  - [Disjuntor desarmando toda hora: causas e o que fazer](/blog/disjuntor-desarmando-toda-hora-causas/) **(Novo - Publicado)**
   - [Como trocar a resistência do chuveiro sem queimar](/blog/como-trocar-resistencia-chuveiro-passo-a-passo/)
   - [Dimensionamento de disjuntor e fiação de chuveiro](/blog/como-escolher-disjuntor-chuveiro-blumenau/)
   - [Válvula Hydra disparada ou vazando sem quebrar parede](/blog/valvula-hydra-disparada-como-consertar/)
@@ -30,8 +31,9 @@ Este documento estabelece o guia estratégico de produção de conteúdo, o back
 ## 📋 2. Os 12 Artigos Mais Recomendados (Ordem de Prioridade)
 
 ### A. Eletricista (Maior Intenção Comercial e Urgência)
-1. **Disjuntor desarmando toda hora: causas e quando chamar um eletricista.**
-   * *Justificativa:* Problema recorrente, urgente, com alto risco elétrico e forte intenção local.
+1. **[PUBLICADO] Disjuntor desarmando toda hora: causas e quando chamar um eletricista.**
+   * *URL Canônica:* [`/blog/disjuntor-desarmando-toda-hora-causas/`](/blog/disjuntor-desarmando-toda-hora-causas/)
+   * *Status:* No ar em produção com 1.300 palavras, tabela de sintomas, diagrama de dispositivos (Disjuntor/DR/DPS) e FAQs Schema.
 2. **Chuveiro elétrico não esquenta ou queima: diagnóstico completo.**
    * *Justificativa:* Cobre o que a resistência não cobre (chave de temperatura, fiação carbonizada, disjuntor, neutro frouxo). Linka com os posts da resistência e do disjuntor.
 3. **Choque ao tocar na torneira, geladeira ou chuveiro: o que fazer.**

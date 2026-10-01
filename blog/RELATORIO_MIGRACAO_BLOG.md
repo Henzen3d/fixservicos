@@ -1,8 +1,8 @@
 # 📑 Relatório de Migração e Implementação do Blog — Fix Serviços Blumenau
 
 **Data de Atualização:** 30 de Setembro de 2026  
-**Status Atual:** Blog nativo em Astro em produção com 7 artigos de alto valor, sitemaps canônicos e matriz de redirecionamento 301 completa cobrindo 100% das URLs legadas do WordPress.  
-**Build de Produção:** Testado e aprovado com 51 páginas estáticas geradas com sucesso via `npm run build`.
+**Status Atual:** Blog nativo em Astro em produção com 11 artigos de alto valor, sitemaps canônicos e matriz de redirecionamento 301 completa cobrindo 100% das URLs legadas do WordPress.  
+**Build de Produção:** Testado e aprovado com 55 páginas estáticas geradas com sucesso via `npm run build`.
 
 ---
 
@@ -37,9 +37,10 @@ O blog opera de forma nativa e integrada à identidade visual da Fix Serviços:
 * **Tecnologia:** Geração Estática via `getStaticPaths()`. Cada artigo é pré-compilado em HTML puro em tempo de build.
 * **Recursos do Artigo:**
   * Breadcrumb semântico navegável (`Início > Blog > Categoria`).
-  * Renderizador de conteúdo com suporte a títulos h2 (`###`), listas com marcadores (`*`), passos numerados (`1.`) e ênfase negrito (`**`).
+  * Renderizador de conteúdo com suporte a títulos h2/h3 (`##`, `###`), listas (`*`, `1.`), links contextuais `[texto](url)`, citações/destaques `>` e tabelas responsivas.
   * Seção de **Perguntas Frequentes (FAQ)** estruturada ao final de cada artigo com microdados Schema.
   * **Caixa de Autoridade / E-E-A-T:** Destaque para o Técnico Osmar (mais de 20 anos de experiência em Blumenau, certificação NR10).
+  * **Navegação Bidirecional de Artigos:** Botões de Post Anterior / Próximo Post com setas visuais e títulos contextuais.
   * **Barra Lateral de Conversão Fixa (Sticky Sidebar):** Caixa de destaque ligando o tema do artigo diretamente ao serviço correspondente, com link para a página do serviço e botão direto de WhatsApp com mensagem contextualizada.
 * **Schema SEO:** `BlogPosting` completo com autor, publisher, data de publicação e URL canônica.
 
@@ -54,7 +55,7 @@ O blog opera de forma nativa e integrada à identidade visual da Fix Serviços:
 
 ---
 
-## 📚 3. Artigos Publicados em Produção (10 Artigos Oficiais)
+## 📚 3. Artigos Publicados em Produção (11 Artigos Oficiais)
 
 | # | Artigo | Categoria | URL | Página de Serviço Vinculada |
 | :-: | :--- | :--- | :--- | :--- |
@@ -68,6 +69,7 @@ O blog opera de forma nativa e integrada à identidade visual da Fix Serviços:
 | 8 | **As vantagens das instalações elétricas subterrâneas em Blumenau: segurança, estética e normas NBR 5410** | Eletricista | `/blog/as-vantagens-das-instalacoes-eletricas-subterraneas/` | `/eletricista/` |
 | 9 | **Tipos de suporte para TV em painel e parede: como escolher e 4 cuidados para não danificar seu aparelho** | Marido de Aluguel | `/blog/tipos-de-suporte-para-tv-em-painel-como-escolher-e-instalar/` | `/marido-de-aluguel/instalacao-de-tv-em-blumenau/` |
 | 10 | **Fogão ou cooktop estalando sozinho sem parar? Descubra as causas e como resolver** | Eletricista | `/blog/fogao-cooktop-estalando-sozinho-o-que-fazer/` | `/eletricista/` |
+| 11 | **Disjuntor Desarmando Toda Hora: Causas e o Que Fazer** | Eletricista | `/blog/disjuntor-desarmando-toda-hora-causas/` | `/eletricista/` |
 
 ---
 

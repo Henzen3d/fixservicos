@@ -58,6 +58,12 @@ const schema = {
     }
   }
 };
+
+function formatMarkdown(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-brand-green font-semibold hover:underline">$1</a>');
+}
 ---
 
 <MainLayout title={title} description={description} canonicalURL={canonicalURL} noPadding={true} schema={schema}>
@@ -112,14 +118,25 @@ const schema = {
       <article class="lg:col-span-8 bg-surface-1 border border-border-main rounded-2xl p-6 sm:p-10 shadow-sm">
         <div class="prose prose-slate dark:prose-invert max-w-none text-text-main text-base sm:text-lg leading-relaxed space-y-6">
           {post.content.map((paragraph) => {
+            if (paragraph.startsWith('## ')) {
+              return <h2 class="text-xl sm:text-2xl font-bold font-display text-text-main pt-6 pb-2 border-b border-border-main" set:html={formatMarkdown(paragraph.replace('## ', ''))} />;
+            }
             if (paragraph.startsWith('### ')) {
-              return <h2 class="text-xl sm:text-2xl font-bold font-display text-text-main pt-6 pb-2 border-b border-border-main">{paragraph.replace('### ', '')}</h2>;
+              return <h3 class="text-lg sm:text-xl font-bold font-display text-text-main pt-4 pb-1" set:html={formatMarkdown(paragraph.replace('### ', ''))} />;
+            }
+            if (paragraph.startsWith('> ')) {
+              return (
+                <blockquote class="my-5 p-4 sm:p-5 rounded-xl bg-surface-2 border-l-4 border-brand-green text-text-main text-sm sm:text-base leading-relaxed shadow-xs" set:html={formatMarkdown(paragraph.replace(/^>\s*/, ''))} />
+              );
+            }
+            if (paragraph.startsWith('<div') || paragraph.startsWith('<table') || paragraph.startsWith('<blockquote') || paragraph.startsWith('<section')) {
+              return <div class="my-4" set:html={paragraph} />;
             }
             if (paragraph.startsWith('* ')) {
               return (
                 <div class="flex items-start gap-2.5 my-2">
                   <span class="text-brand-green font-bold text-lg mt-0.5">•</span>
-                  <p class="text-text-main text-sm sm:text-base leading-relaxed m-0" set:html={paragraph.replace('* ', '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+                  <p class="text-text-main text-sm sm:text-base leading-relaxed m-0" set:html={formatMarkdown(paragraph.replace('* ', ''))} />
                 </div>
               );
             }
@@ -127,11 +144,11 @@ const schema = {
               return (
                 <div class="flex items-start gap-2.5 my-2">
                   <span class="text-brand-navy dark:text-brand-green font-bold text-sm mt-0.5">{paragraph.split('. ')[0]}.</span>
-                  <p class="text-text-main text-sm sm:text-base leading-relaxed m-0" set:html={paragraph.replace(/^\d+\. /, '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+                  <p class="text-text-main text-sm sm:text-base leading-relaxed m-0" set:html={formatMarkdown(paragraph.replace(/^\d+\. /, ''))} />
                 </div>
               );
             }
-            return <p class="text-text-main text-sm sm:text-base leading-relaxed" set:html={paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />;
+            return <p class="text-text-main text-sm sm:text-base leading-relaxed" set:html={formatMarkdown(paragraph)} />;
           })}
         </div>
 
