@@ -350,3 +350,7 @@ http://www.fixblu.com.br/*  https://fixblu.com.br/:splat 301
 /blog/*/amp                  /blog/:splat/ 301
 /*/amp/                      /:splat/ 301
 /*/amp                       /:splat/ 301
+
+# 11. Páginas Legadas de Linktree e Avaliação (evitar referência antiga a MOB)
+/linktree/index_old.html     /linktree/ 301
+/avaliar/index_old.html      /avaliar/ 301

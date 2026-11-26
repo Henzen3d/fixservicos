@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import { blogPosts } from '../../data/blogPosts';
+import { fixProviderSchema } from '../../data/business';
 
 const title = "Blog & Dicas de Manutenção Residencial em Blumenau | Fix Serviços";
 const description = "Guias práticos de eletricista, encanador e reparos residenciais para Blumenau. Dicas de segurança, manutenção preventiva e instalações pelo Técnico Osmar.";
@@ -12,18 +13,7 @@ const schema = {
   "name": "Blog Fix Serviços Blumenau",
   "description": description,
   "url": canonicalURL,
-  "publisher": {
-    "@type": "LocalBusiness",
-    "name": "Fix Serviços",
-    "telephone": "+55-47-98804-1306",
-    "url": "https://fixblu.com.br",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Blumenau",
-      "addressRegion": "SC",
-      "addressCountry": "BR"
-    }
-  },
+  "publisher": fixProviderSchema,
   "blogPost": blogPosts.map((post) => ({
     "@type": "BlogPosting",
     "headline": post.title,

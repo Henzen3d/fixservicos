@@ -1,5 +1,6 @@
 ---
 import MainLayout from './MainLayout.astro';
+import { fixProviderSchema } from '../data/business';
 
 interface Props {
   title: string;
@@ -34,24 +35,7 @@ const defaultSchema = {
   "@type": "Service",
   "name": h1,
   "description": description,
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Fix Serviços",
-    "telephone": "+55-47-98804-1306",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Germano Beduschi, 101 – Sala 102",
-      "addressLocality": "Blumenau",
-      "addressRegion": "SC",
-      "postalCode": "89066-020",
-      "addressCountry": "BR"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Blumenau"
-    },
-    "url": "https://fixblu.com.br"
-  },
+  "provider": fixProviderSchema,
   "url": canonicalURL,
   "areaServed": "Blumenau, SC"
 };

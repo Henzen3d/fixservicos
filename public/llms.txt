@@ -60,7 +60,6 @@ A Fix Serviços atua em Blumenau e região oferecendo mão de obra especializada
 - [Instalação de Kit de Banheiro](https://fixblu.com.br/marido-de-aluguel/instalacao-kit-de-banheiro/): Fixação de kit de metais (porta-toalha, porta-papel, saboneteira etc.).
 - [Instalação de Barra de Apoio para Banheiro](https://fixblu.com.br/marido-de-aluguel/instalacao-barra-para-banheiro/): Instalação de barras de apoio para acessibilidade em banheiros.
 - [Instalação Varal de Teto](https://fixblu.com.br/marido-de-aluguel/instalacao-varal-de-teto/): Fixação de varal retrátil de teto em área de serviço.
-- [Instalação Secadora de Roupas de Parede](https://fixblu.com.br/marido-de-aluguel/instalacao-secadora-de-roupas-de-parede/): Instalação de secadora de roupas tipo varal de parede retrátil.
 - [Troca de Assento Sanitário](https://fixblu.com.br/marido-de-aluguel/troca-de-assento-sanitario/): Substituição de tampo e assento de vaso sanitário.
 - [Troca Dobradiça Armário](https://fixblu.com.br/marido-de-aluguel/troca-dobradica-armario/): Troca de dobradiças de armários de cozinha ou banheiro.
 - [Conserto de Cadeira Giratória de Escritório](https://fixblu.com.br/marido-de-aluguel/conserto-cadeira-giratoria-de-escritorio/): Reparo de mecanismos, rodízios e pistão de cadeiras de escritório.
@@ -75,11 +74,15 @@ A Fix Serviços atua em Blumenau e região oferecendo mão de obra especializada
 
 ## Informações de Contato e Localização
 
+- **Nome Fantasia**: Fix Serviços (Fix - Serviços e Reparos)
 - **Cidade**: Blumenau – Santa Catarina
-- **Endereço**: Rua Germano Beduschi, 101 – Sala 102
-- **WhatsApp/Telefone**: (47) 98804-1306
+- **Endereço**: Rua Germano Beduschi, 101 – Sala 102, Bairro Velha, CEP 89046-010
+- **WhatsApp/Telefone oficial único**: (47) 98804-1306 (`tel:+5547988041306`)
+- **E-mail**: contato@fixblu.com.br
 - **Site Oficial**: [https://fixblu.com.br](https://fixblu.com.br)
-- **Atendimento**: Segunda a Sexta, das 08:00 às 18:00.
+- **Instagram Oficial**: [https://www.instagram.com/fixservicosereparos/](https://www.instagram.com/fixservicosereparos/)
+- **Facebook Oficial**: [https://www.facebook.com/FixServicoseReparos](https://www.facebook.com/FixServicoseReparos)
+- **Atendimento**: Segunda a Sexta, das 08:00 às 18:00; Sábado, das 08:00 às 13:00.
 
 ## Optional
 

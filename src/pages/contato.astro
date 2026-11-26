@@ -1,35 +1,33 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import {
+  FIX_ADDRESS,
+  FIX_BUSINESS_ID,
+  FIX_OPENING_HOURS,
+  FIX_SAME_AS,
+} from '../data/business';
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": FIX_BUSINESS_ID,
   "name": "Fix Serviços",
+  "alternateName": ["Fix - Serviços e Reparos", "Fix Blumenau"],
   "description": "Eletricista, Encanador e Marido de Aluguel em Blumenau. Atendimento rápido para residências e empresas.",
   "url": "https://fixblu.com.br",
   "telephone": "+55-47-98804-1306",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rua Germano Beduschi, 101 – Sala 102",
-    "addressLocality": "Blumenau",
-    "addressRegion": "SC",
-    "postalCode": "89066-020",
-    "addressCountry": "BR"
+  "email": "contato@fixblu.com.br",
+  "address": FIX_ADDRESS,
+  "openingHoursSpecification": FIX_OPENING_HOURS,
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+55-47-98804-1306",
+    "contactType": "customer service",
+    "areaServed": "BR",
+    "availableLanguage": ["Portuguese"],
+    "url": "https://wa.me/5547988041306"
   },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "08:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "13:00"
-    }
-  ],
+  "sameAs": FIX_SAME_AS,
   "areaServed": { "@type": "City", "name": "Blumenau" }
 };
 
@@ -103,7 +101,7 @@ const faqs = [
 
             <!-- Telefone -->
             <a
-              href="tel:+554798804-1306"
+              href="tel:+5547988041306"
               class="flex items-center gap-4 p-4 bg-surface-2 border border-border-main rounded-2xl hover:border-brand-green/50 transition-all group no-underline"
             >
               <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-white transition-colors">
@@ -122,7 +120,7 @@ const faqs = [
               </div>
               <div>
                 <p class="font-bold text-text-main text-sm">Endereço</p>
-                <p class="text-text-muted text-sm">Rua Germano Beduschi, 101 – Sala 102<br/>Blumenau – SC, 89066-020</p>
+                <p class="text-text-muted text-sm">Rua Germano Beduschi, 101 – Sala 102<br/>Velha, Blumenau – SC, 89046-010</p>
               </div>
             </div>
 

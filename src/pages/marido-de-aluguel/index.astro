@@ -3,29 +3,11 @@ import MainLayout from '../../layouts/MainLayout.astro';
 import HeroServico from '../../components/HeroServico.astro';
 import Marquee from '../../components/Marquee.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
+import { buildServiceSchema } from '../../data/business';
 const title = "Marido de Aluguel Blumenau - Fix Serviços";
 const description = "⚡ Contrate nosso Marido de Aluguel e surpreenda-se com nossos serviços. Empresa Especializada Serviços e Consertos para Casa, Solicite Agora!";
 const canonicalURL = "https://fixblu.com.br/marido-de-aluguel/";
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Marido de Aluguel em Blumenau",
-  "description": description,
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Fix Serviços",
-    "telephone": "+55-47-98804-1306",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Germano Beduschi, 101 – Sala 102",
-      "addressLocality": "Blumenau",
-      "addressRegion": "SC",
-      "addressCountry": "BR"
-    }
-  },
-  "areaServed": { "@type": "City", "name": "Blumenau" },
-  "url": canonicalURL
-};
+const schema = buildServiceSchema("Marido de Aluguel em Blumenau", description, canonicalURL);
 ---
 <MainLayout title={title} description={description} canonicalURL={canonicalURL} noPadding={true} schema={schema}>
   <HeroServico

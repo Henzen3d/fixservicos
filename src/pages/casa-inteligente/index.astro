@@ -4,29 +4,11 @@ import HeroServico from '../../components/HeroServico.astro';
 import Marquee from '../../components/Marquee.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Reviews from '../../components/Reviews.astro';
+import { buildServiceSchema } from '../../data/business';
 const title = "💡 Casa Inteligente - Fix Serviços";
 const description = "Tudo para sua Smart Home em Blumenau, serviços de instalação e configuração de dispositivos smart wireless para sua Casa Inteligente";
 const canonicalURL = "https://fixblu.com.br/casa-inteligente/";
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Casa Inteligente em Blumenau",
-  "description": description,
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Fix Serviços",
-    "telephone": "+55-47-98804-1306",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Germano Beduschi, 101 – Sala 102",
-      "addressLocality": "Blumenau",
-      "addressRegion": "SC",
-      "addressCountry": "BR"
-    }
-  },
-  "areaServed": { "@type": "City", "name": "Blumenau" },
-  "url": canonicalURL
-};
+const schema = buildServiceSchema("Casa Inteligente em Blumenau", description, canonicalURL);
 ---
 <MainLayout title={title} description={description} canonicalURL={canonicalURL} noPadding={true} schema={schema}>
   <HeroServico

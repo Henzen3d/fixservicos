@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import { blogPosts, type BlogPost } from '../../data/blogPosts';
+import { fixProviderSchema } from '../../data/business';
 
 export function getStaticPaths() {
   return blogPosts.map((post, index) => {
@@ -50,18 +51,7 @@ const schema = {
     "jobTitle": post.author.role,
     "url": "https://fixblu.com.br/contato/"
   },
-  "publisher": {
-    "@type": "LocalBusiness",
-    "name": "Fix Serviços",
-    "telephone": "+55-47-98804-1306",
-    "url": "https://fixblu.com.br",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Blumenau",
-      "addressRegion": "SC",
-      "addressCountry": "BR"
-    }
-  }
+  "publisher": fixProviderSchema
 };
 
 function formatMarkdown(text: string): string {

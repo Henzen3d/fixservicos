@@ -3,6 +3,12 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Hero from '../components/Hero.astro';
 import Marquee from '../components/Marquee.astro';
 import Reviews from '../components/Reviews.astro';
+import {
+  FIX_ADDRESS,
+  FIX_BUSINESS_ID,
+  FIX_OPENING_HOURS,
+  FIX_SAME_AS,
+} from '../data/business';
 
 const title = "Eletricista, Encanador e Marido de Aluguel em Blumenau | Fix Serviços";
 const description = "Eletricista e Marido de Aluguel Blumenau, pequenos reparos, instalações e manutenções. Serviços especializados e rápidos para Blumenau. 🔨";
@@ -11,19 +17,15 @@ const canonicalURL = "https://fixblu.com.br/";
 const schema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+  "@id": FIX_BUSINESS_ID,
   "name": "Fix Serviços",
+  "alternateName": ["Fix - Serviços e Reparos", "Fix Blumenau"],
   "description": description,
   "url": "https://fixblu.com.br",
   "telephone": "+55-47-98804-1306",
+  "email": "contato@fixblu.com.br",
   "image": "https://fixblu.com.br/og-fixblu.jpg",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rua Germano Beduschi, 101 – Sala 102",
-    "addressLocality": "Blumenau",
-    "addressRegion": "SC",
-    "postalCode": "89066-020",
-    "addressCountry": "BR"
-  },
+  "address": FIX_ADDRESS,
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": "-26.9194",
@@ -31,20 +33,16 @@ const schema = {
   },
   "areaServed": { "@type": "City", "name": "Blumenau" },
   "priceRange": "$$",
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "13:00"
-    }
-  ],
+  "openingHoursSpecification": FIX_OPENING_HOURS,
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+55-47-98804-1306",
+    "contactType": "customer service",
+    "areaServed": "BR",
+    "availableLanguage": ["Portuguese"],
+    "url": "https://wa.me/5547988041306"
+  },
+  "sameAs": FIX_SAME_AS,
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Serviços Fix Blumenau",
