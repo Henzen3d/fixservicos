@@ -317,7 +317,7 @@ Cada item é trabalho futuro. P0 = risco imediato de contato ou de mensuração,
 - [ ] **F4.1 — Documentar provas e uniformizar promessas comerciais**
   - Problema e evidência — Quatro depoimentos estáticos repetidos em cinco páginas; nenhuma fonte individual no componente. A nota agregada pública coincide com a faixa. As condições de garantia e agenda divergem entre telas.
   - Arquivos e componentes — src/components/Reviews.astro, Marquee.astro, Hero.astro, src/layouts/ServicePage.astro, contato.astro e /avaliar/.
-  - [ ] Vincular cada depoimento a registro verificável; confirmar direito de uso, números e condições.
+  - [x] Vincular cada depoimento a registro verificável; confirmar direito de uso, números e condições. *(7 avaliações públicas reais do Google adicionadas em `src/data/reviews.ts` com rotação dinâmica em `Reviews.astro` sem JSON-LD de rating).*
   - [x] Remover textos sem confirmação ou trocar por link para o perfil. Padronizar a garantia real, custos de visita e prazo de resposta conforme o serviço.
   - Prioridade **P1** · Complexidade **baixa** · Evidência **comprovada**.
   - Impacto esperado — Aumentar confiança antes do primeiro contato e reduzir atritos de orçamento.
