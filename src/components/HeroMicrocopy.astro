@@ -1,0 +1,60 @@
+---
+import { FIX_OPENING_HOURS_SHORT } from '../data/business';
+
+const messages = [
+  `Atendimento ${FIX_OPENING_HOURS_SHORT.replace(': ', ', ')}`,
+  "Resposta média em 5 minutos",
+] as const;
+---
+
+<!-- Micro-copy -->
+<div class="mt-4 ml-2 flex items-center gap-2" data-hero-microcopy>
+  <span class="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+    <span class="animate-ping motion-reduce:animate-none absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+  </span>
+  <span class="inline-grid items-center text-xs font-medium text-slate-600 dark:text-slate-300 sm:text-white/80 uppercase tracking-widest transition-colors">
+    {messages.map((text, index) => (
+      <span
+        data-microcopy-item={index}
+        aria-hidden={index === 0 ? "false" : "true"}
+        class:list={[
+          "col-start-1 row-start-1 transition-opacity duration-300 motion-reduce:transition-none",
+          index === 0 ? "opacity-100" : "opacity-0",
+        ]}
+      >
+        {text}
+      </span>
+    ))}
+  </span>
+</div>
+
+<script is:inline>
+  (function () {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    document.querySelectorAll('[data-hero-microcopy]').forEach((container) => {
+      if (container.dataset.initialized === 'true') return;
+      container.dataset.initialized = 'true';
+
+      const items = Array.from(container.querySelectorAll('[data-microcopy-item]'));
+      if (items.length < 2) return;
+
+      let activeIndex = 0;
+      setInterval(() => {
+        const current = items[activeIndex];
+        activeIndex = (activeIndex + 1) % items.length;
+        const next = items[activeIndex];
+
+        current.classList.remove('opacity-100');
+        current.classList.add('opacity-0');
+        current.setAttribute('aria-hidden', 'true');
+
+        next.classList.remove('opacity-0');
+        next.classList.add('opacity-100');
+        next.setAttribute('aria-hidden', 'false');
+      }, 4000);
+    });
+  })();
+</script>
