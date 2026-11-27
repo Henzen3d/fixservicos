@@ -1,7 +1,7 @@
 ---
-const phone = "98804-1306";
-const msg = encodeURIComponent("Olá! Vi o site e preciso de um orçamento para um reparo em Blumenau.");
-const waLink = `https://wa.me/5547988041306?text=${msg}`;
+import { buildWhatsAppUrl } from '../data/business';
+
+const waLink = buildWhatsAppUrl();
 ---
 
 <section class="relative min-h-[90dvh] flex flex-col justify-center overflow-hidden pt-16 sm:pt-24">
@@ -78,11 +78,11 @@ const waLink = `https://wa.me/5547988041306?text=${msg}`;
         <!-- Micro-copy -->
         <div class="mt-4 ml-2 flex items-center gap-2">
           <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="animate-ping motion-reduce:animate-none absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
           </span>
           <span class="text-xs font-medium text-slate-600 dark:text-slate-300 sm:text-white/80 uppercase tracking-widest transition-colors">
-            Resposta média em 5 minutos
+            Atendimento Seg–Sex, 08h às 18h
           </span>
         </div>
       </div>

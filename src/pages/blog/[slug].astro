@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import { blogPosts, type BlogPost } from '../../data/blogPosts';
-import { fixProviderSchema } from '../../data/business';
+import { buildBlogPostSchema, buildWhatsAppUrl } from '../../data/business';
 
 export function getStaticPaths() {
   return blogPosts.map((post, index) => {
@@ -31,28 +31,15 @@ const formattedDate = new Date(`${post.date}T12:00:00Z`).toLocaleDateString('pt-
   month: 'long',
   year: 'numeric',
 });
+const formattedUpdatedDate = post.updatedDate
+  ? new Date(`${post.updatedDate}T12:00:00Z`).toLocaleDateString('pt-BR', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    })
+  : formattedDate;
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": post.title,
-  "description": post.description,
-  "datePublished": post.date,
-  "dateModified": post.date,
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": canonicalURL
-  },
-  "url": canonicalURL,
-  "image": "https://fixblu.com.br/og-fixblu.jpg",
-  "author": {
-    "@type": "Person",
-    "name": post.author.name,
-    "jobTitle": post.author.role,
-    "url": "https://fixblu.com.br/contato/"
-  },
-  "publisher": fixProviderSchema
-};
+const schema = buildBlogPostSchema(post);
 
 function formatMarkdown(text: string): string {
   return text
@@ -104,7 +91,7 @@ function formatMarkdown(text: string): string {
         </div>
         <div>
           <span class="font-bold text-white block">{post.author.name}</span>
-          <span class="text-white/60 text-xs block">{post.author.role} · Blumenau, SC · Revisado em {formattedDate}</span>
+          <span class="text-white/60 text-xs block">{post.author.role} · Blumenau, SC · Revisado em {formattedUpdatedDate}</span>
         </div>
       </div>
     </div>
@@ -235,9 +222,9 @@ function formatMarkdown(text: string): string {
         <!-- Direct Service Card -->
         <div class="bg-surface-1 border-2 border-brand-green/30 rounded-2xl p-6 shadow-sm sticky top-24">
           <span class="text-[11px] font-bold uppercase tracking-wider text-brand-green block mb-1">Serviço Especializado</span>
-          <h3 class="text-lg font-bold font-display text-text-main mb-2">Precisa desse serviço pronto hoje?</h3>
+          <h3 class="text-lg font-bold font-display text-text-main mb-2">Precisa resolver esse serviço em Blumenau?</h3>
           <p class="text-xs text-text-muted mb-4 leading-relaxed">
-            Realizamos {post.serviceName.toLowerCase()} com garantia, pontualidade e ferramentas profissionais em toda Blumenau.
+            Realizamos {post.serviceName.toLowerCase()} em toda Blumenau, de segunda a sexta-feira, das 08h às 18h.
           </p>
 
           <a 
@@ -248,7 +235,7 @@ function formatMarkdown(text: string): string {
           </a>
 
           <a 
-            href={`https://wa.me/5547988041306?text=${encodeURIComponent(`Olá Técnico Osmar! Li o artigo "${post.title}" e gostaria de um orçamento para esse serviço em Blumenau.`)}`}
+            href={buildWhatsAppUrl(`Olá Técnico Osmar! Li o artigo "${post.title}" e gostaria de um orçamento para esse serviço em Blumenau.`)}
             target="_blank"
             rel="noopener noreferrer"
             class="block w-full text-center bg-brand-green hover:bg-brand-green-hover text-white font-bold py-3 px-4 rounded-xl text-xs uppercase tracking-wider no-underline transition-all shadow-md shadow-brand-green/20 flex items-center justify-center gap-2"

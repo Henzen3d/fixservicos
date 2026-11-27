@@ -1,65 +1,51 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import {
-  FIX_ADDRESS,
-  FIX_BUSINESS_ID,
-  FIX_OPENING_HOURS,
-  FIX_SAME_AS,
+  FIX_CLOSED_DAYS_SHORT,
+  FIX_OPENING_HOURS_SHORT,
+  FIX_PHONE_DISPLAY,
+  FIX_PHONE_TEL,
+  buildContactSchema,
+  buildWhatsAppUrl,
 } from '../data/business';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": FIX_BUSINESS_ID,
-  "name": "Fix Serviços",
-  "alternateName": ["Fix - Serviços e Reparos", "Fix Blumenau"],
-  "description": "Eletricista, Encanador e Marido de Aluguel em Blumenau. Atendimento rápido para residências e empresas.",
-  "url": "https://fixblu.com.br",
-  "telephone": "+55-47-98804-1306",
-  "email": "contato@fixblu.com.br",
-  "address": FIX_ADDRESS,
-  "openingHoursSpecification": FIX_OPENING_HOURS,
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+55-47-98804-1306",
-    "contactType": "customer service",
-    "areaServed": "BR",
-    "availableLanguage": ["Portuguese"],
-    "url": "https://wa.me/5547988041306"
-  },
-  "sameAs": FIX_SAME_AS,
-  "areaServed": { "@type": "City", "name": "Blumenau" }
-};
+const description =
+  "Entre em contato com a Fix Serviços para orçamento de Eletricista, Encanador e Marido de Aluguel em Blumenau. Atendimento de segunda a sexta, das 08h às 18h.";
 
-const waLink = "https://wa.me/5547988041306?text=Ol%C3%A1!%20Vi%20o%20site%20e%20preciso%20de%20um%20or%C3%A7amento%20para%20um%20reparo%20em%20Blumenau.";
+const schema = buildContactSchema(description);
+const waLink = buildWhatsAppUrl();
 
 const faqs = [
   {
     q: "Quais regiões vocês atendem?",
-    a: "Atendemos toda a cidade de Blumenau — Centro, Velha, Victor Konder, Itoupava, Vila Nova, Ponta Aguda, Garcia e demais bairros. Também atendemos municípios vizinhos conforme disponibilidade de agenda."
+    a: "Atendemos em domicílio toda a cidade de Blumenau — incluindo Velha, Velha Central, Centro, Victor Konder, Itoupava Norte, Itoupava Central, Vila Nova, Ponta Aguda, Garcia e demais bairros. Também atendemos municípios vizinhos mediante agendamento prévio."
+  },
+  {
+    q: "Qual é o horário de atendimento?",
+    a: "Atendemos de segunda a sexta-feira, das 08h às 18h. Não atendemos aos sábados e domingos. Mensagens enviadas fora do horário comercial são respondidas no próximo dia útil."
   },
   {
     q: "Como é feito o orçamento?",
-    a: "O orçamento pode ser feito de forma rápida via WhatsApp — basta enviar fotos ou um vídeo curto do problema. Para serviços mais complexos, agendamos uma visita técnica sem custo."
+    a: "O orçamento começa pelo WhatsApp: basta informar o bairro e enviar fotos ou um vídeo curto do ponto de instalação ou reparo. Para serviços mais complexos que exigem avaliação presencial, informamos previamente eventuais condições de visita técnica."
   },
   {
     q: "Vocês emitem nota fiscal?",
     a: "Sim! Emitimos nota fiscal de serviços (NFS-e) para residências e empresas. Trabalhamos na formalidade para garantir sua tranquilidade."
   },
   {
-    q: "Qual o prazo de atendimento?",
-    a: "Em casos de urgência (curto-circuito, vazamento, etc.), tentamos atender no mesmo dia. Para serviços agendados, o prazo médio é de 24 a 48 horas."
+    q: "Qual o prazo de agendamento?",
+    a: "Os atendimentos são organizados por agenda de segunda a sexta-feira, com prazo médio de 24 a 48 horas úteis. Em situações urgentes (curto-circuito ou vazamento ativo), avaliamos encaixe prioritário conforme disponibilidade da rota do dia."
   },
   {
     q: "Há garantia nos serviços prestados?",
-    a: "Sim. Todos os nossos serviços possuem garantia. O período varia conforme o tipo de serviço e os materiais utilizados. Ao solicitar o orçamento, informamos o prazo de garantia específico."
+    a: "Sim. Todos os serviços executados pela Fix contam com garantia, cujo prazo varia conforme o escopo e os materiais utilizados. O prazo específico é sempre informado junto com o orçamento antes da confirmação."
   }
 ];
 ---
 
 <MainLayout
   title="Contato e Perguntas Frequentes - Fix Serviços"
-  description="Entre em contato com a Fix Serviços para orçamento de Eletricista, Encanador e Marido de Aluguel em Blumenau. Resposta rápida via WhatsApp."
+  description={description}
   canonicalURL="https://fixblu.com.br/contato/"
   h1="Contato"
   schema={schema}
@@ -74,10 +60,10 @@ const faqs = [
             Fale conosco
           </span>
           <h2 class="text-2xl sm:text-3xl font-bold text-text-main font-display mb-4 leading-tight">
-            Atendimento rápido para toda Blumenau
+            Atendimento em domicílio para toda Blumenau
           </h2>
           <p class="text-text-muted text-base mb-8 leading-relaxed">
-            Estamos prontos para resolver suas necessidades de manutenção e reparos. Chame no WhatsApp e receba seu orçamento em minutos.
+            Envie uma mensagem pelo WhatsApp com o modelo do item, uma foto do local e o seu bairro (como Velha, Velha Central, Centro ou região) para receber seu orçamento.
           </p>
 
           <!-- Contact cards -->
@@ -94,14 +80,14 @@ const faqs = [
               </div>
               <div>
                 <p class="font-bold text-text-main text-sm">WhatsApp (preferencial)</p>
-                <p class="text-text-muted text-sm">(47) 98804-1306 — Resposta em ~5 min</p>
+                <p class="text-text-muted text-sm">{FIX_PHONE_DISPLAY} — Orçamento com foto e bairro</p>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-auto text-text-muted group-hover:text-brand-green transition-colors" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
             </a>
 
             <!-- Telefone -->
             <a
-              href="tel:+5547988041306"
+              href={FIX_PHONE_TEL}
               class="flex items-center gap-4 p-4 bg-surface-2 border border-border-main rounded-2xl hover:border-brand-green/50 transition-all group no-underline"
             >
               <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-white transition-colors">
@@ -109,7 +95,7 @@ const faqs = [
               </div>
               <div>
                 <p class="font-bold text-text-main text-sm">Telefone</p>
-                <p class="text-text-muted text-sm">(47) 98804-1306</p>
+                <p class="text-text-muted text-sm">{FIX_PHONE_DISPLAY}</p>
               </div>
             </a>
 
@@ -119,7 +105,7 @@ const faqs = [
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div>
-                <p class="font-bold text-text-main text-sm">Endereço</p>
+                <p class="font-bold text-text-main text-sm">Base operacional (atendimento em domicílio)</p>
                 <p class="text-text-muted text-sm">Rua Germano Beduschi, 101 – Sala 102<br/>Velha, Blumenau – SC, 89046-010</p>
               </div>
             </div>
@@ -131,7 +117,7 @@ const faqs = [
               </div>
               <div>
                 <p class="font-bold text-text-main text-sm">Horário de Atendimento</p>
-                <p class="text-text-muted text-sm">Seg–Sex: 08h às 18h<br/>Sábado: 08h às 13h</p>
+                <p class="text-text-muted text-sm">{FIX_OPENING_HOURS_SHORT}<br/>{FIX_CLOSED_DAYS_SHORT}</p>
               </div>
             </div>
           </div>

@@ -9,19 +9,47 @@ const related = [
 ---
 <ServicePage
   title="Instalação de Chuveiro Elétrico em Blumenau | Fix Serviços"
-  description="Instalação de chuveiro elétrico profissional em Blumenau. Troca de chuveiro antiga, fiação segura, disjuntor adequado e aterramento correto. Fix Serviços."
+  description="Instalação de chuveiro elétrico em Blumenau pelo Técnico Osmar. Troca segura com vedação hidráulica, conectores certificados e aterramento. Envie modelo, foto e bairro."
   canonicalURL="https://fixblu.com.br/eletricista/instalacao-de-chuveiro/"
   h1="Instalação de Chuveiro"
   category="Eletricista"
   categoryUrl="/eletricista/"
   relatedServices={related}
 >
+  <div class="space-y-6">
+    <!-- Escopo direto e claro (visível em mobile e desktop) -->
+    <div>
+      <h2 class="text-xl sm:text-2xl font-bold text-text-main font-display mb-3">
+        Instalação e Troca Profissional de Chuveiro Elétrico em Blumenau
+      </h2>
+      <p class="text-text-muted leading-relaxed mb-4">
+        A Fix Serviços realiza a instalação e troca de chuveiros e duchas elétricas em residências e apartamentos de toda Blumenau (Velha, Velha Central, Centro, Victor Konder, Itoupavas e bairros vizinhos), com atendimento direto do Técnico Osmar de segunda a sexta, das 08h às 18h.
+      </p>
+      <p class="text-text-muted leading-relaxed">
+        Instalamos modelos 110V e 220V de todas as marcas (Lorenzetti, Hydra, Fame, Corona, Sintex, ND), garantindo vedação hidráulica sem gotejamentos, conexão elétrica com conectores cerâmicos ou Wago adequados à potência e ligação do aterramento.
+      </p>
+    </div>
 
-  <!-- ===================== MOBILE CONTENT (hidden on sm+) ===================== -->
-  <div class="sm:hidden space-y-5">
+    <!-- Como pedir orçamento (O que enviar pelo WhatsApp) -->
+    <div class="bg-brand-green/10 border border-brand-green/30 rounded-2xl p-5">
+      <h3 class="font-bold text-text-main font-display text-base sm:text-lg mb-2">
+        O que enviar para orçar pelo WhatsApp
+      </h3>
+      <p class="text-text-muted text-sm leading-relaxed mb-3">
+        Para agilizar o orçamento sem precisar desmontar nada antes da visita, envie:
+      </p>
+      <ul class="space-y-1.5 text-sm text-text-main font-medium">
+        <li>• <strong>Modelo e tensão/potência</strong> do chuveiro novo (110V ou 220V);</li>
+        <li>• <strong>Foto externa do ponto atual</strong> acessível no banheiro (mostrando o cano e a saída dos fios);</li>
+        <li>• <strong>Seu bairro em Blumenau</strong> e se é substituição simples ou instalação em ponto novo.</li>
+      </ul>
+      <p class="text-xs text-text-muted mt-3">
+        O valor pode variar caso haja necessidade de adequar a fiação, substituir disjuntor no quadro ou trocar o registro de água.
+      </p>
+    </div>
 
-    <!-- 1. Benefícios Rápidos com ícones -->
-    <div class="grid grid-cols-3 gap-2">
+    <!-- Benefícios Rápidos com ícones (Mobile) -->
+    <div class="grid grid-cols-3 gap-2 sm:hidden">
       <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
         <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -32,7 +60,7 @@ const related = [
         <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
         </div>
-        <p class="text-xs font-bold text-text-main leading-tight">Zero<br/>Vazamentos</p>
+        <p class="text-xs font-bold text-text-main leading-tight">Vedação<br/>Hidráulica</p>
       </div>
       <div class="flex flex-col items-center text-center gap-2 bg-surface-2 border border-border-main rounded-2xl p-3">
         <div class="h-10 w-10 rounded-full bg-brand-green/10 flex items-center justify-center shrink-0">
@@ -42,96 +70,59 @@ const related = [
       </div>
     </div>
 
-    <!-- 2. Checklist Visual — O que está incluso -->
-    <div class="bg-surface-2 border border-border-main rounded-2xl p-4">
-      <h2 class="font-bold text-text-main font-display mb-3 text-base flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-        O que está incluso
-      </h2>
-      <ul class="space-y-2.5">
-        {[
-          "Retirada do chuveiro antigo",
-          "Vedação hidráulica com fita veda-rosca",
-          "Montagem completa (cano, corpo e espalhador)",
-          "Conexão elétrica com conectores certificados",
-          "Ligação do aterramento elétrico",
-          "Teste de vazamento e temperatura",
-        ].map(item => (
-          <li class="flex items-center gap-3">
-            <div class="h-5 w-5 rounded-full bg-brand-green flex items-center justify-center shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <span class="text-sm text-text-main font-medium">{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-
-    <!-- Marcas atendidas -->
-    <div class="bg-brand-navy/5 dark:bg-white/5 border border-border-main rounded-2xl p-4">
-      <p class="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Marcas atendidas</p>
-      <p class="text-sm text-text-main font-medium">Lorenzetti · Hydra · Fame · Corona · Sintex · ND</p>
-    </div>
-
-  </div>
-  <!-- ===================== END MOBILE CONTENT ===================== -->
-
-
-  <!-- ===================== DESKTOP CONTENT (hidden on mobile) ===================== -->
-  <div class="hidden sm:block">
-
-    <h2 class="text-2xl font-bold text-text-main font-display mb-4">Instalação e Troca Profissional de Chuveiro Elétrico em Blumenau</h2>
-    <p class="text-text-muted leading-relaxed mb-4">
-      Tomar um banho quente e relaxante requer um chuveiro bem instalado. A instalação correta do chuveiro elétrico evita problemas muito comuns, como gotejamentos indesejados, conexões elétricas que derretem devido à alta corrente, ou o desligamento constante do disjuntor geral da casa.
-    </p>
-    <p class="text-text-muted leading-relaxed mb-6">
-      Nossos eletricistas realizam a troca ou instalação completa de chuveiros e duchas elétricas de todas as marcas e potências (Lorenzetti Acqua Ultra, Advanced, Hydra Optima, ND, Fame, Corona, Sintex). Realizamos a fixação hidráulica perfeita com vedação adequada, e fazemos a ligação elétrica utilizando conectores adequados e seguros (como conectores cerâmicos ou Wago 221 para alta amperagem), assegurando também a ligação do aterramento e a verificação do disjuntor correspondente no quadro de energia.
-    </p>
-
-    <div class="bg-surface-2 border border-border-main rounded-2xl p-6 mb-6">
+    <!-- Checklist O que está incluso -->
+    <div class="bg-surface-2 border border-border-main rounded-2xl p-5 sm:p-6">
       <h3 class="font-bold text-text-main font-display mb-4 flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
         O que está incluso no serviço
       </h3>
-      <ul class="space-y-2 text-text-muted text-sm">
+      <ul class="space-y-2.5 text-text-muted text-sm">
         {[
-          "Retirada do chuveiro antigo com segurança",
-          "Vedação hidráulica da conexão do cano com fita veda-rosca de alta qualidade",
-          "Montagem física completa do chuveiro (cano, corpo, espalhador e chuveirinho)",
-          "Conexão elétrica utilizando conectores de cerâmica ou Wago de alta performance",
-          "Ligação obrigatória do fio de aterramento elétrico para evitar choques",
-          "Testes de vazamento de água e teste de temperatura nas diferentes potências",
+          "Retirada do chuveiro antigo com circuito desligado",
+          "Vedação hidráulica da rosca com fita veda-rosca adequada",
+          "Montagem completa do aparelho (cano, corpo, espalhador e ducha manual)",
+          "Conexão elétrica com conectores cerâmicos ou Wago dimensionados para a corrente",
+          "Ligação do fio de aterramento quando disponível no ponto",
+          "Testes de vazamento e de aquecimento nas potências do chuveiro",
         ].map(item => (
-          <li class="flex items-start gap-2">
+          <li class="flex items-start gap-2.5">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-brand-green shrink-0 mt-0.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            {item}
+            <span>{item}</span>
           </li>
         ))}
       </ul>
     </div>
 
-    <h3 class="text-lg font-bold text-text-main font-display mb-4">Como funciona o atendimento</h3>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-      {[
-        { n: "1", titulo: "Compre o Chuveiro", desc: "Você escolhe o modelo ideal para a tensão da sua residência (110V ou 220V)." },
-        { n: "2", titulo: "Instalação no Ponto", desc: "O eletricista fixa a ducha e garante a vedação hidráulica completa para evitar pingos." },
-        { n: "3", titulo: "Ligação Elétrica", desc: "Realizamos as emendas seguras e o aterramento antes de ligar o disjuntor principal." },
-      ].map(step => (
-        <div class="bg-brand-navy/5 dark:bg-white/5 rounded-2xl p-4 text-center border border-border-main">
-          <div class="h-10 w-10 rounded-full bg-brand-green text-white font-bold text-lg flex items-center justify-center mx-auto mb-3">{step.n}</div>
-          <p class="font-bold text-text-main text-sm mb-1">{step.titulo}</p>
-          <p class="text-text-muted text-xs leading-relaxed">{step.desc}</p>
-        </div>
-      ))}
+    <!-- Etapas de atendimento -->
+    <div>
+      <h3 class="text-lg font-bold text-text-main font-display mb-4">Como funciona o atendimento</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {[
+          { n: "1", titulo: "Envie os dados", desc: "Informe modelo, tensão, bairro e envie foto externa do ponto pelo WhatsApp." },
+          { n: "2", titulo: "Orçamento e agenda", desc: "Passamos o escopo, o prazo de garantia e agendamos de segunda a sexta." },
+          { n: "3", titulo: "Instalação e teste", desc: "Fixação hidráulica, conexões seguras, aterramento e teste completo." },
+        ].map(step => (
+          <div class="bg-brand-navy/5 dark:bg-white/5 rounded-2xl p-4 text-center border border-border-main">
+            <div class="h-10 w-10 rounded-full bg-brand-green text-white font-bold text-lg flex items-center justify-center mx-auto mb-3">{step.n}</div>
+            <p class="font-bold text-text-main text-sm mb-1">{step.titulo}</p>
+            <p class="text-text-muted text-xs leading-relaxed">{step.desc}</p>
+          </div>
+        ))}
+      </div>
     </div>
 
-    <div class="bg-brand-green/10 border border-brand-green/30 rounded-2xl p-5">
-      <p class="text-brand-green-text dark:text-brand-green font-semibold text-sm">
-        ✅ Instalação profissional de chuveiros e duchas elétricas em Blumenau. Serviço rápido, seguro e sem vazamentos. Banho quente garantido!
-      </p>
+    <!-- Guia relacionado -->
+    <div class="bg-surface-2 border border-border-main rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-wider text-brand-green mb-1">Guia técnico relacionado</p>
+        <p class="text-sm font-bold text-text-main">Vai comprar um chuveiro novo e está em dúvida sobre disjuntor ou fiação?</p>
+      </div>
+      <a
+        href="/blog/como-escolher-disjuntor-chuveiro-blumenau/"
+        class="shrink-0 inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-brand-green text-white text-xs font-bold uppercase tracking-wider no-underline hover:bg-brand-green-hover transition-colors"
+      >
+        Ler guia de disjuntor e fiação &rarr;
+      </a>
     </div>
-
   </div>
-  <!-- ===================== END DESKTOP CONTENT ===================== -->
-
 </ServicePage>

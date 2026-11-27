@@ -4,6 +4,7 @@ export interface BlogPost {
   metaTitle?: string;
   description: string;
   date: string;
+  updatedDate?: string;
   category: 'Eletricista' | 'Encanador' | 'Marido de Aluguel' | 'Casa Inteligente';
   readTime: string;
   serviceLink: string;

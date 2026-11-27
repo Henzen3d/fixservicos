@@ -55,17 +55,12 @@ const ADS_ID = "";
     if (!link) return;
     const href = link.getAttribute('href') || '';
     
-    // Identifica qualquer clique que leve ao WhatsApp
+    // Identifica qualquer clique que leve ao WhatsApp (dispara apenas 1 evento de microconversão por clique)
     if (href.includes('wa.me') || href.includes('whatsapp.com')) {
-      gtag('event', 'generate_lead', {
-        event_category: 'Contato',
-        event_label: 'WhatsApp Click',
-        transport_type: 'beacon',
-        page_location: window.location.href
-      });
       gtag('event', 'whatsapp_click', {
         event_category: 'Conversao',
         event_label: 'Contato WhatsApp',
+        link_url: href,
         transport_type: 'beacon',
         page_location: window.location.href
       });

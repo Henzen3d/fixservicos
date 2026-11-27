@@ -1,7 +1,7 @@
 ---
-const phone = "5547988041306";
-const msg = encodeURIComponent("Olá! Vi o site e preciso de um orçamento para um reparo em Blumenau.");
-const url = `https://wa.me/${phone}?text=${msg}`;
+import { buildWhatsAppUrl } from '../data/business';
+
+const url = buildWhatsAppUrl();
 ---
 
 <section class="py-20 px-4 md:px-8 max-w-7xl mx-auto transition-colors duration-300">

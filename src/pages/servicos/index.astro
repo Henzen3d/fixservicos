@@ -4,40 +4,13 @@ import HeroServico from '../../components/HeroServico.astro';
 import Marquee from '../../components/Marquee.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import Reviews from '../../components/Reviews.astro';
-import {
-  FIX_ADDRESS,
-  FIX_BUSINESS_ID,
-  FIX_SAME_AS,
-} from '../../data/business';
+import { buildServicesCatalogSchema } from '../../data/business';
 
 const title = "🔨 Serviços para Blumenau - Fix Serviços";
 const description = "A Fix Serviços oferece para Blumenau diversos serviços: Eletricista, Encanador, Marido de Aluguel e Casa Inteligente. Solicite orçamento agora!";
 const canonicalURL = "https://fixblu.com.br/servicos/";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": FIX_BUSINESS_ID,
-  "name": "Fix Serviços",
-  "alternateName": ["Fix - Serviços e Reparos", "Fix Blumenau"],
-  "description": description,
-  "telephone": "+55-47-98804-1306",
-  "email": "contato@fixblu.com.br",
-  "url": "https://fixblu.com.br",
-  "address": FIX_ADDRESS,
-  "sameAs": FIX_SAME_AS,
-  "areaServed": { "@type": "City", "name": "Blumenau" },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Serviços Fix Blumenau",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eletricista em Blumenau" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Encanador em Blumenau" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marido de Aluguel em Blumenau" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Casa Inteligente em Blumenau" } }
-    ]
-  }
-};
+const schema = buildServicesCatalogSchema(description);
 ---
 
 <MainLayout title={title} description={description} canonicalURL={canonicalURL} noPadding={true} schema={schema}>

@@ -1,32 +1,13 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import { blogPosts } from '../../data/blogPosts';
-import { fixProviderSchema } from '../../data/business';
+import { buildBlogIndexSchema, buildWhatsAppUrl } from '../../data/business';
 
 const title = "Blog & Dicas de Manutenção Residencial em Blumenau | Fix Serviços";
 const description = "Guias práticos de eletricista, encanador e reparos residenciais para Blumenau. Dicas de segurança, manutenção preventiva e instalações pelo Técnico Osmar.";
 const canonicalURL = "https://fixblu.com.br/blog/";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Blog Fix Serviços Blumenau",
-  "description": description,
-  "url": canonicalURL,
-  "publisher": fixProviderSchema,
-  "blogPost": blogPosts.map((post) => ({
-    "@type": "BlogPosting",
-    "headline": post.title,
-    "description": post.description,
-    "datePublished": post.date,
-    "url": `https://fixblu.com.br/blog/${post.slug}/`,
-    "author": {
-      "@type": "Person",
-      "name": post.author.name,
-      "jobTitle": post.author.role
-    }
-  }))
-};
+const schema = buildBlogIndexSchema(description, blogPosts);
 ---
 
 <MainLayout title={title} description={description} canonicalURL={canonicalURL} noPadding={true} schema={schema}>
@@ -166,14 +147,14 @@ const schema = {
       <!-- Bottom Banner for Direct Service Hiring -->
       <div class="mt-16 bg-gradient-to-r from-brand-navy to-[#0F1E36] rounded-2xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6 border border-white/10 shadow-lg">
         <div class="max-w-xl text-center md:text-left">
-          <span class="text-brand-green text-xs font-bold uppercase tracking-widest block mb-2">Atendimento Imediato</span>
-          <h3 class="text-2xl sm:text-3xl font-bold font-display text-white mb-2">Precisa de um reparo agora em Blumenau?</h3>
+          <span class="text-brand-green text-xs font-bold uppercase tracking-widest block mb-2">Orçamento pelo WhatsApp</span>
+          <h3 class="text-2xl sm:text-3xl font-bold font-display text-white mb-2">Precisa de um serviço residencial em Blumenau?</h3>
           <p class="text-white/80 text-sm sm:text-base">
-            Não arrisque com instalações perigosas. Fale direto com o Técnico Osmar para orçamento rápido sem compromisso.
+            Não arrisque com instalações sem padrão técnico. Fale direto com o Técnico Osmar (Seg–Sex, 08h às 18h) para orçamento sem compromisso.
           </p>
         </div>
         <a 
-          href="https://wa.me/5547988041306?text=Ol%C3%A1!%20Li%20o%20blog%20da%20Fix%20Servi%C3%A7os%20e%20preciso%20de%20um%20or%C3%A7amento%20em%20Blumenau."
+          href={buildWhatsAppUrl("Olá! Li o blog da Fix Serviços e preciso de um orçamento em Blumenau.")}
           target="_blank"
           rel="noopener noreferrer"
           class="bg-brand-green hover:bg-brand-green-hover text-white font-bold px-8 py-4 rounded-xl text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-brand-green/30 no-underline shrink-0 flex items-center gap-2"

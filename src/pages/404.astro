@@ -1,7 +1,8 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import { buildWhatsAppUrl } from '../data/business';
 
-const waLink = "https://wa.me/5547988041306?text=" + encodeURIComponent("Olá! Estava navegando no site da Fix Serviços e não encontrei a página que procurava. Poderia me ajudar?");
+const waLink = buildWhatsAppUrl("Olá! Estava navegando no site da Fix Serviços e não encontrei a página que procurava. Poderia me ajudar?");
 
 const services = [
   {

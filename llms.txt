@@ -2,12 +2,12 @@
 
 > Empresa de serviços residenciais e comerciais em Blumenau, SC — elétrica, encanamento e marido de aluguel. WhatsApp: (47) 98804-1306.
 
-A Fix Serviços atua em Blumenau e região oferecendo mão de obra especializada para instalações, reparos e manutenções residenciais e comerciais. Os serviços são organizados nas categorias: Eletricista, Encanador, Marido de Aluguel e Casa Inteligente.
+A Fix Serviços atua em Blumenau e região oferecendo mão de obra especializada para instalações, reparos e manutenções residenciais e comerciais em domicílio. Os serviços são organizados nas categorias: Eletricista, Encanador, Marido de Aluguel e Casa Inteligente.
 
 ## Técnico Responsável
- 
+
 - **Nome**: Osmar Gonçalves
-- **Experiência**: Mais de 20 anos em manutenção residencial e predial
+- **Experiência**: Mais de 20 anos de atuação prática em manutenção residencial e predial
 - **Formação**: Técnico em Edificações pelo SENAI
 - **Certificações**: NR10 (Segurança em Instalações Elétricas), NR18 (Construção Civil), NR33 (Segurança e Saúde nos Trabalhos em Espaços Confinados), NR35 (Trabalho em Altura)
 
@@ -15,8 +15,8 @@ A Fix Serviços atua em Blumenau e região oferecendo mão de obra especializada
 
 - **Eletricista Profissional**: Instalação de chuveiros, troca de resistências, manutenção de quadros elétricos, troca de tomadas e disjuntores, instalação de DPS e luminárias.
 - **Encanador**: Conserto de descargas (Válvulas Hydra/Docol e caixas acopladas), troca de sifão, ralo de pia e reparos hidráulicos.
-- **Marido de Aluguel (Faz Tudo)**: Instalação de TVs, cortinas, quadros, espelhos, varal de teto, persianas e conserto de cadeiras de escritório.
-- **Casa Inteligente**: Instalação de fechaduras digitais, interruptores inteligentes e automação de iluminação.
+- **Marido de Aluguel (Faz Tudo)**: Instalação de TVs, cortinas, quadros, espelhos, varal de teto, persianas, fechaduras digitais e conserto de cadeiras de escritório.
+- **Casa Inteligente**: Instalação de fechaduras inteligentes smart, interruptores inteligentes e automação de iluminação.
 
 ## Páginas principais
 
@@ -25,7 +25,7 @@ A Fix Serviços atua em Blumenau e região oferecendo mão de obra especializada
 - [Eletricista](https://fixblu.com.br/eletricista/): Serviços elétricos profissionais — instalações, trocas e manutenções elétricas residenciais e comerciais em Blumenau.
 - [Encanador](https://fixblu.com.br/encanador/): Serviços de encanamento — instalações hidráulicas, reparos e manutenções em Blumenau.
 - [Marido de Aluguel](https://fixblu.com.br/marido-de-aluguel/): Serviços gerais residenciais — pequenos reparos, fixações, montagens e instalações diversas em Blumenau.
-- [Casa Inteligente](https://fixblu.com.br/casa-inteligente/): Automação residencial (Smart Home) em Blumenau — instalação de interruptores inteligentes, fechaduras digitais e dispositivos Sonoff.
+- [Casa Inteligente](https://fixblu.com.br/casa-inteligente/): Automação residencial (Smart Home) em Blumenau — instalação de interruptores inteligentes, fechaduras inteligentes e dispositivos Sonoff.
 
 ## Serviços de Elétrica
 
@@ -37,6 +37,7 @@ A Fix Serviços atua em Blumenau e região oferecendo mão de obra especializada
 - [Troca de Tomada](https://fixblu.com.br/eletricista/troca-de-tomada/): Substituição de tomadas elétricas residenciais pelo padrão NBR 14136.
 - [Troca de Disjuntor](https://fixblu.com.br/eletricista/troca-de-disjuntor/): Troca de disjuntores em quadro de distribuição elétrica.
 - [Instalação de DPS](https://fixblu.com.br/eletricista/instalacao-de-dps/): Instalação de Dispositivo de Proteção contra Surtos no quadro elétrico.
+- [Circuito e Instalação Elétrica de Torneira](https://fixblu.com.br/eletricista/instalacao-de-torneira-eletrica/): Dimensionamento de circuito exclusivo, fiação, disjuntor e aterramento para torneira elétrica.
 
 ## Serviços de Encanamento
 
@@ -64,13 +65,14 @@ A Fix Serviços atua em Blumenau e região oferecendo mão de obra especializada
 - [Troca Dobradiça Armário](https://fixblu.com.br/marido-de-aluguel/troca-dobradica-armario/): Troca de dobradiças de armários de cozinha ou banheiro.
 - [Conserto de Cadeira Giratória de Escritório](https://fixblu.com.br/marido-de-aluguel/conserto-cadeira-giratoria-de-escritorio/): Reparo de mecanismos, rodízios e pistão de cadeiras de escritório.
 - [Instalação de Olho Mágico](https://fixblu.com.br/marido-de-aluguel/instalacao-de-olho-magico/): Instalação de olho mágico óptico ou digital em portas.
-- [Instalação de Fechadura Digital](https://fixblu.com.br/marido-de-aluguel/instalacao-de-fechadura-digital/): Instalação de fechaduras digitais biométricas ou por senha para residências e empresas.
+- [Instalação de Fechadura Digital](https://fixblu.com.br/marido-de-aluguel/instalacao-de-fechadura-digital/): Instalação física de fechaduras digitais biométricas ou por senha para residências e empresas.
 - [Instalação de Coifa](https://fixblu.com.br/marido-de-aluguel/instalacao-de-coifa/): Instalação de coifa ou depurador de ar sobre fogão.
 
 ## Serviços de Casa Inteligente
 
 - [Instalar Interruptor Sonoff](https://fixblu.com.br/casa-inteligente/instalar-interruptor-sonoff/): Instalação de interruptores inteligentes da linha Sonoff com controle por Wi-Fi.
 - [Instalação Interruptor Inteligente](https://fixblu.com.br/casa-inteligente/instalacao-interruptor-inteligente/): Instalação de interruptores inteligentes compatíveis com assistentes de voz e aplicativos.
+- [Fechadura Inteligente Smart](https://fixblu.com.br/casa-inteligente/instalacao-de-fechadura-digital/): Instalação física e integração de fechadura smart com aplicativo e automações residenciais.
 
 ## Informações de Contato e Localização
 
@@ -82,11 +84,11 @@ A Fix Serviços atua em Blumenau e região oferecendo mão de obra especializada
 - **Site Oficial**: [https://fixblu.com.br](https://fixblu.com.br)
 - **Instagram Oficial**: [https://www.instagram.com/fixservicosereparos/](https://www.instagram.com/fixservicosereparos/)
 - **Facebook Oficial**: [https://www.facebook.com/FixServicoseReparos](https://www.facebook.com/FixServicoseReparos)
-- **Atendimento**: Segunda a Sexta, das 08:00 às 18:00; Sábado, das 08:00 às 13:00.
+- **Atendimento**: Segunda a Sexta, das 08:00 às 18:00 (fechado aos sábados e domingos).
 
 ## Optional
 
-- [Catálogo de Recursos de IA (ARD 1.0)](https://fixblu.com.br/.well-known/ai-catalog.json): Manifesto oficial de descoberta de recursos para agentes de IA autônomos (especificação ARD / Lighthouse Agentic Browsing).
+- [Catálogo de Recursos de IA (ARD 1.0)](https://fixblu.com.br/.well-known/ai-catalog.json): Índice de recursos públicos do site em JSON.
 - [Índice de Serviços e Páginas (Sitemap)](https://fixblu.com.br/sitemap-index.xml): Lista completa de todas as URLs canônicas e páginas de serviços disponíveis para consulta.
 - [Atendimento e Orçamentos](https://fixblu.com.br/contato/): Informações para envio de fotos/vídeos e solicitação direta de orçamento de reparos residenciais e comerciais em Blumenau.
-- [Orçamento via WhatsApp](https://wa.me/5547988041306?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Fix%20Servi%C3%A7os%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20em%20Blumenau.): Canal direto via WhatsApp (47 98804-1306) para envio de fotos/vídeos e atendimento rápido para reparos em Blumenau com resposta média em 5 minutos.
+- [Orçamento via WhatsApp](https://wa.me/5547988041306?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Fix%20Servi%C3%A7os%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20em%20Blumenau.): Canal direto via WhatsApp (47 98804-1306) para envio de fotos/vídeos e solicitação de orçamento em Blumenau, de segunda a sexta, das 08:00 às 18:00.

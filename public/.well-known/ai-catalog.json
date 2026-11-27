@@ -6,23 +6,34 @@
   },
   "entries": [
     {
-      "identifier": "urn:air:fixblu.com.br:services:catalogo",
-      "displayName": "Fix Serviços - Catálogo de Reparos e Manutenção",
-      "type": "application/ai-catalog+json",
+      "identifier": "urn:air:fixblu.com.br:services:catalogo-llms",
+      "displayName": "Fix Serviços - Catálogo de Serviços e Informações (llms.txt)",
+      "type": "text/plain",
       "url": "https://fixblu.com.br/llms.txt",
-      "description": "Catálogo completo em formato llms.txt para agentes de IA consultarem serviços de eletricista, encanador e marido de aluguel em Blumenau.",
+      "description": "Resumo estruturado em texto simples com serviços, regiões atendidas em Blumenau, responsável técnico e horários (segunda a sexta, 08:00 às 18:00; fechado aos sábados e domingos).",
       "representativeQueries": [
         "Qual o contato de eletricista profissional em Blumenau?",
         "Quem faz conserto de vazamentos e válvula de descarga em Blumenau?",
-        "Onde encontrar marido de aluguel para instalação de TV e coifa em Blumenau?"
+        "Onde encontrar marido de aluguel para instalação de TV e fechadura digital em Blumenau?"
       ]
     },
     {
-      "identifier": "urn:air:fixblu.com.br:tools:atendimento",
-      "displayName": "Atendimento e Orçamentos Fix Serviços",
-      "type": "application/mcp-server-card+json",
+      "identifier": "urn:air:fixblu.com.br:pages:servicos",
+      "displayName": "Catálogo de Serviços Fix Serviços",
+      "type": "text/html",
+      "url": "https://fixblu.com.br/servicos/",
+      "description": "Página HTML com as categorias de serviços de eletricista, encanador, marido de aluguel e casa inteligente em Blumenau.",
+      "representativeQueries": [
+        "Quais serviços residenciais a Fix Serviços realiza em Blumenau?",
+        "Quem instala chuveiro elétrico e disjuntor em Blumenau?"
+      ]
+    },
+    {
+      "identifier": "urn:air:fixblu.com.br:pages:contato",
+      "displayName": "Contato, Horários e Perguntas Frequentes",
+      "type": "text/html",
       "url": "https://fixblu.com.br/contato/",
-      "description": "Canal oficial para informações sobre orçamento, envio de fotos para avaliação e agendamento de serviços em Blumenau.",
+      "description": "Página HTML com telefone oficial, link para solicitação de orçamento, bairros atendidos em Blumenau e horário de atendimento (segunda a sexta, 08:00 às 18:00; fechado aos sábados e domingos).",
       "representativeQueries": [
         "Como solicitar orçamento de reparos residenciais em Blumenau?",
         "Quais são os horários de atendimento da Fix Serviços Blumenau?",
